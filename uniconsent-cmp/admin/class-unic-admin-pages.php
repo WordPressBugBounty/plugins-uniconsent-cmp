@@ -12,24 +12,17 @@ use UNIC\UNIC_Values;
 class UNIC_Admin_Pages {
 
 	private $unic_license;
-
 	private $unic_options;
-
 	private $unic_values;
-
 	private $unic_language;
-
 	private $unic_company;
-
 	private $unic_logo;
-
 	private $unic_policy_url;
+	private $unic_language_default = 'en';
 
 	public function __construct() {
 
 		$this->unic_values = new UNIC_Values();
-
-		$this->unic_language_default = "en";
 		$this->unic_language = esc_attr( get_option( 'unic_language' ) );
 
 		$this->unic_language = isset( $this->unic_language ) && ! empty( $this->unic_language )
@@ -43,7 +36,6 @@ class UNIC_Admin_Pages {
 	}
 
 	public function unic_admin_notice_license() {
-
 		$unic_enable_iab = get_option( 'unic_enable_iab');
 	}
 

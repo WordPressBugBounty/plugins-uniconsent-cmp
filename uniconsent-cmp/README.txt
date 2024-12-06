@@ -1,11 +1,11 @@
 === UniConsent CMP for IAB TCF GPP Consent Mode ===
-Version: 1.5.4
+Version: 1.5.5
 Contributors: uniconsent
 Tags: cookies, cookie banner, gdpr, cpra, eprivacy, cookie consent, iab, cmp
 Requires at least: 4.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.5.4
+Stable tag: 1.5.5
 
 == Description ==
 
@@ -114,6 +114,10 @@ Please check: [UniConsent Consent Manager Offical site](https://www.uniconsent.c
 6. UniConsent - stage six: Initial bar screen.
 
 == Changelog ==
+
+
+= 1.5.5 =
+* Optimize and improvements
 
 = 1.5.3 =
 * Improve Google Consent Mode

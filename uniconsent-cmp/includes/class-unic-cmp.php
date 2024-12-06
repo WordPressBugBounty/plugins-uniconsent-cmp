@@ -19,7 +19,7 @@ class UNIC_CMP {
 		if ( defined( 'UNIC_VERSION' ) ) {
 			$this->version = UNIC_VERSION;
 		} else {
-			$this->version = '1.5.4';
+			$this->version = '1.5.5';
 		}
 		$this->plugin_name = 'uniconsent-cmp';
 
@@ -32,15 +32,10 @@ class UNIC_CMP {
 	private function load_dependencies() {
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-unic-loader.php';
-
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-unic-i18n.php';
-
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-unic-values.php';
-
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-unic-admin-pages.php';
-
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-unic-public.php';
-
 		$this->loader = new UNIC_Loader();
 
 	}
