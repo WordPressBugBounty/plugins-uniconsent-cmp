@@ -300,6 +300,8 @@ class UNIC_Admin_Pages {
                         	<li><strong>Certified Canada IAB TCF CMP</strong>
                         	<li><strong>Certified Google CMP</strong>
                         	<li><strong>Google Consent Mode v2</strong>
+                        	<li><strong>Microsoft UET Consent Mode</strong>
+                        	<li><strong>IAB GPP 1.1 compliance</strong>
                         	<li><strong>40+ Languages support</strong>
                         	<li><strong>GPP, TCF, USP Consent signals</strong>
                         	<li><strong>Fix errors in Google's report</strong>

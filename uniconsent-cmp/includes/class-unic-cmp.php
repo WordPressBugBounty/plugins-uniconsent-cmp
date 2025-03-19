@@ -2,7 +2,7 @@
 /**
  * *
  *  * @link https://www.uniconsent.com/
- *  * @copyright Copyright (c) 2018 - 2024 Transfon Ltd.
+ *  * @copyright Copyright (c) 2018 - 2025 Transfon Ltd.
  *  * @license https://www.uniconsent.com/wordpress/
  *
  */
@@ -19,7 +19,7 @@ class UNIC_CMP {
 		if ( defined( 'UNIC_VERSION' ) ) {
 			$this->version = UNIC_VERSION;
 		} else {
-			$this->version = '1.5.5';
+			$this->version = '1.5.6';
 		}
 		$this->plugin_name = 'uniconsent-cmp';
 

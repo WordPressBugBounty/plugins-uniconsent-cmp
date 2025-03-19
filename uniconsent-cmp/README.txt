@@ -1,11 +1,11 @@
 === UniConsent CMP for IAB TCF GPP Consent Mode ===
-Version: 1.5.5
+Version: 1.5.6
 Contributors: uniconsent
 Tags: cookies, cookie banner, gdpr, cpra, eprivacy, cookie consent, iab, cmp
 Requires at least: 4.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 
 == Description ==
 
@@ -13,7 +13,9 @@ Stable tag: 1.5.5
 
 **UniConsent CMP is a certified Canada IAB TCF Consent Management Platform.**
 
-**Google Consent Mode CMP**
+**UniConsent CMP is a certified Google Consent Mode CMP**
+
+**Microsoft UET Consent Mode**
 
 Leading Consent Management Platform for GDPR Compliance, CCPA Compliance, COPPA, LGPD Compliance. UniConsent GDPR, CCPA/CPRA, COPPA, LGPD Compliance Solution Privacy Manager Simplify Global Privacy Regulations Compliance.
 
@@ -29,15 +31,13 @@ IAB Europe announced a technical standard to support the digital advertising eco
 
 UniConsent supports consent management for Google GAM vendors.
 
-Multiple languages support: Spanish, German, French, Italian, Portuguese, Polish, Dutch, Swedish, Bulgarian, Catalan, Czech, Danish, Greek, Estonian, Finnish, Hungarian, Lithuanian, Latvian, Maltese, Norwegian, Romanian, Russian, Slovak, Slovenian, Chinese.
+Multiple languages support: English, Spanish, German, French, Italian, Portuguese, Polish, Dutch, Swedish, Bulgarian, Catalan, Czech, Danish, Greek, Estonian, Finnish, Hungarian, Lithuanian, Latvian, Maltese, Norwegian, Romanian, Russian, Slovak, Slovenian, Chinese, Serbian, Japanese, Bosnian, Turkish, Welsh, Basque, Galician, Hebrew, Indonesian, Korean, Macedonian, Malay, Tagalog, Ukrainian languages support. More languages on the way.
 
 The UniConsent plugin implements the IAB Consent Framework for GDPR, CCPA, ePrivacy Directive and Google Ad Manager/Adsense Consent Manager.
 
 UniConsent can load the third party tags based on user's consent and sending consent data to Google Tag Manager.
 
-Support IAB TCF 2.2, Google Ad Manager, Google AdX, Google Adsense, Prebid.js Header Bidding, Amazon APS, Custom Vendors, Facebook Pixel, Google Adwords, Linkedin Pixel.
-
-You can manage the consent for your [First Party Data](https://www.uniconsent.com/first-party-data) with UniConsent CMP.
+Support IAB TCF 2.2, Google Ad Manager, Google AdX, Google Adsense, Prebid.js Header Bidding, Amazon APS, Custom Vendors, Facebook Pixel, Google Adwords, Linkedin Pixel, Bing Ads.
 
 == Installation ==
 
@@ -115,6 +115,10 @@ Please check: [UniConsent Consent Manager Offical site](https://www.uniconsent.c
 
 == Changelog ==
 
+= 1.5.6 =
+* Microsoft UET Consent Mode
+* Google Consent Mode 2.0
+* IAB GPP 1.1 compliance
 
 = 1.5.5 =
 * Optimize and improvements
