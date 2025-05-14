@@ -1,13 +1,18 @@
-=== UniConsent CMP for IAB TCF GPP Consent Mode ===
-Version: 1.5.6
+=== UniConsent Cookie Consent CMP - Consent Manager ===
+Version: 1.5.9
 Contributors: uniconsent
-Tags: cookies, cookie banner, gdpr, cpra, eprivacy, cookie consent, iab, cmp
+Tags: cmp, cookie banner, cookie consent, iab, cookie
 Requires at least: 4.0
-Tested up to: 6.6
+Tested up to: 6.8.1
 Requires PHP: 7.4
-Stable tag: 1.5.6
+Stable tag: 1.5.9
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Leading Consent Management Platform for IAB TCF, GPP, GDPR, POPIA, CCPA, COPPA, and LGPD Compliance.
 
 == Description ==
+
+Leading Consent Management Platform for GDPR, CCPA, COPPA, PIPL, LGPD, POPIA Compliance. UniConsent GDPR, CCPA/CPRA, COPPA, LGPD, POPIA Compliance Solution Privacy Manager Simplify Global Privacy Regulations Compliance.
 
 **UniConsent CMP is a certified EU IAB TCF Consent Management Platform.**
 
@@ -15,11 +20,11 @@ Stable tag: 1.5.6
 
 **UniConsent CMP is a certified Google Consent Mode CMP**
 
-**Microsoft UET Consent Mode**
+**Microsoft UET Consent Mode Support**
 
-Leading Consent Management Platform for GDPR Compliance, CCPA Compliance, COPPA, LGPD Compliance. UniConsent GDPR, CCPA/CPRA, COPPA, LGPD Compliance Solution Privacy Manager Simplify Global Privacy Regulations Compliance.
+**Bing Ads Consent Mode Support **
 
-[UniConsent CMP](https://www.uniconsent.com/) implements the IAB Transparency and Consent Framework for GDPR and Google Ad Manager/Adsense Consent Guidance. Most publishers have seen revenue increased substantially right after implemented and switched to UniConsent.
+[UniConsent](https://www.uniconsent.com/) implements the IAB Transparency and Consent Framework for GDPR and Google Ad Manager/Adsense Consent Guidance. Most publishers have seen revenue increased substantially right after implemented and switched to UniConsent.
 
 Looking for UniConsent GDPR CMP for other platform, please check [Universal Consent Manager for GDPR and CCPA Compliance](https://www.uniconsent.com/).
 
@@ -114,6 +119,9 @@ Please check: [UniConsent Consent Manager Offical site](https://www.uniconsent.c
 6. UniConsent - stage six: Initial bar screen.
 
 == Changelog ==
+
+= 1.5.7 =
+* Fix warning for PHP 8.2+
 
 = 1.5.6 =
 * Microsoft UET Consent Mode

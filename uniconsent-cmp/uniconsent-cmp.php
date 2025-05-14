@@ -1,20 +1,19 @@
 <?php
-
 /**
-* Plugin Name: UniConsent CMP for IAB TCF GPP Consent Mode
-* Plugin URI: https://www.uniconsent.com/wordpress
-* Description: UniConsent CMP implements the Google Consent Mode, IAB TCF 2.2, IAB GPP for GDPR Google Ad Manager/Prebid.js/Amazon APS and increase advertising revenue.
-* Version: 1.5.6
+* Plugin Name: UniConsent Cookie Consent CMP
+* Plugin URI: https://www.uniconsent.com/?utm_source=wp-plugins
+* Description: Leading Consent Management Platform for IAB TCF, GPP, GDPR, POPIA, CCPA, COPPA, and LGPD Compliance.
+* Version: 1.5.9
 * Author: UniConsent
-* Author URI: https://www.uniconsent.com/
-* License: GPL2
+* Author URI: https://www.uniconsent.com/?utm_source=wp-plugins
+* License: GPLv3
 */
 
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'UNIC_CMP_VERSION', '1.5.6' );
+define( 'UNIC_CMP_VERSION', '1.5.9' );
 
 function activate_unic_cmp() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-unic-activator.php';

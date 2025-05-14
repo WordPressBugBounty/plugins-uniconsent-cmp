@@ -215,7 +215,7 @@ class UNIC_Admin_Pages {
 					<?php $unic_region = get_option( 'unic_region' ); ?>
 					<tr class="table-top-row" valign="top">
 						<th scope="row">
-							<?php _e( 'Display GDPR CMP', 'uniconsent' ); ?>
+							<?php _e( 'GDPR Policy Region', 'uniconsent' ); ?>
 						</th>
 						<td class="col-2">
 							<select name="unic_region">
@@ -294,7 +294,7 @@ class UNIC_Admin_Pages {
                     
                 <div class='logo'>
                 	<div>
-                        <h3>UniConsent for GDPR/CPRA Compliance</h3>
+                        <h3>UniConsent Cookie Consent CMP</h3>
                         <ul>
                         	<li><strong>Certified EU IAB TCF 2.2 CMP</strong>
                         	<li><strong>Certified Canada IAB TCF CMP</strong>
@@ -304,22 +304,18 @@ class UNIC_Admin_Pages {
                         	<li><strong>IAB GPP 1.1 compliance</strong>
                         	<li><strong>40+ Languages support</strong>
                         	<li><strong>GPP, TCF, USP Consent signals</strong>
-                        	<li><strong>Fix errors in Google's report</strong>
                         	<li><strong>For GDPR, CCPA, LGPD, PDPA, CPRA, PIPL</strong>
                         	<li><strong>More popup UI choices and easy mode</strong>
                             <li><strong>Fully customisable multiple stages consent collection pop-ups, bars</strong>
                             <li><strong>Multiple languages support</strong>
                             <li><strong>Data analytics and inisght dashboard</strong>
                             <li><strong>One-tag Implementation</strong>
-                            <li><strong>Use Custom Domain</strong>
-                            <li><strong>Google GAM/Google Adsense/Google Adx/Amazon APS support</strong>
+                            <li><strong>Google GAM/Google Adsense/Google Adx/Amazon APS Support</strong>
                             <li><strong>Prebid.js and Header bidding support</strong>
                             <li><strong>Cookie ePrivacy consent support</strong>
                             <li><strong>Website cookie discovery and disclose</strong>
                             <li><strong>Javascript and cookie blocking</strong>
                             <li><strong>Consent rate analytics and insight</strong>
-                            <li><strong>24/7 Technical support</strong>
-                            <li><strong>Service Level Agreement</strong>
                             <li><strong>Support: support@uniconsent.com</strong>
                         </ul>
                         <a class="button button-primary" href="https://app.uniconsent.com/app/register?utm_source=wp" target="_blank">Get Started</a>

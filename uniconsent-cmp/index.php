@@ -2,7 +2,7 @@
 /**
  * *
  *  * @link https://www.uniconsent.com/
- *  * @copyright Copyright (c) 2018 - 2024 Transfon Ltd.
+ *  * @copyright Copyright (c) 2018 - 2025 Transfon Ltd.
  *  * @license https://www.uniconsent.com/wordpress/
  *
  */

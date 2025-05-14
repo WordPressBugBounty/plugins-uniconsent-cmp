@@ -2,7 +2,7 @@
 /**
  * *
  *  * @link https://www.uniconsent.com/
- *  * @copyright Copyright (c) 2018 - 2023 Transfon Ltd.
+ *  * @copyright Copyright (c) 2018 - 2025 Transfon Ltd.
  *  * @license https://www.uniconsent.com/wordpress/
  *
  */
@@ -14,6 +14,8 @@ class UNIC_Public {
 	private $plugin_name;
 
 	private $version;
+
+	private $unic_values;
 
 	private $unic_default_language;
 
@@ -35,95 +37,6 @@ class UNIC_Public {
 
 		$unic_init = $this->get_unic_init_values();
 
-$unic_template_v1 = <<<UNIC
-window._unic_start = true;
-window.__cmp = window.__cmp || function () {
-	window.__cmp.commandQueue = window.__cmp.commandQueue || [];
-	window.__cmp.commandQueue.push(arguments);
-};
-window.__cmp.commandQueue = window.__cmp.commandQueue || [];
-window.__cmp.receiveMessage = function (event) {
-	var data = event && event.data && event.data.__cmpCall;
-
-	if (data) {
-		var callId = data.callId,
-		    command = data.command,
-		    parameter = data.parameter;
-
-		window.__cmp.commandQueue.push({
-			callId: callId,
-			command: command,
-			parameter: parameter,
-			event: event
-		});
-	}
-};
-var listen = window.attachEvent || window.addEventListener;
-var eventMethod = window.attachEvent ? "onmessage" : "message";
-listen(eventMethod, function (event) {
-	window.__cmp.receiveMessage(event);
-}, false);
-function addLocatorFrame() {
-	if (!window.frames['__cmpLocator']) {
-		if (document.body) {
-			var frame = document.createElement('iframe');
-			frame.style.display = 'none';
-			frame.name = '__cmpLocator';
-			document.body.appendChild(frame);
-		} else {
-			setTimeout(addLocatorFrame, 5);
-		}
-	}
-}
-addLocatorFrame();
-window.__uspapi = window.__uspapi || function() {
-    window.__uspapi.commandQueue = window.__uspapi.commandQueue || [];
-    window.__uspapi.commandQueue.push(arguments);
-};
-
-window.__uspapi.receiveMessage = function(event) {
-    var data = event && event.data && event.data.__uspapiCall;
-
-    if (data) {
-        var callId = data.callId,
-            command = data.command,
-            parameter = data.parameter;
-
-        window.__uspapi.commandQueue.push({
-            callId: callId,
-            command: command,
-            parameter: parameter,
-            event: event
-        });
-    }
-};
-
-if (window.attachEvent) {
-    window.attachEvent("onmessage", function(event) {
-        window.__uspapi.receiveMessage(event);
-    }, false);
-} else {
-    window.addEventListener("message", function(event) {
-        window.__uspapi.receiveMessage(event);
-    }, false);
-}
-
-function addLocatorFrameUSP() {
-    if (!window.frames['__uspapiLocator']) {
-        if (document.body) {
-            var frame = document.createElement('iframe');
-            frame.style.display = 'none';
-            frame.name = '__uspapiLocator';
-            document.body.appendChild(frame);
-        } else {
-            setTimeout(addLocatorFrameUSP, 5);
-        }
-    }
-}
-
-addLocatorFrameUSP();
-UNIC;
-
 $unic_stub_v2 = <<<UNIC
 <script type="text/javascript">
 !function(){var i,r,o;i="__tcfapiLocator",r=[],(o=window.frames[i])||(function e(){var t=window.document,a=!!o;if(!a)if(t.body){var n=t.createElement("iframe");n.style.cssText="display:none",n.name=i,t.body.appendChild(n)}else setTimeout(e,50);return!a}(),window.__tcfapi=function(){for(var e,t=[],a=0;a<arguments.length;a++)t[a]=arguments[a];if(!t.length)return r;if("setGdprApplies"===t[0])3<t.length&&2===parseInt(t[1],10)&&"boolean"==typeof t[3]&&(e=t[3],"function"==typeof t[2]&&t[2]("set",!0));else if("ping"===t[0]){var n={gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"};"function"==typeof t[2]&&t[2](n,!0)}else r.push(t)},window.addEventListener("message",function(n){var i="string"==typeof n.data,e={};try{e=i?JSON.parse(n.data):n.data}catch(e){}var r=e.__tcfapiCall;r&&window.__tcfapi(r.command,r.version,function(e,t){var a={__tcfapiReturn:{returnValue:e,success:t,callId:r.callId}};i&&(a=JSON.stringify(a)),n.source.postMessage(a,"*")},r.parameter)},!1))}();
@@ -133,7 +46,6 @@ window.gtag||(window.dataLayer=window.dataLayer||[],window.gtag=function(){windo
 </script>
 UNIC;
 		
-
 		$unic_license = esc_attr(get_option( 'unic_license' ));
 		$unic_enable_iab = esc_attr(get_option( 'unic_enable_iab' ));
 		if(strpos($unic_license, 'license-') > -1) {
@@ -141,14 +53,6 @@ UNIC;
 			$unic_license = substr($unic_license,0,10);
 			echo $unic_stub_v2."\n";
 			echo "<script async data-cfasync='false' src='https://cmp.uniconsent.com/v2/".$unic_license."/cmp.js'></script>\n";
-
-		} else if(strpos($unic_license, 'key-') > -1) {
-			$unic_license = str_replace('key-', '', $unic_license);
-			$unic_license = substr($unic_license,0,10);
-			echo "<script>\n";
-			echo $unic_template_v1."\n";
-			echo "</script>\n";
-			echo "<script async data-cfasync='false' src='https://cmp.uniconsent.com/t/".$unic_license.".cmp.js'></script>\n";
 
 		} else if($unic_enable_iab == 'v2') {
 			$unic_license = '85d3bd683e';
@@ -159,12 +63,12 @@ UNIC;
 			echo "<script async data-cfasync='false' src='https://cmp.uniconsent.com/v2/".$unic_license."/cmp.js'></script>\n";
 
 		} else {
-			$unic_license = '69a3449348';
+			$unic_license = '85d3bd683e';
 			echo "<script>\n";
-			echo "window.__unic_config = window.__unic_config || {}; window.__unic_config = ".$unic_init.";\n";
-			echo $unic_template_v1."\n";
+			echo "window.__unic_config_v2 = ".$unic_init.";\n";
 			echo "</script>\n";
-			echo "<script async data-cfasync='false' src='https://cmp.uniconsent.com/t/".$unic_license.".cmp.js'></script>\n";
+			echo $unic_stub_v2."\n";
+			echo "<script async data-cfasync='false' src='https://cmp.uniconsent.com/v2/".$unic_license."/cmp.js'></script>\n";
 		}
 		
 	}
@@ -174,11 +78,7 @@ UNIC;
 		$unic_init_vals = array();
 
 		$unic_license = esc_attr(get_option( 'unic_license' ));
-		if(strpos($unic_license, 'key-') > -1) {
-			$unic_init_vals['unic_license'] = str_replace('key-', '', $unic_license);
-			$unic_init_vals['unic_license'] = substr($unic_license,0,10);
-			$unic_init_vals['version'] = 1;
-		} else if(strpos($unic_license, 'license-') > -1) {
+		if(strpos($unic_license, 'license-') > -1) {
 			$unic_init_vals['unic_license'] = str_replace('license-', '', $unic_license);
 			$unic_init_vals['unic_license'] = substr($unic_license,0,10);
 			$unic_init_vals['version'] = 2;
@@ -209,7 +109,7 @@ UNIC;
 
 			$unic_company = esc_attr(get_option( 'unic_company' ));
 			if(!$unic_company) {
-				$unic_company = 'Current website';
+				$unic_company = '';
 			}
 			$unic_init_vals['unic_company'] = $unic_company;
 
