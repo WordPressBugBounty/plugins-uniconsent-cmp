@@ -19,7 +19,7 @@ class UNIC_CMP {
 		if ( defined( 'UNIC_VERSION' ) ) {
 			$this->version = UNIC_VERSION;
 		} else {
-			$this->version = '1.5.10';
+			$this->version = '1.6.0';
 		}
 		$this->plugin_name = 'uniconsent-cmp';
 

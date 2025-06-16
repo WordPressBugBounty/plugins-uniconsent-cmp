@@ -1,11 +1,11 @@
 === UniConsent Cookie Consent CMP - Consent Manager ===
-Version: 1.5.10
+Version: 1.6.0
 Contributors: uniconsent
 Tags: cmp, cookie banner, cookie consent, iab, cookie
 Requires at least: 4.0
 Tested up to: 6.8.1
 Requires PHP: 7.4
-Stable tag: 1.5.10
+Stable tag: 1.6.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Leading Consent Management Platform for IAB TCF, GPP, GDPR, POPIA, CCPA, COPPA, and LGPD Compliance.
@@ -22,7 +22,9 @@ Leading Consent Management Platform for GDPR, CCPA, COPPA, PIPL, LGPD, POPIA Com
 
 **Microsoft UET Consent Mode Support**
 
-**Bing Ads Consent Mode Support **
+**Bing Ads Consent Mode Support**
+
+**WP Consent API Support**
 
 [UniConsent](https://www.uniconsent.com/) implements the IAB Transparency and Consent Framework for GDPR and Google Ad Manager/Adsense Consent Guidance. Most publishers have seen revenue increased substantially right after implemented and switched to UniConsent.
 
@@ -119,6 +121,9 @@ Please check: [UniConsent Consent Manager Offical site](https://www.uniconsent.c
 6. UniConsent - stage six: Initial bar screen.
 
 == Changelog ==
+
+= 1.6.0 =
+* WP Consent API Support
 
 = 1.5.7 =
 * Fix warning for PHP 8.2+
