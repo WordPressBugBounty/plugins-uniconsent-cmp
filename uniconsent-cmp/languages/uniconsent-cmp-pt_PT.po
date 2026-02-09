@@ -1,3 +1,4 @@
+# Portuguese translation for UniConsent Cookie Consent CMP
 # Copyright (C) 2025 UniConsent
 # This file is distributed under the GPLv3.
 msgid ""
@@ -5,465 +6,467 @@ msgstr ""
 "Project-Id-Version: UniConsent Cookie Consent CMP 1.6.5\n"
 "Report-Msgid-Bugs-To: https://www.uniconsent.com/\n"
 "POT-Creation-Date: 2025-01-01T00:00:00+00:00\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Last-Translator: UniConsent <support@uniconsent.com>\n"
+"Language-Team: Portuguese\n"
+"Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: admin/views.php:63
 msgid "Enable EU GDPR Compliance"
-msgstr ""
+msgstr "Ativar a conformidade com o RGPD da UE"
 
 #: admin/views.php:65 admin/views.php:74 admin/views.php:176
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: admin/views.php:66 admin/views.php:75
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: admin/views.php:72
 msgid "Enable U.S. CCPA Compliance"
-msgstr ""
+msgstr "Ativar a conformidade com a CCPA dos EUA"
 
 #: admin/views.php:81
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 #: admin/views.php:83
 msgid "English"
-msgstr ""
+msgstr "Inglês"
 
 #: admin/views.php:84
 msgid "French"
-msgstr ""
+msgstr "Francês"
 
 #: admin/views.php:85
 msgid "German"
-msgstr ""
+msgstr "Alemão"
 
 #: admin/views.php:86
 msgid "Spanish"
-msgstr ""
+msgstr "Espanhol"
 
 #: admin/views.php:87
 msgid "Italian"
-msgstr ""
+msgstr "Italiano"
 
 #: admin/views.php:88
 msgid "Portuguese"
-msgstr ""
+msgstr "Português"
 
 #: admin/views.php:89
 msgid "Polish"
-msgstr ""
+msgstr "Polaco"
 
 #: admin/views.php:90
 msgid "Dutch"
-msgstr ""
+msgstr "Neerlandês"
 
 #: admin/views.php:91
 msgid "Swedish"
-msgstr ""
+msgstr "Sueco"
 
 #: admin/views.php:92
 msgid "Bulgarian"
-msgstr ""
+msgstr "Búlgaro"
 
 #: admin/views.php:93
 msgid "Catalan"
-msgstr ""
+msgstr "Catalão"
 
 #: admin/views.php:94
 msgid "Czech"
-msgstr ""
+msgstr "Checo"
 
 #: admin/views.php:95
 msgid "Danish"
-msgstr ""
+msgstr "Dinamarquês"
 
 #: admin/views.php:96
 msgid "Greek"
-msgstr ""
+msgstr "Grego"
 
 #: admin/views.php:97
 msgid "Estonian"
-msgstr ""
+msgstr "Estónio"
 
 #: admin/views.php:98
 msgid "Finnish"
-msgstr ""
+msgstr "Finlandês"
 
 #: admin/views.php:99
 msgid "Hungarian"
-msgstr ""
+msgstr "Húngaro"
 
 #: admin/views.php:100
 msgid "Lithuanian"
-msgstr ""
+msgstr "Lituano"
 
 #: admin/views.php:101
 msgid "Latvian"
-msgstr ""
+msgstr "Letão"
 
 #: admin/views.php:102
 msgid "Maltese"
-msgstr ""
+msgstr "Maltês"
 
 #: admin/views.php:103
 msgid "Norwegian"
-msgstr ""
+msgstr "Norueguês"
 
 #: admin/views.php:104
 msgid "Romanian"
-msgstr ""
+msgstr "Romeno"
 
 #: admin/views.php:105
 msgid "Russian"
-msgstr ""
+msgstr "Russo"
 
 #: admin/views.php:106
 msgid "Slovak"
-msgstr ""
+msgstr "Eslovaco"
 
 #: admin/views.php:107
 msgid "Slovenian"
-msgstr ""
+msgstr "Esloveno"
 
 #: admin/views.php:108
 msgid "Chinese"
-msgstr ""
+msgstr "Chinês"
 
 #: admin/views.php:109
 msgid "Serbian"
-msgstr ""
+msgstr "Sérvio"
 
 #: admin/views.php:110
 msgid "Japanese"
-msgstr ""
+msgstr "Japonês"
 
 #: admin/views.php:111
 msgid "Bosnian"
-msgstr ""
+msgstr "Bósnio"
 
 #: admin/views.php:112
 msgid "Turkish"
-msgstr ""
+msgstr "Turco"
 
 #: admin/views.php:113
 msgid "Welsh"
-msgstr ""
+msgstr "Galês"
 
 #: admin/views.php:114
 msgid "Basque"
-msgstr ""
+msgstr "Basco"
 
 #: admin/views.php:115
 msgid "Galician"
-msgstr ""
+msgstr "Galego"
 
 #: admin/views.php:116
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebraico"
 
 #: admin/views.php:117
 msgid "Indonesian"
-msgstr ""
+msgstr "Indonésio"
 
 #: admin/views.php:118
 msgid "Korean"
-msgstr ""
+msgstr "Coreano"
 
 #: admin/views.php:119
 msgid "Macedonian"
-msgstr ""
+msgstr "Macedónio"
 
 #: admin/views.php:120
 msgid "Malay"
-msgstr ""
+msgstr "Malaio"
 
 #: admin/views.php:121
 msgid "Tagalog"
-msgstr ""
+msgstr "Tagalo"
 
 #: admin/views.php:122
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ucraniano"
 
 #: admin/views.php:127
 msgid "Website Name (Optional)"
-msgstr ""
+msgstr "Nome do site (Opcional)"
 
 #: admin/views.php:134
 msgid "Website LOGO URL (Optional)"
-msgstr ""
+msgstr "URL do logótipo do site (Opcional)"
 
 #: admin/views.php:141
 msgid "Policy URL (Optional)"
-msgstr ""
+msgstr "URL da política de privacidade (Opcional)"
 
 #: admin/views.php:146
 msgid "Example:"
-msgstr ""
+msgstr "Exemplo:"
 
 #: admin/views.php:146
 msgid "https://www.example.com/policy"
-msgstr ""
+msgstr "https://www.example.com/politica"
 
 #: admin/views.php:152
 msgid "GDPR Policy Region"
-msgstr ""
+msgstr "Região da política RGPD"
 
 #: admin/views.php:154
 msgid "None"
-msgstr ""
+msgstr "Nenhuma"
 
 #: admin/views.php:155
 msgid "Worldwide"
-msgstr ""
+msgstr "Todo o mundo"
 
 #: admin/views.php:156
 msgid "EU (EEA) Countries"
-msgstr ""
+msgstr "Países da UE (EEE)"
 
 #: admin/views.php:165
 msgid "CMP Style"
-msgstr ""
+msgstr "Estilo da CMP"
 
 #: admin/views.php:167
 msgid "Banner"
-msgstr ""
+msgstr "Banner"
 
 #: admin/views.php:168
 msgid "Popup Box"
-msgstr ""
+msgstr "Janela pop-up"
 
 #: admin/views.php:174
 msgid "IAB TCF Compliance"
-msgstr ""
+msgstr "Conformidade IAB TCF"
 
 #: admin/views.php:177
 msgid "IAB TCF 2.2"
-msgstr ""
+msgstr "IAB TCF 2.2"
 
 #: admin/views.php:184
 msgid "License key (Optional)"
-msgstr ""
+msgstr "Chave de licença (Opcional)"
 
 #: admin/views.php:189
 msgid "* Get your free license key at:"
-msgstr ""
+msgstr "* Obtenha a sua chave de licença gratuita em:"
 
 #: admin/views.php
 msgid "Settings"
-msgstr ""
+msgstr "Definições"
 
 #: admin/views.php
 msgid "Support"
-msgstr ""
+msgstr "Suporte"
 
 #: admin/views.php
 msgid "UniConsent Configuration"
-msgstr ""
+msgstr "Configuração do UniConsent"
 
 #: admin/views.php
 msgid "Configure your UniConsent integration settings"
-msgstr ""
+msgstr "Configure as suas definições de integração do UniConsent"
 
 #: admin/views.php
 msgid "Enter your website name..."
-msgstr ""
+msgstr "Introduza o nome do seu site..."
 
 #: admin/views.php
 msgid "Enter your logo URL..."
-msgstr ""
+msgstr "Introduza o URL do seu logótipo..."
 
 #: admin/views.php
 msgid "Enter your license key..."
-msgstr ""
+msgstr "Introduza a sua chave de licença..."
 
 #: admin/views.php
 msgid "When select EU, only display CMP to the users in EU countries."
-msgstr ""
+msgstr "Ao selecionar UE, a CMP só é exibida aos utilizadores em países da UE."
 
 #: admin/views.php
 msgid "to unlock more features."
-msgstr ""
+msgstr "para desbloquear mais funcionalidades."
 
 #: admin/views.php
 msgid "* The configurations are managed at"
-msgstr ""
+msgstr "* As configurações são geridas em"
 
 #: admin/views.php
 msgid "once you have entered the license key:"
-msgstr ""
+msgstr "depois de ter introduzido a chave de licença:"
 
 #: admin/views.php
 msgid "Save Changes"
-msgstr ""
+msgstr "Guardar alterações"
 
 #: admin/views.php
 msgid "Support Center"
-msgstr ""
+msgstr "Centro de suporte"
 
 #: admin/views.php
 msgid "Get help and find answers to your questions"
-msgstr ""
+msgstr "Obtenha ajuda e encontre respostas para as suas questões"
 
 #: admin/views.php
 msgid "Documentation"
-msgstr ""
+msgstr "Documentação"
 
 #: admin/views.php
 msgid "Comprehensive guides and tutorials to help you get started and make the most of our plugin."
-msgstr ""
+msgstr "Guias completos e tutoriais para o ajudar a começar e tirar o máximo partido do nosso plugin."
 
 #: admin/views.php
 msgid "View Documentation"
-msgstr ""
+msgstr "Ver documentação"
 
 #: admin/views.php
 msgid "Email Support"
-msgstr ""
+msgstr "Suporte por e-mail"
 
 #: admin/views.php
 msgid "Send us an email and we'll get back to you within 24 hours with a detailed response."
-msgstr ""
+msgstr "Envie-nos um e-mail e responderemos no prazo de 24 horas com uma resposta detalhada."
 
 #: admin/views.php
 msgid "Send Email"
-msgstr ""
+msgstr "Enviar e-mail"
 
 #: admin/views.php
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Perguntas frequentes"
 
 #: admin/views.php
 msgid "Quick answers to common questions"
-msgstr ""
+msgstr "Respostas rápidas a perguntas comuns"
 
 #: admin/views.php
 msgid "How do I get started with UniConsent?"
-msgstr ""
+msgstr "Como começo a usar o UniConsent?"
 
 #: admin/views.php
 msgid "Install and activate the plugin, then configure your consent settings on the Settings tab. Enable GDPR and/or CCPA compliance, choose your language and CMP style, and save. The consent banner will appear on your site automatically."
-msgstr ""
+msgstr "Instale e ative o plugin, depois configure as suas definições de consentimento no separador Definições. Ative a conformidade com o RGPD e/ou CCPA, escolha o seu idioma e estilo de CMP e guarde. O banner de consentimento aparecerá automaticamente no seu site."
 
 #: admin/views.php
 msgid "Do I need a license key?"
-msgstr ""
+msgstr "Preciso de uma chave de licença?"
 
 #: admin/views.php
 msgid "No, the plugin works without a license key with basic features. To unlock advanced features such as IAB TCF 2.2, Google Consent Mode v2, analytics dashboard, and full customisation, register for a free license key at"
-msgstr ""
+msgstr "Não, o plugin funciona sem chave de licença com funcionalidades básicas. Para desbloquear funcionalidades avançadas como IAB TCF 2.2, Google Consent Mode v2, painel de análise e personalização completa, registe-se para obter uma chave de licença gratuita em"
 
 #: admin/views.php
 msgid "What is IAB TCF 2.2 and do I need it?"
-msgstr ""
+msgstr "O que é o IAB TCF 2.2 e preciso dele?"
 
 #: admin/views.php
 msgid "IAB TCF (Transparency and Consent Framework) 2.2 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.2 is recommended to stay compliant."
-msgstr ""
+msgstr "IAB TCF (Transparency and Consent Framework) 2.2 é um padrão da indústria para gerir o consentimento do utilizador para publicidade online. Se utiliza Google AdSense, Google Ad Manager ou publicidade programática, é recomendado ativar o IAB TCF 2.2 para manter a conformidade."
 
 #: admin/views.php
 msgid "Where are my settings managed after entering a license key?"
-msgstr ""
+msgstr "Onde são geridas as minhas definições após introduzir uma chave de licença?"
 
 #: admin/views.php
 msgid "Once you enter a license key (format: license-xxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at"
-msgstr ""
+msgstr "Depois de introduzir uma chave de licença (formato: license-xxxxxxxx), as suas configurações de CMP são geridas através do painel do UniConsent em"
 
 #: admin/views.php
 msgid "The WordPress plugin will load your configuration automatically."
-msgstr ""
+msgstr "O plugin WordPress carregará a sua configuração automaticamente."
 
 #: admin/views.php
 msgid "Certified EU IAB TCF 2.2/2.3 CMP"
-msgstr ""
+msgstr "CMP certificada EU IAB TCF 2.2/2.3"
 
 #: admin/views.php
 msgid "Certified Canada IAB TCF CMP"
-msgstr ""
+msgstr "CMP certificada Canada IAB TCF"
 
 #: admin/views.php
 msgid "Certified Google CMP (Gold Tier)"
-msgstr ""
+msgstr "CMP certificada Google (nível Gold)"
 
 #: admin/views.php
 msgid "Google Consent Mode v2"
-msgstr ""
+msgstr "Google Consent Mode v2"
 
 #: admin/views.php
 msgid "Microsoft UET Consent Mode"
-msgstr ""
+msgstr "Microsoft UET Consent Mode"
 
 #: admin/views.php
 msgid "IAB GPP 1.1 compliance"
-msgstr ""
+msgstr "Conformidade IAB GPP 1.1"
 
 #: admin/views.php
 msgid "40+ Languages support"
-msgstr ""
+msgstr "Suporte de 40+ idiomas"
 
 #: admin/views.php
 msgid "GPP, TCF, USP Consent signals"
-msgstr ""
+msgstr "Sinais de consentimento GPP, TCF, USP"
 
 #: admin/views.php
 msgid "For GDPR, CCPA, LGPD, PDPA, CPRA, PIPL"
-msgstr ""
+msgstr "Para RGPD, CCPA, LGPD, PDPA, CPRA, PIPL"
 
 #: admin/views.php
 msgid "More popup UI choices and easy mode"
-msgstr ""
+msgstr "Mais opções de interface popup e modo fácil"
 
 #: admin/views.php
 msgid "Fully customisable consent collection pop-ups and bars"
-msgstr ""
+msgstr "Pop-ups e barras de recolha de consentimento totalmente personalizáveis"
 
 #: admin/views.php
 msgid "Multiple languages support"
-msgstr ""
+msgstr "Suporte multilingue"
 
 #: admin/views.php
 msgid "Data analytics and insight dashboard"
-msgstr ""
+msgstr "Painel de análise de dados e insights"
 
 #: admin/views.php
 msgid "One-tag Implementation"
-msgstr ""
+msgstr "Implementação de uma única tag"
 
 #: admin/views.php
 msgid "Google GAM/Google AdSense/Google AdX/Amazon APS Support"
-msgstr ""
+msgstr "Suporte Google GAM/Google AdSense/Google AdX/Amazon APS"
 
 #: admin/views.php
 msgid "Prebid.js and Header bidding support"
-msgstr ""
+msgstr "Suporte Prebid.js e Header bidding"
 
 #: admin/views.php
 msgid "Cookie ePrivacy consent support"
-msgstr ""
+msgstr "Suporte de consentimento Cookie ePrivacy"
 
 #: admin/views.php
 msgid "Website cookie discovery and disclosure"
-msgstr ""
+msgstr "Descoberta e divulgação de cookies do site"
 
 #: admin/views.php
 msgid "JavaScript and cookie blocking"
-msgstr ""
+msgstr "Bloqueio de JavaScript e cookies"
 
 #: admin/views.php
 msgid "Consent rate analytics and insight"
-msgstr ""
+msgstr "Análise e insights da taxa de consentimento"
 
 #: admin/views.php
 msgid "Support:"
-msgstr ""
+msgstr "Suporte:"
 
 #: admin/views.php
 msgid "Get Started"
-msgstr ""
+msgstr "Começar"

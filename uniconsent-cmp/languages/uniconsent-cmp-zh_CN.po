@@ -1,3 +1,4 @@
+# Chinese (Simplified) translation for UniConsent Cookie Consent CMP
 # Copyright (C) 2025 UniConsent
 # This file is distributed under the GPLv3.
 msgid ""
@@ -5,465 +6,467 @@ msgstr ""
 "Project-Id-Version: UniConsent Cookie Consent CMP 1.6.5\n"
 "Report-Msgid-Bugs-To: https://www.uniconsent.com/\n"
 "POT-Creation-Date: 2025-01-01T00:00:00+00:00\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Last-Translator: UniConsent <support@uniconsent.com>\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: admin/views.php:63
 msgid "Enable EU GDPR Compliance"
-msgstr ""
+msgstr "启用欧盟 GDPR 合规"
 
 #: admin/views.php:65 admin/views.php:74 admin/views.php:176
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: admin/views.php:66 admin/views.php:75
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: admin/views.php:72
 msgid "Enable U.S. CCPA Compliance"
-msgstr ""
+msgstr "启用美国 CCPA 合规"
 
 #: admin/views.php:81
 msgid "Language"
-msgstr ""
+msgstr "语言"
 
 #: admin/views.php:83
 msgid "English"
-msgstr ""
+msgstr "英语"
 
 #: admin/views.php:84
 msgid "French"
-msgstr ""
+msgstr "法语"
 
 #: admin/views.php:85
 msgid "German"
-msgstr ""
+msgstr "德语"
 
 #: admin/views.php:86
 msgid "Spanish"
-msgstr ""
+msgstr "西班牙语"
 
 #: admin/views.php:87
 msgid "Italian"
-msgstr ""
+msgstr "意大利语"
 
 #: admin/views.php:88
 msgid "Portuguese"
-msgstr ""
+msgstr "葡萄牙语"
 
 #: admin/views.php:89
 msgid "Polish"
-msgstr ""
+msgstr "波兰语"
 
 #: admin/views.php:90
 msgid "Dutch"
-msgstr ""
+msgstr "荷兰语"
 
 #: admin/views.php:91
 msgid "Swedish"
-msgstr ""
+msgstr "瑞典语"
 
 #: admin/views.php:92
 msgid "Bulgarian"
-msgstr ""
+msgstr "保加利亚语"
 
 #: admin/views.php:93
 msgid "Catalan"
-msgstr ""
+msgstr "加泰罗尼亚语"
 
 #: admin/views.php:94
 msgid "Czech"
-msgstr ""
+msgstr "捷克语"
 
 #: admin/views.php:95
 msgid "Danish"
-msgstr ""
+msgstr "丹麦语"
 
 #: admin/views.php:96
 msgid "Greek"
-msgstr ""
+msgstr "希腊语"
 
 #: admin/views.php:97
 msgid "Estonian"
-msgstr ""
+msgstr "爱沙尼亚语"
 
 #: admin/views.php:98
 msgid "Finnish"
-msgstr ""
+msgstr "芬兰语"
 
 #: admin/views.php:99
 msgid "Hungarian"
-msgstr ""
+msgstr "匈牙利语"
 
 #: admin/views.php:100
 msgid "Lithuanian"
-msgstr ""
+msgstr "立陶宛语"
 
 #: admin/views.php:101
 msgid "Latvian"
-msgstr ""
+msgstr "拉脱维亚语"
 
 #: admin/views.php:102
 msgid "Maltese"
-msgstr ""
+msgstr "马耳他语"
 
 #: admin/views.php:103
 msgid "Norwegian"
-msgstr ""
+msgstr "挪威语"
 
 #: admin/views.php:104
 msgid "Romanian"
-msgstr ""
+msgstr "罗马尼亚语"
 
 #: admin/views.php:105
 msgid "Russian"
-msgstr ""
+msgstr "俄语"
 
 #: admin/views.php:106
 msgid "Slovak"
-msgstr ""
+msgstr "斯洛伐克语"
 
 #: admin/views.php:107
 msgid "Slovenian"
-msgstr ""
+msgstr "斯洛文尼亚语"
 
 #: admin/views.php:108
 msgid "Chinese"
-msgstr ""
+msgstr "中文"
 
 #: admin/views.php:109
 msgid "Serbian"
-msgstr ""
+msgstr "塞尔维亚语"
 
 #: admin/views.php:110
 msgid "Japanese"
-msgstr ""
+msgstr "日语"
 
 #: admin/views.php:111
 msgid "Bosnian"
-msgstr ""
+msgstr "波斯尼亚语"
 
 #: admin/views.php:112
 msgid "Turkish"
-msgstr ""
+msgstr "土耳其语"
 
 #: admin/views.php:113
 msgid "Welsh"
-msgstr ""
+msgstr "威尔士语"
 
 #: admin/views.php:114
 msgid "Basque"
-msgstr ""
+msgstr "巴斯克语"
 
 #: admin/views.php:115
 msgid "Galician"
-msgstr ""
+msgstr "加利西亚语"
 
 #: admin/views.php:116
 msgid "Hebrew"
-msgstr ""
+msgstr "希伯来语"
 
 #: admin/views.php:117
 msgid "Indonesian"
-msgstr ""
+msgstr "印度尼西亚语"
 
 #: admin/views.php:118
 msgid "Korean"
-msgstr ""
+msgstr "韩语"
 
 #: admin/views.php:119
 msgid "Macedonian"
-msgstr ""
+msgstr "马其顿语"
 
 #: admin/views.php:120
 msgid "Malay"
-msgstr ""
+msgstr "马来语"
 
 #: admin/views.php:121
 msgid "Tagalog"
-msgstr ""
+msgstr "他加禄语"
 
 #: admin/views.php:122
 msgid "Ukrainian"
-msgstr ""
+msgstr "乌克兰语"
 
 #: admin/views.php:127
 msgid "Website Name (Optional)"
-msgstr ""
+msgstr "网站名称（可选）"
 
 #: admin/views.php:134
 msgid "Website LOGO URL (Optional)"
-msgstr ""
+msgstr "网站 Logo 网址（可选）"
 
 #: admin/views.php:141
 msgid "Policy URL (Optional)"
-msgstr ""
+msgstr "隐私政策网址（可选）"
 
 #: admin/views.php:146
 msgid "Example:"
-msgstr ""
+msgstr "示例："
 
 #: admin/views.php:146
 msgid "https://www.example.com/policy"
-msgstr ""
+msgstr "https://www.example.com/policy"
 
 #: admin/views.php:152
 msgid "GDPR Policy Region"
-msgstr ""
+msgstr "GDPR 政策区域"
 
 #: admin/views.php:154
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #: admin/views.php:155
 msgid "Worldwide"
-msgstr ""
+msgstr "全球"
 
 #: admin/views.php:156
 msgid "EU (EEA) Countries"
-msgstr ""
+msgstr "欧盟（EEA）国家"
 
 #: admin/views.php:165
 msgid "CMP Style"
-msgstr ""
+msgstr "CMP 样式"
 
 #: admin/views.php:167
 msgid "Banner"
-msgstr ""
+msgstr "横幅"
 
 #: admin/views.php:168
 msgid "Popup Box"
-msgstr ""
+msgstr "弹窗"
 
 #: admin/views.php:174
 msgid "IAB TCF Compliance"
-msgstr ""
+msgstr "IAB TCF 合规"
 
 #: admin/views.php:177
 msgid "IAB TCF 2.2"
-msgstr ""
+msgstr "IAB TCF 2.2"
 
 #: admin/views.php:184
 msgid "License key (Optional)"
-msgstr ""
+msgstr "许可证密钥（可选）"
 
 #: admin/views.php:189
 msgid "* Get your free license key at:"
-msgstr ""
+msgstr "* 在此获取您的免费许可证密钥："
 
 #: admin/views.php
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: admin/views.php
 msgid "Support"
-msgstr ""
+msgstr "支持"
 
 #: admin/views.php
 msgid "UniConsent Configuration"
-msgstr ""
+msgstr "UniConsent 配置"
 
 #: admin/views.php
 msgid "Configure your UniConsent integration settings"
-msgstr ""
+msgstr "配置您的 UniConsent 集成设置"
 
 #: admin/views.php
 msgid "Enter your website name..."
-msgstr ""
+msgstr "输入您的网站名称..."
 
 #: admin/views.php
 msgid "Enter your logo URL..."
-msgstr ""
+msgstr "输入您的 Logo 网址..."
 
 #: admin/views.php
 msgid "Enter your license key..."
-msgstr ""
+msgstr "输入您的许可证密钥..."
 
 #: admin/views.php
 msgid "When select EU, only display CMP to the users in EU countries."
-msgstr ""
+msgstr "选择欧盟时，仅向欧盟国家的用户显示 CMP。"
 
 #: admin/views.php
 msgid "to unlock more features."
-msgstr ""
+msgstr "以解锁更多功能。"
 
 #: admin/views.php
 msgid "* The configurations are managed at"
-msgstr ""
+msgstr "* 配置在以下网址管理"
 
 #: admin/views.php
 msgid "once you have entered the license key:"
-msgstr ""
+msgstr "在您输入许可证密钥后："
 
 #: admin/views.php
 msgid "Save Changes"
-msgstr ""
+msgstr "保存更改"
 
 #: admin/views.php
 msgid "Support Center"
-msgstr ""
+msgstr "支持中心"
 
 #: admin/views.php
 msgid "Get help and find answers to your questions"
-msgstr ""
+msgstr "获取帮助并找到您问题的答案"
 
 #: admin/views.php
 msgid "Documentation"
-msgstr ""
+msgstr "文档"
 
 #: admin/views.php
 msgid "Comprehensive guides and tutorials to help you get started and make the most of our plugin."
-msgstr ""
+msgstr "全面的指南和教程，帮助您入门并充分利用我们的插件。"
 
 #: admin/views.php
 msgid "View Documentation"
-msgstr ""
+msgstr "查看文档"
 
 #: admin/views.php
 msgid "Email Support"
-msgstr ""
+msgstr "邮件支持"
 
 #: admin/views.php
 msgid "Send us an email and we'll get back to you within 24 hours with a detailed response."
-msgstr ""
+msgstr "给我们发送电子邮件，我们将在 24 小时内给您详细回复。"
 
 #: admin/views.php
 msgid "Send Email"
-msgstr ""
+msgstr "发送邮件"
 
 #: admin/views.php
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "常见问题"
 
 #: admin/views.php
 msgid "Quick answers to common questions"
-msgstr ""
+msgstr "常见问题快速解答"
 
 #: admin/views.php
 msgid "How do I get started with UniConsent?"
-msgstr ""
+msgstr "如何开始使用 UniConsent？"
 
 #: admin/views.php
 msgid "Install and activate the plugin, then configure your consent settings on the Settings tab. Enable GDPR and/or CCPA compliance, choose your language and CMP style, and save. The consent banner will appear on your site automatically."
-msgstr ""
+msgstr "安装并激活插件，然后在设置选项卡中配置您的同意设置。启用 GDPR 和/或 CCPA 合规，选择您的语言和 CMP 样式，然后保存。同意横幅将自动显示在您的网站上。"
 
 #: admin/views.php
 msgid "Do I need a license key?"
-msgstr ""
+msgstr "我需要许可证密钥吗？"
 
 #: admin/views.php
 msgid "No, the plugin works without a license key with basic features. To unlock advanced features such as IAB TCF 2.2, Google Consent Mode v2, analytics dashboard, and full customisation, register for a free license key at"
-msgstr ""
+msgstr "不需要，插件无需许可证密钥即可使用基本功能。要解锁高级功能（如 IAB TCF 2.2、Google Consent Mode v2、分析仪表板和完全自定义），请在以下网址注册免费许可证密钥"
 
 #: admin/views.php
 msgid "What is IAB TCF 2.2 and do I need it?"
-msgstr ""
+msgstr "什么是 IAB TCF 2.2，我需要它吗？"
 
 #: admin/views.php
 msgid "IAB TCF (Transparency and Consent Framework) 2.2 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.2 is recommended to stay compliant."
-msgstr ""
+msgstr "IAB TCF（透明度和同意框架）2.2 是管理在线广告用户同意的行业标准。如果您使用 Google AdSense、Google Ad Manager 或程序化广告，建议启用 IAB TCF 2.2 以保持合规。"
 
 #: admin/views.php
 msgid "Where are my settings managed after entering a license key?"
-msgstr ""
+msgstr "输入许可证密钥后，我的设置在哪里管理？"
 
 #: admin/views.php
 msgid "Once you enter a license key (format: license-xxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at"
-msgstr ""
+msgstr "输入许可证密钥（格式：license-xxxxxxxx）后，您的 CMP 配置通过 UniConsent 仪表板管理，网址为"
 
 #: admin/views.php
 msgid "The WordPress plugin will load your configuration automatically."
-msgstr ""
+msgstr "WordPress 插件将自动加载您的配置。"
 
 #: admin/views.php
 msgid "Certified EU IAB TCF 2.2/2.3 CMP"
-msgstr ""
+msgstr "经认证的 EU IAB TCF 2.2/2.3 CMP"
 
 #: admin/views.php
 msgid "Certified Canada IAB TCF CMP"
-msgstr ""
+msgstr "经认证的 Canada IAB TCF CMP"
 
 #: admin/views.php
 msgid "Certified Google CMP (Gold Tier)"
-msgstr ""
+msgstr "经认证的 Google CMP（金牌级）"
 
 #: admin/views.php
 msgid "Google Consent Mode v2"
-msgstr ""
+msgstr "Google Consent Mode v2"
 
 #: admin/views.php
 msgid "Microsoft UET Consent Mode"
-msgstr ""
+msgstr "Microsoft UET Consent Mode"
 
 #: admin/views.php
 msgid "IAB GPP 1.1 compliance"
-msgstr ""
+msgstr "IAB GPP 1.1 合规"
 
 #: admin/views.php
 msgid "40+ Languages support"
-msgstr ""
+msgstr "支持 40+ 种语言"
 
 #: admin/views.php
 msgid "GPP, TCF, USP Consent signals"
-msgstr ""
+msgstr "GPP、TCF、USP 同意信号"
 
 #: admin/views.php
 msgid "For GDPR, CCPA, LGPD, PDPA, CPRA, PIPL"
-msgstr ""
+msgstr "适用于 GDPR、CCPA、LGPD、PDPA、CPRA、PIPL"
 
 #: admin/views.php
 msgid "More popup UI choices and easy mode"
-msgstr ""
+msgstr "更多弹窗界面选择和简易模式"
 
 #: admin/views.php
 msgid "Fully customisable consent collection pop-ups and bars"
-msgstr ""
+msgstr "完全可定制的同意收集弹窗和横幅"
 
 #: admin/views.php
 msgid "Multiple languages support"
-msgstr ""
+msgstr "多语言支持"
 
 #: admin/views.php
 msgid "Data analytics and insight dashboard"
-msgstr ""
+msgstr "数据分析和洞察仪表板"
 
 #: admin/views.php
 msgid "One-tag Implementation"
-msgstr ""
+msgstr "一标签实现"
 
 #: admin/views.php
 msgid "Google GAM/Google AdSense/Google AdX/Amazon APS Support"
-msgstr ""
+msgstr "支持 Google GAM/Google AdSense/Google AdX/Amazon APS"
 
 #: admin/views.php
 msgid "Prebid.js and Header bidding support"
-msgstr ""
+msgstr "支持 Prebid.js 和 Header bidding"
 
 #: admin/views.php
 msgid "Cookie ePrivacy consent support"
-msgstr ""
+msgstr "Cookie ePrivacy 同意支持"
 
 #: admin/views.php
 msgid "Website cookie discovery and disclosure"
-msgstr ""
+msgstr "网站 Cookie 发现和披露"
 
 #: admin/views.php
 msgid "JavaScript and cookie blocking"
-msgstr ""
+msgstr "JavaScript 和 Cookie 阻止"
 
 #: admin/views.php
 msgid "Consent rate analytics and insight"
-msgstr ""
+msgstr "同意率分析和洞察"
 
 #: admin/views.php
 msgid "Support:"
-msgstr ""
+msgstr "支持："
 
 #: admin/views.php
 msgid "Get Started"
-msgstr ""
+msgstr "立即开始"

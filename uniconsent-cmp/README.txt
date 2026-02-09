@@ -1,11 +1,11 @@
 === UniConsent Cookie Consent CMP - Consent Manager ===
-Version: 1.6.2
+Version: 1.6.5
 Contributors: uniconsent
 Tags: cmp, cookie banner, cookie consent, iab, cookie
 Requires at least: 4.0
-Tested up to: 6.8.1
+Tested up to: 6.8.3
 Requires PHP: 7.4
-Stable tag: 1.6.2
+Stable tag: 1.6.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Leading Consent Management Platform for IAB TCF, GPP, GDPR, POPIA, CCPA, COPPA, and LGPD Compliance.
@@ -121,6 +121,12 @@ Please check: [UniConsent Consent Manager Offical site](https://www.uniconsent.c
 6. UniConsent - stage six: Initial bar screen.
 
 == Changelog ==
+
+= 1.6.5 =
+* Localization support
+
+= 1.6.4 =
+* Improve UI
 
 = 1.6.1 =
 * Improvement

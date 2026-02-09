@@ -1,0 +1,266 @@
+=== UniConsent Cookie Consent CMP - Einwilligungsmanager ===
+Version: 1.6.5
+Contributors: uniconsent
+Tags: cmp, cookie banner, cookie einwilligung, iab, cookie
+Requires at least: 4.0
+Tested up to: 6.8.3
+Requires PHP: 7.4
+Stable tag: 1.6.5
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Führende Consent-Management-Plattform für IAB TCF, GPP, DSGVO, POPIA, CCPA, COPPA und LGPD Konformität.
+
+== Description ==
+
+Führende Consent-Management-Plattform für DSGVO, CCPA, COPPA, PIPL, LGPD, POPIA Konformität. UniConsent DSGVO, CCPA/CPRA, COPPA, LGPD, POPIA Konformitätslösung – Privacy Manager zur Vereinfachung der Einhaltung globaler Datenschutzvorschriften.
+
+**UniConsent CMP ist eine zertifizierte EU IAB TCF Consent-Management-Plattform.**
+
+**UniConsent CMP ist eine zertifizierte Canada IAB TCF Consent-Management-Plattform.**
+
+**UniConsent CMP ist eine zertifizierte Google Consent Mode CMP**
+
+**Microsoft UET Consent Mode Unterstützung**
+
+**Bing Ads Consent Mode Unterstützung**
+
+**WP Consent API Unterstützung**
+
+[UniConsent](https://www.uniconsent.com/) implementiert das IAB Transparency and Consent Framework für die DSGVO und die Google Ad Manager/AdSense Einwilligungsrichtlinien. Die meisten Publisher haben nach der Implementierung und dem Wechsel zu UniConsent eine deutliche Umsatzsteigerung verzeichnet.
+
+Sie suchen UniConsent DSGVO CMP für andere Plattformen? Besuchen Sie [Universal Consent Manager für DSGVO und CCPA Konformität](https://www.uniconsent.com/).
+
+Bleiben Sie auf dem Laufenden mit [Datenschutz Regtech Nachrichten](https://www.uniconsent.com/blog).
+
+Unterstützte Einwilligungssignale: EU IAB TCF 2.2 Einwilligungssignale, TCF Canada Einwilligungssignale, Global Privacy Platform (GPP) Einwilligungssignale, CCPA USP Einwilligungssignale, US-Bundesstaaten Einwilligungssignale usw.
+
+IAB Europe hat einen technischen Standard angekündigt, um das digitale Werbe-Ökosystem bei der Erfüllung der Anforderungen der [Datenschutz-Grundverordnung](https://www.uniconsent.com/gdpr) (DSGVO), [CCPA Konformität](https://www.uniconsent.com/ccpa), [CPRA Konformität](https://www.uniconsent.com/cpra), [LGPD Konformität](https://www.uniconsent.com/lgpd), [PDPA Konformität](https://www.uniconsent.com/pdpa) zu unterstützen. Dieses Plugin stellt eine Implementierung dieses Frameworks dar.
+
+UniConsent unterstützt die Einwilligungsverwaltung für Google GAM Anbieter.
+
+Unterstützung mehrerer Sprachen: Englisch, Spanisch, Deutsch, Französisch, Italienisch, Portugiesisch, Polnisch, Niederländisch, Schwedisch, Bulgarisch, Katalanisch, Tschechisch, Dänisch, Griechisch, Estnisch, Finnisch, Ungarisch, Litauisch, Lettisch, Maltesisch, Norwegisch, Rumänisch, Russisch, Slowakisch, Slowenisch, Chinesisch, Serbisch, Japanisch, Bosnisch, Türkisch, Walisisch, Baskisch, Galizisch, Hebräisch, Indonesisch, Koreanisch, Mazedonisch, Malaiisch, Tagalog, Ukrainisch. Weitere Sprachen folgen.
+
+Das UniConsent-Plugin implementiert das IAB Consent Framework für DSGVO, CCPA, ePrivacy-Richtlinie und Google Ad Manager/AdSense Einwilligungsmanager.
+
+UniConsent kann Drittanbieter-Tags basierend auf der Einwilligung des Benutzers laden und Einwilligungsdaten an den Google Tag Manager senden.
+
+Unterstützung für IAB TCF 2.2, Google Ad Manager, Google AdX, Google AdSense, Prebid.js Header Bidding, Amazon APS, benutzerdefinierte Anbieter, Facebook Pixel, Google Adwords, LinkedIn Pixel, Bing Ads.
+
+== Installation ==
+
+Dieser Abschnitt beschreibt, wie Sie das Plugin installieren und zum Laufen bringen.
+
+1. Laden Sie `uniconsent-cmp` in das Verzeichnis `/wp-content/plugins/` hoch
+2. Aktivieren Sie das Plugin über das Menü „Plugins" in WordPress
+3. Navigieren Sie zur UniConsent-Administrationsseite und konfigurieren Sie Ihre Einstellungen: Geben Sie Ihren Lizenzschlüssel ein oder ändern Sie die Konfigurationen.
+
+== Frequently Asked Questions ==
+
+= Was ist die DSGVO? =
+
+Die meisten Unternehmen, die in der EU geschäftlich tätig sind, kennen die Datenschutz-Grundverordnung (DSGVO), die am 25. Mai 2018 in Kraft getreten ist.
+
+Organisationen, die gegen die Vorschriften verstoßen, müssen mit hohen Geldstrafen rechnen: 20 Millionen Euro oder 4 Prozent des weltweiten Umsatzes pro Verstoß. Das kann für große Unternehmen Millionen oder sogar Milliarden Dollar an Bußgeldern bedeuten.
+
+Die DSGVO gilt für jedes Unternehmen, unabhängig davon, ob es seinen Sitz in der EU hat, das personenbezogene Daten von EU-Bürgern verarbeitet.
+
+= Was ist die DSGVO-Einwilligung und CMP?
+
+Die Einwilligung sollte durch eine eindeutige bestätigende Handlung erfolgen, die eine freiwillige, spezifische, informierte und unmissverständliche Zustimmung der betroffenen Person zur Verarbeitung ihrer personenbezogenen Daten darstellt, z. B. durch eine schriftliche Erklärung, auch auf elektronischem Wege, oder eine mündliche Erklärung. Dies könnte das Ankreuzen eines Kästchens beim Besuch einer Website, die Auswahl technischer Einstellungen für Dienste der Informationsgesellschaft oder eine andere Erklärung oder ein Verhalten umfassen, das in diesem Zusammenhang eindeutig die Zustimmung der betroffenen Person zur vorgeschlagenen Verarbeitung ihrer personenbezogenen Daten anzeigt.
+
+CMP ist die technische Infrastruktur, die ein Unternehmen verwendet, um zu erfassen und zu speichern, welchen Datenverwendungen die Kunden zugestimmt haben und wofür.
+
+= Ist UniConsent eine von der IAB EU zugelassene CMP?
+
+Ja, UniConsent ist ein von der IAB zugelassener Consent Management Provider.
+
+HINWEIS: DIE AKTIVIERUNG DIESES PLUGINS GARANTIERT NICHT, DASS SIE VOLLSTÄNDIG DSGVO-KONFORM SIND. BITTE WENDEN SIE SICH AN EINEN DSGVO-BERATER ODER EINE ANWALTSKANZLEI, UM DIE ERFORDERLICHEN MASSNAHMEN ZU BEWERTEN.
+
+= Wie funktioniert UniConsent oder eine Consent Management Provider (CMP) Lösung? =
+
+UniConsent oder jeder andere von der IAB zugelassene Consent Management Provider (CMP) bietet Publishern und Werbetreibenden einen Mechanismus, um die Einwilligung einzuholen und dann zu kontrollieren, welche Drittanbieter die Einwilligung zur Verfolgung von Benutzern ihrer Websites und Apps anfordern können.
+
+= Was ist der Unterschied zwischen UniConsent und anderen CMPs?
+
+* GEO-Targeting-Unterstützung, Einwilligungsbanner nur für EU-Bürger anzeigen.
+* Unterstützung mehrerer Modi, Banner oder Popup
+* Unterstützung für IAB-Anbieter und Google DFP-Anbieter.
+* Hohe Leistung und Zuverlässigkeit
+* Hohe Opt-in-Rate.
+* Geringe Auswirkung auf den Werbeumsatz
+* Cookie ePrivacy Einwilligungsunterstützung
+* Unterstützung für Google AdSense und Google DFP.
+* Cookie-Erkennung
+
+= Ist diese CMP-Lösung kostenlos?
+
+Ja, das WordPress-Plugin ist eine Lite-Version von UniConsent CMP und kann kostenlos verwendet werden. Wir bieten auch eine Premium-Version mit erweiterten Funktionen und technischem Support an. Bitte wenden Sie sich an hello@uniconsent.com für weitere Details.
+
+= Wir sind ein großer Publisher. Bieten Sie einen Premium-Plan an?
+
+Ja. Der Premium-Plan bietet folgende Funktionen:
+
+* Vollständig anpassbare mehrstufige Einwilligungs-Pop-ups und -Banner
+* Ein-Tag-Implementierung
+* Datenanalyse und Einblicke
+* Unterstützung mehrerer Sprachen
+* IAB- und Google-Unterstützung
+* Cookie ePrivacy Einwilligungsunterstützung
+* Technischer Support
+* Benutzerdefinierte Domain-Unterstützung [Beta]
+
+Bitte besuchen Sie: [UniConsent Consent Manager offizielle Website](https://www.uniconsent.com)
+
+== Screenshots ==
+
+1. UniConsent – Stufe eins: Erster Popup-Bildschirm.
+2. UniConsent – Stufe zwei: Zweck-Einwilligungsbildschirm.
+3. UniConsent – Stufe drei: IAB TCF Anbieter-Einwilligungsbildschirm.
+4. UniConsent – Stufe vier: Benutzerdefinierter Anbieter-Einwilligungsbildschirm.
+5. UniConsent – Stufe fünf: Cookie-Listen-Bildschirm.
+6. UniConsent – Stufe sechs: Erster Banner-Bildschirm.
+
+== Changelog ==
+
+= 1.6.5 =
+* Lokalisierungsunterstützung
+
+= 1.6.4 =
+* UI-Verbesserung
+
+= 1.6.1 =
+* Verbesserung
+
+= 1.6.0 =
+* WP Consent API Unterstützung
+
+= 1.5.7 =
+* Warnung für PHP 8.2+ behoben
+
+= 1.5.6 =
+* Microsoft UET Consent Mode
+* Google Consent Mode 2.0
+* IAB GPP 1.1 Konformität
+
+= 1.5.5 =
+* Optimierungen und Verbesserungen
+
+= 1.5.3 =
+* Google Consent Mode verbessert
+
+= 1.5.2 =
+* Consent Mode verbessert und Unterstützung für 40 Sprachen
+
+= 1.5.1 =
+* GPP API verbessert
+
+= 1.5.0 =
+* Google Consent Mode V2 Standardstatus verbessert
+
+= 1.4.9 =
+* GPP Consent-Leistung verbessert
+* Google Consent Mode v2 verbessert
+
+= 1.4.8 =
+* Consent Mode verbessert
+* Tag-Laden verbessert
+
+= 1.4.7 =
+* IAB GPP 1.1 Unterstützung
+
+= 1.4.6 =
+* IAB TCF 2.2 Unterstützung
+
+= 1.4.5 =
+* Sicherheitsverbesserungen und Fehlerbehebungen
+
+= 1.4.2 =
+* GPP Einwilligungssignale
+* TCF Canada Einwilligungssignale
+
+= 1.3.11 =
+* Consent-Rate-Leistung optimiert.
+
+= 1.3.8 =
+* Unterstützung für einfachen Modus und Leistungsaktualisierung.
+
+= 1.3.1 =
+* Unterstützung für weitere Sprachen.
+
+= 1.3.0 =
+* IAB TCF 1.1 Hinweis hinzugefügt.
+
+= 1.2.12 =
+* IAB TCF 2.0 aktiviert.
+
+= 1.2.11 =
+* Google Ad Manager Einwilligungsunterstützung.
+
+= 1.2.10 =
+* Leistungsaktualisierung.
+
+= 1.2.8 =
+* UniConsent v2 hinzugefügt.
+
+= 1.2.5 =
+* CCPA hinzugefügt.
+
+= 1.2.4 =
+* Fehler behoben.
+
+= 1.2.0 =
+* Leistungsverbesserung.
+
+= 1.1.29 =
+* Fehler behoben.
+
+= 1.1.27 =
+* Niederländische Sprachunterstützung hinzugefügt.
+
+= 1.1.26 =
+* Laden von Drittanbieter-Tags und GTM.
+
+= 1.1.25 =
+* Leistung optimiert
+
+= 1.1.22 =
+* Lizenzschlüssel-Unterstützung
+
+= 1.1.13 =
+* Test für WordPress 5.0
+
+= 1.1.12 =
+* Fehler behoben.
+
+= 1.1.10 =
+* Readme aktualisiert.
+
+= 1.1.7 =
+* Version aktualisiert.
+
+= 1.1.6 =
+* Aktualisiert.
+
+= 1.1.4 =
+* Logo für Einwilligung hinzugefügt.
+
+= 1.1.3 =
+* 100K Benutzer kostenlos.
+
+= 1.1.0 =
+* Leistung verbessert.
+
+= 1.0.9 =
+* JS-Tag optimiert.
+
+= 1.0.8 =
+* Stub aktualisiert.
+
+= 1.0.6 =
+* Unterstützung für mehrere Sprachen.
+
+= 1.0.4 =
+* Banner- oder Popup-Box-Stil hinzugefügt.
+
+= 1.0.0 =
+* Erste Plugin-Veröffentlichung
