@@ -39,7 +39,6 @@ class UNIC_Admin_Settings {
 	}
 
 	public function unic_admin_notice_license() {
-		$unic_enable_iab = get_option( 'unic_enable_iab');
 	}
 
 	public function unic_options() {
@@ -81,7 +80,16 @@ class UNIC_Admin_Settings {
 
 		register_setting(
 			'unic-general-config', // Option group
-			'unic_type', // Option name
+			'unic_barmode', // Option name
+			array(
+				'type' => 'string',
+				'sanitize_callback' => array( $this, 'sanitize_text' )
+			)
+		);
+
+		register_setting(
+			'unic-general-config', // Option group
+			'unic_show_badge', // Option name
 			array(
 				'type' => 'string',
 				'sanitize_callback' => array( $this, 'sanitize_text' )
@@ -180,17 +188,19 @@ class UNIC_Admin_Settings {
 			'EN', 'FR', 'DE', 'ES', 'IT', 'PT', 'PL', 'NL', 'SV', 'BG', 'CA', 'CS',
 			'DA', 'EL', 'ET', 'FI', 'HU', 'LT', 'LV', 'MT', 'NO', 'RO', 'RU', 'SK',
 			'SL', 'ZH', 'SR', 'JA', 'BS', 'TR', 'CY', 'EU', 'GL', 'HE', 'ID', 'KO',
-			'MK', 'MS', 'TL', 'UK',
+			'MK', 'MS', 'TL', 'UK', 'AR', 'SQ', 'HR', 'KA', 'HI', 'IS', 'TH', 'VI',
+			'SW', 'ZH-HANT', 'PT-BR', 'SR-CYRL',
 		);
 		$allowed_regions = array( 'none', 'worldwide', 'eu' );
-		$allowed_types = array( 'bar', 'popup' );
+		$allowed_barmodes = array( '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'popup' );
 		$allowed_yes_no = array( 'yes', 'no' );
 		$allowed_iab = array( 'no', 'v2' );
 
 		// Validate and sanitize settings
 		$language = isset($_POST['unic_language']) ? sanitize_text_field($_POST['unic_language']) : 'EN';
 		$region = isset($_POST['unic_region']) ? sanitize_text_field($_POST['unic_region']) : 'none';
-		$type = isset($_POST['unic_type']) ? sanitize_text_field($_POST['unic_type']) : 'bar';
+		$barmode = isset($_POST['unic_barmode']) ? sanitize_text_field($_POST['unic_barmode']) : '8';
+		$show_badge = isset($_POST['unic_show_badge']) ? sanitize_text_field($_POST['unic_show_badge']) : 'yes';
 		$enable_gdpr = isset($_POST['unic_enable_gdpr']) ? sanitize_text_field($_POST['unic_enable_gdpr']) : 'no';
 		$enable_ccpa = isset($_POST['unic_enable_ccpa']) ? sanitize_text_field($_POST['unic_enable_ccpa']) : 'no';
 		$enable_iab = isset($_POST['unic_enable_iab']) ? sanitize_text_field($_POST['unic_enable_iab']) : 'no';
@@ -202,7 +212,8 @@ class UNIC_Admin_Settings {
 			'unic_logo' => isset($_POST['unic_logo']) ? esc_url_raw($_POST['unic_logo']) : '',
 			'unic_policy_url' => isset($_POST['unic_policy_url']) ? esc_url_raw($_POST['unic_policy_url']) : '',
 			'unic_region' => in_array($region, $allowed_regions, true) ? $region : 'none',
-			'unic_type' => in_array($type, $allowed_types, true) ? $type : 'bar',
+			'unic_barmode' => in_array($barmode, $allowed_barmodes, true) ? $barmode : '8',
+			'unic_show_badge' => in_array($show_badge, $allowed_yes_no, true) ? $show_badge : 'yes',
 			'unic_enable_gdpr' => in_array($enable_gdpr, $allowed_yes_no, true) ? $enable_gdpr : 'no',
 			'unic_enable_ccpa' => in_array($enable_ccpa, $allowed_yes_no, true) ? $enable_ccpa : 'no',
 			'unic_enable_iab' => in_array($enable_iab, $allowed_iab, true) ? $enable_iab : 'no',

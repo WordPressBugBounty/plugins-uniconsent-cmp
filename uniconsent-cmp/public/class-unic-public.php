@@ -46,22 +46,12 @@ window.gtag||(window.dataLayer=window.dataLayer||[],window.gtag=function(){windo
 </script>
 UNIC;
 		
-		$unic_license = esc_attr(get_option( 'unic_license' ));
-		$unic_enable_iab = esc_attr(get_option( 'unic_enable_iab' ));
+		$unic_license = sanitize_text_field(get_option( 'unic_license' ));
 		if(strpos($unic_license, 'license-') > -1) {
-			$unic_license = str_replace('license-', '', $unic_license);
+			$unic_license = preg_replace('/[^a-f0-9]/', '', str_replace('license-', '', $unic_license));
 			$unic_license = substr($unic_license,0,10);
 			echo $unic_stub_v2."\n";
-			echo "<script data-nowprocket async data-cfasync='false' src='https://cmp.uniconsent.com/v2/".$unic_license."/cmp.js'></script>\n";
-
-		} else if($unic_enable_iab == 'v2') {
-			$unic_license = '85d3bd683e';
-			echo "<script>\n";
-			echo "window.__unic_config_v2 = ".$unic_init.";\n";
-			echo "window.wp_consent_type = 'optin';\n";
-			echo "</script>\n";
-			echo $unic_stub_v2."\n";
-			echo "<script data-nowprocket async data-cfasync='false' src='https://cmp.uniconsent.com/v2/".$unic_license."/cmp.js'></script>\n";
+			echo "<script data-nowprocket async data-cfasync='false' src='".esc_url('https://cmp.uniconsent.com/v2/'.$unic_license.'/cmp.js')."'></script>\n";
 
 		} else {
 			$unic_license = '85d3bd683e';
@@ -70,7 +60,7 @@ UNIC;
 			echo "window.wp_consent_type = 'optin';\n";
 			echo "</script>\n";
 			echo $unic_stub_v2."\n";
-			echo "<script data-nowprocket async data-cfasync='false' src='https://cmp.uniconsent.com/v2/".$unic_license."/cmp.js'></script>\n";
+			echo "<script data-nowprocket async data-cfasync='false' src='".esc_url('https://cmp.uniconsent.com/v2/'.$unic_license.'/cmp.js')."'></script>\n";
 		}
 		
 	}
@@ -79,9 +69,9 @@ UNIC;
 
 		$unic_init_vals = array();
 
-		$unic_license = esc_attr(get_option( 'unic_license' ));
+		$unic_license = sanitize_text_field(get_option( 'unic_license' ));
 		if(strpos($unic_license, 'license-') > -1) {
-			$unic_init_vals['unic_license'] = str_replace('license-', '', $unic_license);
+			$unic_license = preg_replace('/[^a-f0-9]/', '', str_replace('license-', '', $unic_license));
 			$unic_init_vals['unic_license'] = substr($unic_license,0,10);
 			$unic_init_vals['version'] = 2;
 		} else {
@@ -127,11 +117,29 @@ UNIC;
 			}
 			$unic_init_vals['unic_policy_url'] = $unic_policy_url;
 
-			$unic_type = esc_attr(get_option( 'unic_type' ));
-			if(!$unic_type) {
-				$unic_type = 'popup';
+			$unic_barmode = esc_attr(get_option( 'unic_barmode' ));
+			if(!$unic_barmode && $unic_barmode !== '0') {
+				$unic_type = esc_attr(get_option( 'unic_type' ));
+				if($unic_type === 'popup') {
+					$unic_barmode = 'popup';
+				} else if($unic_type === 'bar') {
+					$unic_barmode = '0';
+				} else {
+					$unic_barmode = '8';
+				}
 			}
-			$unic_init_vals['unic_type'] = $unic_type;
+			if($unic_barmode === 'popup') {
+				$unic_init_vals['unic_type'] = 'popup';
+			} else {
+				$unic_init_vals['unic_type'] = 'bar';
+				$unic_init_vals['unic_barmode'] = $unic_barmode;
+			}
+
+			$unic_show_badge = esc_attr(get_option( 'unic_show_badge' ));
+			if(!$unic_show_badge) {
+				$unic_show_badge = 'yes';
+			}
+			$unic_init_vals['unic_show_badge'] = $unic_show_badge;
 
 			$unic_enable_gdpr = esc_attr(get_option( 'unic_enable_gdpr' ));
 			if(!$unic_enable_gdpr) {

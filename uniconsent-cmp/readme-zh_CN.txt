@@ -1,50 +1,45 @@
 === UniConsent Cookie Consent CMP - 同意管理器 ===
-Version: 1.6.5
+Version: 1.7.0
 Contributors: uniconsent
 Tags: cmp, cookie横幅, cookie同意, iab, cookie
 Requires at least: 4.0
 Tested up to: 6.8.3
 Requires PHP: 7.4
-Stable tag: 1.6.5
+Stable tag: 1.7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 领先的同意管理平台，支持 IAB TCF、GPP、GDPR、POPIA、CCPA、COPPA 和 LGPD 合规。
 
 == Description ==
 
-领先的同意管理平台，支持 GDPR、CCPA、COPPA、PIPL、LGPD、POPIA 合规。UniConsent GDPR、CCPA/CPRA、COPPA、LGPD、POPIA 合规解决方案 - 隐私管理器，简化全球隐私法规合规。
+[UniConsent](https://www.uniconsent.com/) 是领先的同意管理平台（CMP），帮助网站遵守全球隐私法规，包括 [GDPR](https://www.uniconsent.com/gdpr)、[CCPA/CPRA](https://www.uniconsent.com/ccpa)、COPPA、[LGPD](https://www.uniconsent.com/lgpd)、PIPL、POPIA 和 [PDPA](https://www.uniconsent.com/pdpa)。
 
-**UniConsent CMP 是经过认证的 EU IAB TCF 同意管理平台。**
+= 认证 =
 
-**UniConsent CMP 是经过认证的 Canada IAB TCF 同意管理平台。**
+* **经认证的 EU IAB TCF 2.3 CMP**
+* **经认证的 Canada IAB TCF CMP**
+* **经认证的 Google Consent Mode CMP（Gold Tier）**
 
-**UniConsent CMP 是经过认证的 Google Consent Mode CMP**
+= 功能 =
 
-**支持 Microsoft UET Consent Mode**
+* 11 种横幅样式，带可视预览 — Bottom Sheet、Floating Card、Dark Compact、Popup 等
+* Google Consent Mode v2
+* Microsoft UET 和 Bing Ads Consent Mode
+* IAB GPP 1.1 同意信号
+* EU IAB TCF 2.3、TCF Canada、CCPA USP 和美国各州同意信号
+* 隐私徽章显示/隐藏选项
+* GEO 地理定位 — 仅向特定地区的访客显示同意横幅
+* 支持 52+ 种语言
+* 兼容 WP Consent API
+* 支持 Google Ad Manager、Google AdX、Google AdSense、Prebid.js、Amazon APS、Facebook Pixel、LinkedIn Pixel 等
 
-**支持 Bing Ads Consent Mode**
+= 使用方法 =
 
-**支持 WP Consent API**
+安装并激活插件，选择您的横幅样式，启用 GDPR 和/或 CCPA 合规，然后保存。同意横幅会自动出现在您的网站上 — 无需编写代码。
 
-[UniConsent](https://www.uniconsent.com/) 实现了 IAB 透明度和同意框架，支持 GDPR 和 Google Ad Manager/AdSense 同意指南。大多数发布商在实施并切换到 UniConsent 后，收入显著增长。
-
-正在寻找其他平台的 UniConsent GDPR CMP？请访问 [GDPR 和 CCPA 合规通用同意管理器](https://www.uniconsent.com/)。
+如需高级功能（如自定义 CSS、同意分析、Cookie 扫描和同意日志记录），请在 [uniconsent.com](https://www.uniconsent.com/) 注册免费许可证密钥。
 
 关注 [数据隐私监管科技新闻](https://www.uniconsent.com/blog) 获取最新资讯。
-
-支持的同意信号：EU IAB TCF 2.2 同意信号、TCF Canada 同意信号、全球隐私平台（GPP）同意信号、CCPA USP 同意信号、美国各州同意信号等。
-
-IAB Europe 宣布了一项技术标准，以支持数字广告生态系统满足 [通用数据保护条例](https://www.uniconsent.com/gdpr)（GDPR）、[CCPA 合规](https://www.uniconsent.com/ccpa)、[CPRA 合规](https://www.uniconsent.com/cpra)、[LGPD 合规](https://www.uniconsent.com/lgpd)、[PDPA 合规](https://www.uniconsent.com/pdpa) 的消费者同意要求。此插件提供了该框架的实现。
-
-UniConsent 支持 Google GAM 供应商的同意管理。
-
-多语言支持：英语、西班牙语、德语、法语、意大利语、葡萄牙语、波兰语、荷兰语、瑞典语、保加利亚语、加泰罗尼亚语、捷克语、丹麦语、希腊语、爱沙尼亚语、芬兰语、匈牙利语、立陶宛语、拉脱维亚语、马耳他语、挪威语、罗马尼亚语、俄语、斯洛伐克语、斯洛文尼亚语、中文、塞尔维亚语、日语、波斯尼亚语、土耳其语、威尔士语、巴斯克语、加利西亚语、希伯来语、印度尼西亚语、韩语、马其顿语、马来语、他加禄语、乌克兰语。更多语言即将推出。
-
-UniConsent 插件实现了 IAB 同意框架，支持 GDPR、CCPA、ePrivacy 指令和 Google Ad Manager/AdSense 同意管理器。
-
-UniConsent 可以根据用户的同意加载第三方标签，并将同意数据发送到 Google Tag Manager。
-
-支持 IAB TCF 2.2、Google Ad Manager、Google AdX、Google AdSense、Prebid.js Header Bidding、Amazon APS、自定义供应商、Facebook Pixel、Google Adwords、LinkedIn Pixel、Bing Ads。
 
 == Installation ==
 
@@ -82,34 +77,32 @@ UniConsent 或任何其他经 IAB 批准的同意管理提供商（CMP）为发�
 
 = UniConsent 与其他 CMP 有什么区别？
 
-* 支持 GEO 地理定位，仅向欧盟公民展示同意。
-* 支持多种模式，横幅或弹窗
-* 支持 IAB 供应商和 Google DFP 供应商。
-* 高性能和高可靠性
-* 高选择加入率。
-* 对广告收入影响小
+* 11 种横幅样式，带可视预览卡片
+* GEO 地理定位 — 仅在特定地区显示同意横幅
+* 经认证的 IAB TCF 2.3 和 Google Consent Mode CMP
+* 支持 IAB 供应商、Google GAM 供应商和自定义供应商
+* Google Consent Mode v2 和 Microsoft UET Consent Mode
+* 52+ 种语言
+* 高选择加入率，对广告收入影响最小
 * 支持 Cookie ePrivacy 同意
-* 支持 Google AdSense 和 Google DFP。
-* Cookie 发现
 
 = 这个 CMP 解决方案免费吗？
 
-是的，WordPress 插件是 UniConsent CMP 的精简版，免费使用。我们还提供具有高级功能和技术支持的高级版本，请发送邮件至 hello@uniconsent.com 了解更多详情。
+是的，WordPress 插件无需许可证密钥即可使用所有核心功能，包括 IAB TCF 2.3、Google Consent Mode v2、11 种横幅样式和 52+ 种语言。在 [uniconsent.com](https://www.uniconsent.com/) 注册免费许可证密钥，即可解锁高级功能，如自定义 CSS、同意分析、Cookie 扫描和同意日志记录。
 
-= 我们是大型发布商。你们提供高级计划吗？
+= 你们提供高级计划吗？
 
-是的。高级计划具有以下功能：
+是的。高级计划包括：
 
-* 完全可定制的多阶段同意收集弹窗和横幅
-* 一标签实现
-* 数据分析和洞察
-* 多语言支持
-* IAB 和 Google 支持
-* Cookie ePrivacy 同意支持
-* 技术支持
-* 自定义域名支持 [测试版]
+* 自定义横幅文本、翻译和 CSS 样式
+* 同意率分析面板
+* 网站 Cookie 发现和披露
+* JavaScript 和 Cookie 阻止
+* ConsentDB 同意日志记录
+* 第一方 CMP 域名
+* 优先支持
 
-请访问：[UniConsent 同意管理器官方网站](https://www.uniconsent.com)
+请访问：[UniConsent 同意管理器](https://www.uniconsent.com)
 
 == Screenshots ==
 
@@ -122,8 +115,10 @@ UniConsent 或任何其他经 IAB 批准的同意管理提供商（CMP）为发�
 
 == Changelog ==
 
-= 1.6.5 =
-* 本地化支持
+= 1.7.0 =
+* 11 种可视横幅样式，带预览卡片
+* 显示或隐藏隐私徽章的选项
+* 支持 52+ 种语言
 
 = 1.6.4 =
 * 改进界面

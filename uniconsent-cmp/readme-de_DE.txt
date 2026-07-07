@@ -1,50 +1,45 @@
 === UniConsent Cookie Consent CMP - Einwilligungsmanager ===
-Version: 1.6.5
+Version: 1.7.0
 Contributors: uniconsent
 Tags: cmp, cookie banner, cookie einwilligung, iab, cookie
 Requires at least: 4.0
 Tested up to: 6.8.3
 Requires PHP: 7.4
-Stable tag: 1.6.5
+Stable tag: 1.7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Führende Consent-Management-Plattform für IAB TCF, GPP, DSGVO, POPIA, CCPA, COPPA und LGPD Konformität.
 
 == Description ==
 
-Führende Consent-Management-Plattform für DSGVO, CCPA, COPPA, PIPL, LGPD, POPIA Konformität. UniConsent DSGVO, CCPA/CPRA, COPPA, LGPD, POPIA Konformitätslösung – Privacy Manager zur Vereinfachung der Einhaltung globaler Datenschutzvorschriften.
+[UniConsent](https://www.uniconsent.com/) ist eine führende Consent-Management-Plattform (CMP), die Websites bei der Einhaltung globaler Datenschutzvorschriften unterstützt, darunter [DSGVO](https://www.uniconsent.com/gdpr), [CCPA/CPRA](https://www.uniconsent.com/ccpa), COPPA, [LGPD](https://www.uniconsent.com/lgpd), PIPL, POPIA und [PDPA](https://www.uniconsent.com/pdpa).
 
-**UniConsent CMP ist eine zertifizierte EU IAB TCF Consent-Management-Plattform.**
+= Zertifizierungen =
 
-**UniConsent CMP ist eine zertifizierte Canada IAB TCF Consent-Management-Plattform.**
+* **Zertifizierte EU IAB TCF 2.3 CMP**
+* **Zertifizierte Canada IAB TCF CMP**
+* **Zertifizierte Google Consent Mode CMP (Gold Tier)**
 
-**UniConsent CMP ist eine zertifizierte Google Consent Mode CMP**
+= Funktionen =
 
-**Microsoft UET Consent Mode Unterstützung**
+* 11 Banner-Stile mit visueller Vorschau — Bottom Sheet, Floating Card, Dark Compact, Popup und mehr
+* Google Consent Mode v2
+* Microsoft UET und Bing Ads Consent Mode
+* IAB GPP 1.1 Einwilligungssignale
+* EU IAB TCF 2.3, TCF Canada, CCPA USP und US-Bundesstaaten Einwilligungssignale
+* Datenschutz-Badge ein-/ausblenden
+* GEO-Targeting — Einwilligungsbanner nur für Besucher in bestimmten Regionen anzeigen
+* Unterstützung für 52+ Sprachen
+* WP Consent API kompatibel
+* Funktioniert mit Google Ad Manager, Google AdX, Google AdSense, Prebid.js, Amazon APS, Facebook Pixel, LinkedIn Pixel und mehr
 
-**Bing Ads Consent Mode Unterstützung**
+= So funktioniert es =
 
-**WP Consent API Unterstützung**
+Installieren und aktivieren Sie das Plugin, wählen Sie Ihren Banner-Stil, aktivieren Sie die DSGVO- und/oder CCPA-Konformität und speichern Sie. Das Einwilligungsbanner erscheint automatisch auf Ihrer Website — keine Programmierung erforderlich.
 
-[UniConsent](https://www.uniconsent.com/) implementiert das IAB Transparency and Consent Framework für die DSGVO und die Google Ad Manager/AdSense Einwilligungsrichtlinien. Die meisten Publisher haben nach der Implementierung und dem Wechsel zu UniConsent eine deutliche Umsatzsteigerung verzeichnet.
-
-Sie suchen UniConsent DSGVO CMP für andere Plattformen? Besuchen Sie [Universal Consent Manager für DSGVO und CCPA Konformität](https://www.uniconsent.com/).
+Für erweiterte Funktionen wie benutzerdefiniertes CSS, Einwilligungsanalysen, Cookie-Scanning und Einwilligungsprotokollierung registrieren Sie sich für einen kostenlosen Lizenzschlüssel auf [uniconsent.com](https://www.uniconsent.com/).
 
 Bleiben Sie auf dem Laufenden mit [Datenschutz Regtech Nachrichten](https://www.uniconsent.com/blog).
-
-Unterstützte Einwilligungssignale: EU IAB TCF 2.2 Einwilligungssignale, TCF Canada Einwilligungssignale, Global Privacy Platform (GPP) Einwilligungssignale, CCPA USP Einwilligungssignale, US-Bundesstaaten Einwilligungssignale usw.
-
-IAB Europe hat einen technischen Standard angekündigt, um das digitale Werbe-Ökosystem bei der Erfüllung der Anforderungen der [Datenschutz-Grundverordnung](https://www.uniconsent.com/gdpr) (DSGVO), [CCPA Konformität](https://www.uniconsent.com/ccpa), [CPRA Konformität](https://www.uniconsent.com/cpra), [LGPD Konformität](https://www.uniconsent.com/lgpd), [PDPA Konformität](https://www.uniconsent.com/pdpa) zu unterstützen. Dieses Plugin stellt eine Implementierung dieses Frameworks dar.
-
-UniConsent unterstützt die Einwilligungsverwaltung für Google GAM Anbieter.
-
-Unterstützung mehrerer Sprachen: Englisch, Spanisch, Deutsch, Französisch, Italienisch, Portugiesisch, Polnisch, Niederländisch, Schwedisch, Bulgarisch, Katalanisch, Tschechisch, Dänisch, Griechisch, Estnisch, Finnisch, Ungarisch, Litauisch, Lettisch, Maltesisch, Norwegisch, Rumänisch, Russisch, Slowakisch, Slowenisch, Chinesisch, Serbisch, Japanisch, Bosnisch, Türkisch, Walisisch, Baskisch, Galizisch, Hebräisch, Indonesisch, Koreanisch, Mazedonisch, Malaiisch, Tagalog, Ukrainisch. Weitere Sprachen folgen.
-
-Das UniConsent-Plugin implementiert das IAB Consent Framework für DSGVO, CCPA, ePrivacy-Richtlinie und Google Ad Manager/AdSense Einwilligungsmanager.
-
-UniConsent kann Drittanbieter-Tags basierend auf der Einwilligung des Benutzers laden und Einwilligungsdaten an den Google Tag Manager senden.
-
-Unterstützung für IAB TCF 2.2, Google Ad Manager, Google AdX, Google AdSense, Prebid.js Header Bidding, Amazon APS, benutzerdefinierte Anbieter, Facebook Pixel, Google Adwords, LinkedIn Pixel, Bing Ads.
 
 == Installation ==
 
@@ -82,34 +77,32 @@ UniConsent oder jeder andere von der IAB zugelassene Consent Management Provider
 
 = Was ist der Unterschied zwischen UniConsent und anderen CMPs?
 
-* GEO-Targeting-Unterstützung, Einwilligungsbanner nur für EU-Bürger anzeigen.
-* Unterstützung mehrerer Modi, Banner oder Popup
-* Unterstützung für IAB-Anbieter und Google DFP-Anbieter.
-* Hohe Leistung und Zuverlässigkeit
-* Hohe Opt-in-Rate.
-* Geringe Auswirkung auf den Werbeumsatz
+* 11 Banner-Stile mit visuellen Vorschaukarten
+* GEO-Targeting — Einwilligungsbanner nur in bestimmten Regionen anzeigen
+* Zertifizierte IAB TCF 2.3 und Google Consent Mode CMP
+* Unterstützung für IAB-Anbieter, Google GAM-Anbieter und benutzerdefinierte Anbieter
+* Google Consent Mode v2 und Microsoft UET Consent Mode
+* 52+ Sprachen
+* Hohe Opt-in-Rate mit minimaler Auswirkung auf den Werbeumsatz
 * Cookie ePrivacy Einwilligungsunterstützung
-* Unterstützung für Google AdSense und Google DFP.
-* Cookie-Erkennung
 
 = Ist diese CMP-Lösung kostenlos?
 
-Ja, das WordPress-Plugin ist eine Lite-Version von UniConsent CMP und kann kostenlos verwendet werden. Wir bieten auch eine Premium-Version mit erweiterten Funktionen und technischem Support an. Bitte wenden Sie sich an hello@uniconsent.com für weitere Details.
+Ja, das WordPress-Plugin funktioniert ohne Lizenzschlüssel mit allen Kernfunktionen, einschließlich IAB TCF 2.3, Google Consent Mode v2, 11 Banner-Stilen und 52+ Sprachen. Registrieren Sie sich für einen kostenlosen Lizenzschlüssel auf [uniconsent.com](https://www.uniconsent.com/), um erweiterte Funktionen wie benutzerdefiniertes CSS, Einwilligungsanalysen, Cookie-Scanning und Einwilligungsprotokollierung freizuschalten.
 
-= Wir sind ein großer Publisher. Bieten Sie einen Premium-Plan an?
+= Bieten Sie einen Premium-Plan an?
 
-Ja. Der Premium-Plan bietet folgende Funktionen:
+Ja. Premium-Pläne beinhalten:
 
-* Vollständig anpassbare mehrstufige Einwilligungs-Pop-ups und -Banner
-* Ein-Tag-Implementierung
-* Datenanalyse und Einblicke
-* Unterstützung mehrerer Sprachen
-* IAB- und Google-Unterstützung
-* Cookie ePrivacy Einwilligungsunterstützung
-* Technischer Support
-* Benutzerdefinierte Domain-Unterstützung [Beta]
+* Benutzerdefinierte Banner-Texte, Übersetzungen und CSS-Styling
+* Einwilligungsraten-Analyse-Dashboard
+* Website-Cookie-Erkennung und -Offenlegung
+* JavaScript- und Cookie-Blockierung
+* ConsentDB Einwilligungsprotokollierung
+* First-Party CMP-Domain
+* Prioritäts-Support
 
-Bitte besuchen Sie: [UniConsent Consent Manager offizielle Website](https://www.uniconsent.com)
+Bitte besuchen Sie: [UniConsent Consent Manager](https://www.uniconsent.com)
 
 == Screenshots ==
 
@@ -122,8 +115,10 @@ Bitte besuchen Sie: [UniConsent Consent Manager offizielle Website](https://www.
 
 == Changelog ==
 
-= 1.6.5 =
-* Lokalisierungsunterstützung
+= 1.7.0 =
+* 11 visuelle Banner-Stile mit Vorschaukarten
+* Option zum Ein-/Ausblenden des Datenschutz-Badges
+* Unterstützung für 52+ Sprachen
 
 = 1.6.4 =
 * UI-Verbesserung

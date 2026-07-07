@@ -16,15 +16,14 @@ class UNIC_Values {
 	public function __construct() {
 
 		$this->default_values = array(
-			'unic_language'  => 'en',
+			'unic_language'  => 'EN',
 			'unic_region'	=> 'worldwide',
-			'unic_enable_iab' => 'v2',
-			'unic_enable_google' => 'no',
-			'unic_enable_cookie' => 'no',
-			'unic_type' => 'popup',
+			'unic_enable_iab' => 'no',
+			'unic_barmode' => '8',
+			'unic_show_badge' => 'yes',
 			'unic_enable_ccpa' => 'no',
 			'unic_enable_gdpr' => 'yes',
-			'publisherCountryCode' => 'GB',
+			'publisherCountryCode' => 'DE',
 		);
 
 	}

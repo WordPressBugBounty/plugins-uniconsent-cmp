@@ -3,7 +3,7 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: UniConsent Cookie Consent CMP 1.6.5\n"
+"Project-Id-Version: UniConsent Cookie Consent CMP 1.7.0\n"
 "Report-Msgid-Bugs-To: https://www.uniconsent.com/\n"
 "POT-Creation-Date: 2025-01-01T00:00:00+00:00\n"
 "PO-Revision-Date: 2025-01-01 00:00+0000\n"
@@ -470,3 +470,175 @@ msgstr "Soporte:"
 #: admin/views.php
 msgid "Get Started"
 msgstr "Comenzar"
+
+#: admin/views.php
+msgid "Arabic"
+msgstr "Árabe"
+
+#: admin/views.php
+msgid "Albanian"
+msgstr "Albanés"
+
+#: admin/views.php
+msgid "Croatian"
+msgstr "Croata"
+
+#: admin/views.php
+msgid "Georgian"
+msgstr "Georgiano"
+
+#: admin/views.php
+msgid "Hindi"
+msgstr "Hindi"
+
+#: admin/views.php
+msgid "Icelandic"
+msgstr "Islandés"
+
+#: admin/views.php
+msgid "Thai"
+msgstr "Tailandés"
+
+#: admin/views.php
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+#: admin/views.php
+msgid "Swahili"
+msgstr "Suajili"
+
+#: admin/views.php
+msgid "Chinese (Traditional)"
+msgstr "Chino (tradicional)"
+
+#: admin/views.php
+msgid "Portuguese (Brazil)"
+msgstr "Portugués (Brasil)"
+
+#: admin/views.php
+msgid "Serbian (Cyrillic)"
+msgstr "Serbio (cirílico)"
+
+#: admin/views.php
+msgid "Display Privacy Badge"
+msgstr "Mostrar insignia de privacidad"
+
+#: admin/views.php
+msgid "Display a privacy badge on your website so users can re-open the consent manager."
+msgstr "Muestra una insignia de privacidad en tu sitio web para que los usuarios puedan volver a abrir el gestor de consentimiento."
+
+#: admin/views.php
+msgid "IAB TCF 2.3"
+msgstr "IAB TCF 2.3"
+
+#: admin/views.php
+msgid "Required if you run Google AdSense, Google Ad Manager, or other Google ads: select IAB TCF 2.3 to serve ads to visitors in the EEA, UK, and Switzerland."
+msgstr "Obligatorio si utilizas Google AdSense, Google Ad Manager u otros anuncios de Google: selecciona IAB TCF 2.3 para mostrar anuncios a los visitantes del EEE, Reino Unido y Suiza."
+
+#: admin/views.php
+msgid "You are on the free plan: up to 50,000 users per month."
+msgstr "Estás en el plan gratuito: hasta 50.000 usuarios al mes."
+
+#: admin/views.php
+msgid "Upgrade for higher traffic, custom banner text, consent analytics, cookie scanning, and consent logging."
+msgstr "Actualiza para obtener más tráfico, texto de banner personalizado, analítica de consentimiento, escaneo de cookies y registro de consentimiento."
+
+#: admin/views.php
+msgid "Upgrade Now →"
+msgstr "Actualizar ahora →"
+
+#: admin/views.php
+msgid "* The free version supports up to 50,000 users per month. For higher traffic, upgrade your plan at"
+msgstr "* La versión gratuita admite hasta 50.000 usuarios al mes. Para más tráfico, actualiza tu plan en"
+
+#: admin/views.php
+msgid "No, the plugin works without a license key with all core features including IAB TCF 2.3, Google Consent Mode v2, and 11 banner styles, for up to 50,000 users per month. To unlock advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, or to support higher traffic, register for a free license key at"
+msgstr "No, el plugin funciona sin clave de licencia con todas las funciones principales, incluidas IAB TCF 2.3, Google Consent Mode v2 y 11 estilos de banner, para hasta 50.000 usuarios al mes. Para desbloquear funciones avanzadas como CSS personalizado, analítica de consentimiento, escaneo de cookies y registro de consentimiento, o para admitir más tráfico, regístrate para obtener una clave de licencia gratuita en"
+
+#: admin/views.php
+msgid "What is IAB TCF 2.3 and do I need it?"
+msgstr "¿Qué es IAB TCF 2.3 y lo necesito?"
+
+#: admin/views.php
+msgid "IAB TCF (Transparency and Consent Framework) 2.3 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.3 is recommended to stay compliant."
+msgstr "IAB TCF (Transparency and Consent Framework) 2.3 es un estándar del sector para gestionar el consentimiento de los usuarios en la publicidad online. Si utilizas Google AdSense, Google Ad Manager o publicidad programática, se recomienda habilitar IAB TCF 2.3 para mantener el cumplimiento."
+
+#: admin/views.php
+msgid "Unlock More with a Free Account"
+msgstr "Desbloquea más con una cuenta gratuita"
+
+#: admin/views.php
+msgid "Register for a free license key to access advanced features:"
+msgstr "Regístrate para obtener una clave de licencia gratuita y acceder a funciones avanzadas:"
+
+#: admin/views.php
+msgid "Custom banner text and translations"
+msgstr "Texto de banner y traducciones personalizados"
+
+#: admin/views.php
+msgid "Custom CSS styling"
+msgstr "Estilos CSS personalizados"
+
+#: admin/views.php
+msgid "Custom vendor and purpose lists"
+msgstr "Listas personalizadas de proveedores y finalidades"
+
+#: admin/views.php
+msgid "Consent rate analytics dashboard"
+msgstr "Panel de analítica de tasas de consentimiento"
+
+#: admin/views.php
+msgid "ConsentDB consent logging"
+msgstr "Registro de consentimiento ConsentDB"
+
+#: admin/views.php
+msgid "LGPD, POPIA, PIPL, PDPD compliance"
+msgstr "Cumplimiento de LGPD, POPIA, PIPL, PDPD"
+
+#: admin/views.php
+msgid "US state privacy laws (VA, CO, CT, UT)"
+msgstr "Leyes de privacidad estatales de EE. UU. (VA, CO, CT, UT)"
+
+#: admin/views.php
+msgid "Google GAM / AdSense / AdX support"
+msgstr "Compatibilidad con Google GAM / AdSense / AdX"
+
+#: admin/views.php
+msgid "Prebid.js and header bidding support"
+msgstr "Compatibilidad con Prebid.js y header bidding"
+
+#: admin/views.php
+msgid "First-party CMP domain (Pro)"
+msgstr "Dominio CMP de origen (Pro)"
+
+#: admin/views.php
+msgid "Get Free License Key →"
+msgstr "Obtener clave de licencia gratuita →"
+
+#: admin/views.php
+msgid "Included in This Plugin"
+msgstr "Incluido en este plugin"
+
+#: admin/views.php
+msgid "Up to 50,000 users per month"
+msgstr "Hasta 50.000 usuarios al mes"
+
+#: admin/views.php
+msgid "IAB TCF 2.3 & IAB GPP 1.1"
+msgstr "IAB TCF 2.3 & IAB GPP 1.1"
+
+#: admin/views.php
+msgid "GDPR & CCPA compliance"
+msgstr "Cumplimiento de RGPD y CCPA"
+
+#: admin/views.php
+msgid "11 banner styles + popup"
+msgstr "11 estilos de banner + popup"
+
+#: admin/views.php
+msgid "52+ languages"
+msgstr "Más de 52 idiomas"
+
+#: admin/views.php
+msgid "Privacy badge"
+msgstr "Insignia de privacidad"

@@ -3,7 +3,7 @@
 * Plugin Name: UniConsent Cookie Consent CMP
 * Plugin URI: https://www.uniconsent.com/?utm_source=wp-plugins
 * Description: Leading Consent Management Platform for IAB TCF, GPP, GDPR, POPIA, CCPA, COPPA, and LGPD Compliance.
-* Version: 1.6.5
+* Version: 1.7.0
 * Author: UniConsent
 * Author URI: https://www.uniconsent.com/?utm_source=wp-plugins
 * License: GPLv3
@@ -13,7 +13,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'UNIC_CMP_VERSION', '1.6.5' );
+define( 'UNIC_CMP_VERSION', '1.7.0' );
 
 function activate_unic_cmp() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-unic-activator.php';
@@ -39,7 +39,7 @@ function unic_cmp_enqueue_scripts() {
         'unic-cmp-script', // Handle
         plugin_dir_url(__FILE__) . 'public/js/unic.min.js',
         array(),
-        '1.6.5',
+        '1.7.0',
         true
     );
 }

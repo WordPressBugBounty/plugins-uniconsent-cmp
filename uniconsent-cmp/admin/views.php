@@ -55,25 +55,44 @@ class UNIC_Admin_Views {
 								<?php $unic_license = esc_attr(get_option( 'unic_license')); ?>
 								<?php if(!($unic_license && (strpos($unic_license, 'key-') > -1 || strpos($unic_license, 'license-') > -1))): ?>
 
-								<?php $unic_enable_gdpr = get_option( 'unic_enable_gdpr'); ?>
-								<?php if(!$unic_enable_gdpr) {
-									$unic_enable_gdpr = 'yes';
-								} ?>
+								<?php
+								$unic_barmode = get_option( 'unic_barmode' );
+								if(!$unic_barmode && $unic_barmode !== '0') {
+									$unic_type = get_option( 'unic_type' );
+									if($unic_type === 'popup') {
+										$unic_barmode = 'popup';
+									} else if($unic_type === 'bar') {
+										$unic_barmode = '0';
+									} else {
+										$unic_barmode = '8';
+									}
+								}
+								?>
 								<div class="unis-form-group">
-									<label class="unis-label" for="unic_enable_gdpr"><?php _e( 'Enable EU GDPR Compliance', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_enable_gdpr" name="unic_enable_gdpr">
-										<option value="no" <?php selected( $unic_enable_gdpr, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
-										<option value="yes" <?php selected( $unic_enable_gdpr, 'yes' ); ?>><?php _e( 'Yes', 'uniconsent-cmp' ); ?></option>
-									</select>
-								</div>
-
-								<?php $unic_enable_ccpa = get_option( 'unic_enable_ccpa'); ?>
-								<div class="unis-form-group">
-									<label class="unis-label" for="unic_enable_ccpa"><?php _e( 'Enable U.S. CCPA Compliance', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_enable_ccpa" name="unic_enable_ccpa">
-										<option value="no" <?php selected( $unic_enable_ccpa, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
-										<option value="yes" <?php selected( $unic_enable_ccpa, 'yes' ); ?>><?php _e( 'Yes', 'uniconsent-cmp' ); ?></option>
-									</select>
+									<label class="unis-label"><?php _e( 'CMP Style', 'uniconsent-cmp' ); ?></label>
+									<input type="hidden" id="unic_barmode" name="unic_barmode" value="<?php echo esc_attr($unic_barmode); ?>">
+									<div class="unis-tmpl-grid">
+										<?php
+										$templates = array(
+											array('value' => '0', 'label' => 'Normal', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0"/><rect x="0" y="70" width="160" height="30" rx="0" fill="#4a90d9"/><rect x="8" y="76" width="60" height="6" rx="2" fill="#fff" opacity=".7"/><rect x="8" y="86" width="40" height="6" rx="2" fill="#fff" opacity=".5"/><rect x="110" y="78" width="40" height="12" rx="3" fill="#fff"/></svg>'),
+											array('value' => '1', 'label' => 'Push Down', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0"/><rect x="0" y="0" width="160" height="35" fill="#4a90d9"/><rect x="8" y="8" width="60" height="6" rx="2" fill="#fff" opacity=".7"/><rect x="8" y="18" width="40" height="6" rx="2" fill="#fff" opacity=".5"/><rect x="110" y="10" width="40" height="12" rx="3" fill="#fff"/><rect x="10" y="45" width="140" height="6" rx="2" fill="#ddd"/><rect x="10" y="57" width="100" height="6" rx="2" fill="#ddd"/></svg>'),
+											array('value' => '2', 'label' => 'Simple', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0"/><rect x="15" y="60" width="130" height="35" rx="4" fill="#4a90d9"/><rect x="22" y="67" width="50" height="5" rx="2" fill="#fff" opacity=".7"/><rect x="22" y="76" width="35" height="5" rx="2" fill="#fff" opacity=".5"/><rect x="90" y="72" width="45" height="14" rx="3" fill="#fff"/></svg>'),
+											array('value' => '3', 'label' => 'Corner', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0"/><rect x="5" y="50" width="70" height="45" rx="6" fill="#4a90d9"/><rect x="12" y="57" width="40" height="5" rx="2" fill="#fff" opacity=".7"/><rect x="12" y="66" width="30" height="5" rx="2" fill="#fff" opacity=".5"/><rect x="12" y="78" width="25" height="10" rx="3" fill="#fff"/><rect x="42" y="78" width="25" height="10" rx="3" fill="#fff" opacity=".6"/></svg>'),
+											array('value' => '4', 'label' => 'Mini', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0"/><rect x="5" y="62" width="55" height="33" rx="5" fill="#4a90d9"/><rect x="11" y="68" width="35" height="4" rx="2" fill="#fff" opacity=".7"/><rect x="11" y="76" width="20" height="8" rx="3" fill="#fff"/><rect x="35" y="76" width="20" height="8" rx="3" fill="#fff" opacity=".6"/></svg>'),
+											array('value' => '5', 'label' => 'Floating Card', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0"/><rect x="8" y="30" width="72" height="62" rx="10" fill="#4a90d9"/><circle cx="18" cy="42" r="5" fill="#fff" opacity=".6"/><rect x="26" y="39" width="40" height="6" rx="2" fill="#fff" opacity=".8"/><rect x="14" y="52" width="55" height="4" rx="2" fill="#fff" opacity=".5"/><rect x="14" y="60" width="45" height="4" rx="2" fill="#fff" opacity=".4"/><rect x="14" y="72" width="28" height="12" rx="4" fill="#fff"/><rect x="46" y="72" width="28" height="12" rx="4" fill="#fff" opacity=".6"/></svg>'),
+											array('value' => '6', 'label' => 'Compact Inline', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0"/><rect x="0" y="78" width="160" height="22" fill="#4a90d9"/><rect x="8" y="84" width="50" height="5" rx="2" fill="#fff" opacity=".7"/><rect x="100" y="82" width="24" height="10" rx="3" fill="#fff"/><rect x="128" y="82" width="24" height="10" rx="3" fill="#fff" opacity=".6"/><circle cx="93" cy="87" r="5" fill="#fff" opacity=".4"/></svg>'),
+											array('value' => '7', 'label' => 'Clean Stacked', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0" opacity=".5"/><rect x="30" y="8" width="100" height="84" rx="8" fill="#4a90d9"/><rect x="42" y="18" width="50" height="6" rx="2" fill="#fff" opacity=".8"/><rect x="42" y="28" width="70" height="4" rx="2" fill="#fff" opacity=".4"/><rect x="42" y="36" width="60" height="4" rx="2" fill="#fff" opacity=".3"/><rect x="40" y="48" width="80" height="12" rx="4" fill="#fff"/><rect x="40" y="64" width="80" height="12" rx="4" fill="#fff" opacity=".6"/><rect x="40" y="80" width="80" height="8" rx="3" fill="#fff" opacity=".3"/></svg>'),
+											array('value' => '8', 'label' => 'Bottom Sheet', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0"/><rect x="0" y="45" width="160" height="55" fill="#fff"/><line x1="0" y1="45" x2="160" y2="45" stroke="#ddd" stroke-width="1"/><rect x="40" y="52" width="80" height="5" rx="2" fill="#333" opacity=".7"/><rect x="30" y="62" width="100" height="3" rx="1" fill="#999" opacity=".4"/><rect x="25" y="72" width="110" height="10" rx="3" fill="#4a90d9"/><rect x="25" y="85" width="110" height="10" rx="3" fill="#ddd"/></svg>'),
+											array('value' => '9', 'label' => 'Dark Compact', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0"/><rect x="0" y="78" width="160" height="22" fill="#1a1a2e"/><rect x="8" y="84" width="70" height="4" rx="2" fill="#b0b0c0" opacity=".6"/><rect x="100" y="82" width="24" height="10" rx="10" fill="transparent" stroke="#666" stroke-width="1"/><rect x="128" y="82" width="28" height="10" rx="10" fill="#4a90d9"/></svg>'),
+											array('value' => 'popup', 'label' => 'Popup', 'svg' => '<svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="100" rx="4" fill="#f0f0f0" opacity=".5"/><rect x="25" y="10" width="110" height="80" rx="8" fill="#4a90d9"/><rect x="40" y="22" width="60" height="6" rx="2" fill="#fff" opacity=".8"/><rect x="38" y="32" width="80" height="4" rx="2" fill="#fff" opacity=".4"/><rect x="38" y="40" width="70" height="4" rx="2" fill="#fff" opacity=".3"/><rect x="38" y="52" width="80" height="12" rx="4" fill="#fff"/><rect x="38" y="68" width="80" height="12" rx="4" fill="#fff" opacity=".6"/></svg>'),
+										);
+										foreach ($templates as $t) : ?>
+											<div class="unis-tmpl-card <?php echo $unic_barmode === $t['value'] ? 'active' : ''; ?>" data-value="<?php echo esc_attr($t['value']); ?>" onclick="document.getElementById('unic_barmode').value=this.dataset.value;document.querySelectorAll('.unis-tmpl-card').forEach(function(c){c.classList.remove('active')});this.classList.add('active');">
+												<div class="unis-tmpl-card__preview"><?php echo $t['svg']; ?></div>
+												<div class="unis-tmpl-card__label"><?php _e($t['label'], 'uniconsent-cmp'); ?></div>
+											</div>
+										<?php endforeach; ?>
+									</div>
 								</div>
 
 								<?php $unic_language = get_option( 'unic_language' ); ?>
@@ -120,6 +139,79 @@ class UNIC_Admin_Views {
 										<option value="MS" <?php selected( $unic_language, 'MS' ); ?>><?php _e( 'Malay', 'uniconsent-cmp' ); ?></option>
 										<option value="TL" <?php selected( $unic_language, 'TL' ); ?>><?php _e( 'Tagalog', 'uniconsent-cmp' ); ?></option>
 										<option value="UK" <?php selected( $unic_language, 'UK' ); ?>><?php _e( 'Ukrainian', 'uniconsent-cmp' ); ?></option>
+										<option value="AR" <?php selected( $unic_language, 'AR' ); ?>><?php _e( 'Arabic', 'uniconsent-cmp' ); ?></option>
+										<option value="SQ" <?php selected( $unic_language, 'SQ' ); ?>><?php _e( 'Albanian', 'uniconsent-cmp' ); ?></option>
+										<option value="HR" <?php selected( $unic_language, 'HR' ); ?>><?php _e( 'Croatian', 'uniconsent-cmp' ); ?></option>
+										<option value="KA" <?php selected( $unic_language, 'KA' ); ?>><?php _e( 'Georgian', 'uniconsent-cmp' ); ?></option>
+										<option value="HI" <?php selected( $unic_language, 'HI' ); ?>><?php _e( 'Hindi', 'uniconsent-cmp' ); ?></option>
+										<option value="IS" <?php selected( $unic_language, 'IS' ); ?>><?php _e( 'Icelandic', 'uniconsent-cmp' ); ?></option>
+										<option value="TH" <?php selected( $unic_language, 'TH' ); ?>><?php _e( 'Thai', 'uniconsent-cmp' ); ?></option>
+										<option value="VI" <?php selected( $unic_language, 'VI' ); ?>><?php _e( 'Vietnamese', 'uniconsent-cmp' ); ?></option>
+										<option value="SW" <?php selected( $unic_language, 'SW' ); ?>><?php _e( 'Swahili', 'uniconsent-cmp' ); ?></option>
+										<option value="ZH-HANT" <?php selected( $unic_language, 'ZH-HANT' ); ?>><?php _e( 'Chinese (Traditional)', 'uniconsent-cmp' ); ?></option>
+										<option value="PT-BR" <?php selected( $unic_language, 'PT-BR' ); ?>><?php _e( 'Portuguese (Brazil)', 'uniconsent-cmp' ); ?></option>
+										<option value="SR-CYRL" <?php selected( $unic_language, 'SR-CYRL' ); ?>><?php _e( 'Serbian (Cyrillic)', 'uniconsent-cmp' ); ?></option>
+									</select>
+								</div>
+
+								<?php $unic_show_badge = get_option( 'unic_show_badge', 'yes' ); ?>
+								<div class="unis-form-group">
+									<label class="unis-label" for="unic_show_badge"><?php _e( 'Display Privacy Badge', 'uniconsent-cmp' ); ?></label>
+									<select class="unis-select" id="unic_show_badge" name="unic_show_badge">
+										<option value="yes" <?php selected( $unic_show_badge, 'yes' ); ?>><?php _e( 'Yes', 'uniconsent-cmp' ); ?></option>
+										<option value="no" <?php selected( $unic_show_badge, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
+									</select>
+									<div class="unis-help-text">
+										<?php _e( 'Display a privacy badge on your website so users can re-open the consent manager.', 'uniconsent-cmp' ); ?>
+									</div>
+								</div>
+
+								<?php $unic_enable_gdpr = get_option( 'unic_enable_gdpr'); ?>
+								<?php if(!$unic_enable_gdpr) {
+									$unic_enable_gdpr = 'yes';
+								} ?>
+								<div class="unis-form-group">
+									<label class="unis-label" for="unic_enable_gdpr"><?php _e( 'Enable EU GDPR Compliance', 'uniconsent-cmp' ); ?></label>
+									<select class="unis-select" id="unic_enable_gdpr" name="unic_enable_gdpr">
+										<option value="no" <?php selected( $unic_enable_gdpr, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
+										<option value="yes" <?php selected( $unic_enable_gdpr, 'yes' ); ?>><?php _e( 'Yes', 'uniconsent-cmp' ); ?></option>
+									</select>
+								</div>
+
+								<?php $unic_region = get_option( 'unic_region' ); ?>
+								<div class="unis-form-group">
+									<label class="unis-label" for="unic_region"><?php _e( 'GDPR Policy Region', 'uniconsent-cmp' ); ?></label>
+									<select class="unis-select" id="unic_region" name="unic_region">
+										<option value="none" <?php selected( $unic_region, 'none' ); ?>><?php _e( 'None', 'uniconsent-cmp' ); ?></option>
+										<option value="worldwide" <?php selected( $unic_region, 'worldwide' ); ?>><?php _e( 'Worldwide', 'uniconsent-cmp' ); ?></option>
+										<option value="eu" <?php selected( $unic_region, 'eu' ); ?>><?php _e( 'EU (EEA) Countries', 'uniconsent-cmp' ); ?></option>
+									</select>
+									<div class="unis-help-text">
+										<?php _e( 'When select EU, only display CMP to the users in EU countries.', 'uniconsent-cmp' ); ?>
+									</div>
+								</div>
+
+								<?php $unic_enable_iab = get_option( 'unic_enable_iab'); ?>
+								<?php if(!$unic_enable_iab) {
+									$unic_enable_iab = 'no';
+								} ?>
+								<div class="unis-form-group">
+									<label class="unis-label" for="unic_enable_iab"><?php _e( 'IAB TCF Compliance', 'uniconsent-cmp' ); ?></label>
+									<select class="unis-select" id="unic_enable_iab" name="unic_enable_iab">
+										<option value="no" <?php selected( $unic_enable_iab, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
+										<option value="v2" <?php selected( $unic_enable_iab, 'v2' ); ?>><?php _e( 'IAB TCF 2.3', 'uniconsent-cmp' ); ?></option>
+									</select>
+									<div class="unis-help-text">
+										<?php _e( 'Required if you run Google AdSense, Google Ad Manager, or other Google ads: select IAB TCF 2.3 to serve ads to visitors in the EEA, UK, and Switzerland.', 'uniconsent-cmp' ); ?>
+									</div>
+								</div>
+
+								<?php $unic_enable_ccpa = get_option( 'unic_enable_ccpa'); ?>
+								<div class="unis-form-group">
+									<label class="unis-label" for="unic_enable_ccpa"><?php _e( 'Enable U.S. CCPA Compliance', 'uniconsent-cmp' ); ?></label>
+									<select class="unis-select" id="unic_enable_ccpa" name="unic_enable_ccpa">
+										<option value="no" <?php selected( $unic_enable_ccpa, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
+										<option value="yes" <?php selected( $unic_enable_ccpa, 'yes' ); ?>><?php _e( 'Yes', 'uniconsent-cmp' ); ?></option>
 									</select>
 								</div>
 
@@ -147,35 +239,12 @@ class UNIC_Admin_Views {
 									</div>
 								</div>
 
-								<?php $unic_region = get_option( 'unic_region' ); ?>
-								<div class="unis-form-group">
-									<label class="unis-label" for="unic_region"><?php _e( 'GDPR Policy Region', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_region" name="unic_region">
-										<option value="none" <?php selected( $unic_region, 'none' ); ?>><?php _e( 'None', 'uniconsent-cmp' ); ?></option>
-										<option value="worldwide" <?php selected( $unic_region, 'worldwide' ); ?>><?php _e( 'Worldwide', 'uniconsent-cmp' ); ?></option>
-										<option value="eu" <?php selected( $unic_region, 'eu' ); ?>><?php _e( 'EU (EEA) Countries', 'uniconsent-cmp' ); ?></option>
-									</select>
-									<div class="unis-help-text">
-										<?php _e( 'When select EU, only display CMP to the users in EU countries.', 'uniconsent-cmp' ); ?>
+								<div class="unis-upgrade-banner">
+									<div class="unis-upgrade-banner__text">
+										<strong><?php _e( 'You are on the free plan: up to 50,000 users per month.', 'uniconsent-cmp' ); ?></strong>
+										<span><?php _e( 'Upgrade for higher traffic, custom banner text, consent analytics, cookie scanning, and consent logging.', 'uniconsent-cmp' ); ?></span>
 									</div>
-								</div>
-
-								<?php $unic_type = get_option( 'unic_type' ); ?>
-								<div class="unis-form-group">
-									<label class="unis-label" for="unic_type"><?php _e( 'CMP Style', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_type" name="unic_type">
-										<option value="bar" <?php selected( $unic_type, 'bar' ); ?>><?php _e( 'Banner', 'uniconsent-cmp' ); ?></option>
-										<option value="popup" <?php selected( $unic_type, 'popup' ); ?>><?php _e( 'Popup Box', 'uniconsent-cmp' ); ?></option>
-									</select>
-								</div>
-
-								<?php $unic_enable_iab = get_option( 'unic_enable_iab'); ?>
-								<div class="unis-form-group">
-									<label class="unis-label" for="unic_enable_iab"><?php _e( 'IAB TCF Compliance', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_enable_iab" name="unic_enable_iab">
-										<option value="no" <?php selected( $unic_enable_iab, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
-										<option value="v2" <?php selected( $unic_enable_iab, 'v2' ); ?>><?php _e( 'IAB TCF 2.2', 'uniconsent-cmp' ); ?></option>
-									</select>
+									<a href="https://app.uniconsent.com/app/register?utm_source=wp_upgrade" target="_blank" class="unis-upgrade__cta unis-upgrade-banner__cta"><?php _e( 'Upgrade Now →', 'uniconsent-cmp' ); ?></a>
 								</div>
 
 								<?php endif;?>
@@ -187,6 +256,7 @@ class UNIC_Admin_Views {
 										   placeholder="<?php esc_attr_e( 'Enter your license key...', 'uniconsent-cmp' ); ?>">
 									<div class="unis-help-text">
 										<p><?php _e( '* Get your free license key at:', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a> <?php _e( 'to unlock more features.', 'uniconsent-cmp' ); ?></p>
+										<p><?php _e( '* The free version supports up to 50,000 users per month. For higher traffic, upgrade your plan at', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a>.</p>
 										<p><?php _e( '* The configurations are managed at', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a> <?php _e( 'once you have entered the license key:', 'uniconsent-cmp' ); ?> <b>license-xxxxxxxx</b>.</p>
 									</div>
 								</div>
@@ -239,12 +309,12 @@ class UNIC_Admin_Views {
 
 								<div class="unis-faq__item">
 									<button class="unis-faq__question"><?php _e( 'Do I need a license key?', 'uniconsent-cmp' ); ?></button>
-									<div class="unis-faq__answer"><?php _e( 'No, the plugin works without a license key with basic features. To unlock advanced features such as IAB TCF 2.2, Google Consent Mode v2, analytics dashboard, and full customisation, register for a free license key at', 'uniconsent-cmp' ); ?> <a href="https://www.uniconsent.com/" target="_blank">uniconsent.com</a>.</div>
+									<div class="unis-faq__answer"><?php _e( 'No, the plugin works without a license key with all core features including IAB TCF 2.3, Google Consent Mode v2, and 11 banner styles, for up to 50,000 users per month. To unlock advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, or to support higher traffic, register for a free license key at', 'uniconsent-cmp' ); ?> <a href="https://www.uniconsent.com/" target="_blank">uniconsent.com</a>.</div>
 								</div>
 
 								<div class="unis-faq__item">
-									<button class="unis-faq__question"><?php _e( 'What is IAB TCF 2.2 and do I need it?', 'uniconsent-cmp' ); ?></button>
-									<div class="unis-faq__answer"><?php _e( 'IAB TCF (Transparency and Consent Framework) 2.2 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.2 is recommended to stay compliant.', 'uniconsent-cmp' ); ?></div>
+									<button class="unis-faq__question"><?php _e( 'What is IAB TCF 2.3 and do I need it?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'IAB TCF (Transparency and Consent Framework) 2.3 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.3 is recommended to stay compliant.', 'uniconsent-cmp' ); ?></div>
 								</div>
 
 								<div class="unis-faq__item">
@@ -261,31 +331,40 @@ class UNIC_Admin_Views {
 				<aside class="unis-sidebar">
 					<!-- Upgrade Card -->
 					<div class="unis-upgrade">
-						<h3 class="unis-upgrade__title">UniConsent Cookie Consent CMP</h3>
+						<h3 class="unis-upgrade__title"><?php _e( 'Unlock More with a Free Account', 'uniconsent-cmp' ); ?></h3>
+						<p class="unis-upgrade__subtitle"><?php _e( 'Register for a free license key to access advanced features:', 'uniconsent-cmp' ); ?></p>
 						<ul class="unis-upgrade__features">
-							<li class="unis-upgrade__feature"><?php _e( 'Certified EU IAB TCF 2.2/2.3 CMP', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Certified Canada IAB TCF CMP', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Certified Google CMP (Gold Tier)', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Google Consent Mode v2', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Microsoft UET Consent Mode', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'IAB GPP 1.1 compliance', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( '40+ Languages support', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'GPP, TCF, USP Consent signals', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'For GDPR, CCPA, LGPD, PDPA, CPRA, PIPL', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'More popup UI choices and easy mode', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Fully customisable consent collection pop-ups and bars', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Multiple languages support', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Data analytics and insight dashboard', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'One-tag Implementation', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Google GAM/Google AdSense/Google AdX/Amazon APS Support', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Prebid.js and Header bidding support', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Cookie ePrivacy consent support', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Custom banner text and translations', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Custom CSS styling', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Custom vendor and purpose lists', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Consent rate analytics dashboard', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Website cookie discovery and disclosure', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'JavaScript and cookie blocking', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Consent rate analytics and insight', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'ConsentDB consent logging', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'LGPD, POPIA, PIPL, PDPD compliance', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'US state privacy laws (VA, CO, CT, UT)', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Google GAM / AdSense / AdX support', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Prebid.js and header bidding support', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'First-party CMP domain (Pro)', 'uniconsent-cmp' ); ?></li>
+						</ul>
+						<a href="https://app.uniconsent.com/app/register?utm_source=wp" class="unis-upgrade__cta"><?php _e( 'Get Free License Key →', 'uniconsent-cmp' ); ?></a>
+					</div>
+
+					<!-- Included Features -->
+					<div class="unis-upgrade" style="margin-top: 16px;">
+						<h3 class="unis-upgrade__title"><?php _e( 'Included in This Plugin', 'uniconsent-cmp' ); ?></h3>
+						<ul class="unis-upgrade__features">
+							<li class="unis-upgrade__feature"><?php _e( 'Up to 50,000 users per month', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Certified Google CMP (Gold Tier)', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Google Consent Mode v2', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'IAB TCF 2.3 & IAB GPP 1.1', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Microsoft UET Consent Mode', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'GDPR & CCPA compliance', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( '11 banner styles + popup', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( '52+ languages', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Privacy badge', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Support:', 'uniconsent-cmp' ); ?> support@uniconsent.com</li>
 						</ul>
-						<a href="https://app.uniconsent.com/app/register?utm_source=wp" class="unis-upgrade__cta"><?php _e( 'Get Started', 'uniconsent-cmp' ); ?></a>
 					</div>
 				</aside>
 			</main>

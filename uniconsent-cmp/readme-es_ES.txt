@@ -1,50 +1,45 @@
 === UniConsent Cookie Consent CMP - Gestor de consentimiento ===
-Version: 1.6.5
+Version: 1.7.0
 Contributors: uniconsent
 Tags: cmp, banner de cookies, consentimiento de cookies, iab, cookie
 Requires at least: 4.0
 Tested up to: 6.8.3
 Requires PHP: 7.4
-Stable tag: 1.6.5
+Stable tag: 1.7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Plataforma líder de gestión de consentimiento para el cumplimiento de IAB TCF, GPP, RGPD, POPIA, CCPA, COPPA y LGPD.
 
 == Description ==
 
-Plataforma líder de gestión de consentimiento para el cumplimiento de RGPD, CCPA, COPPA, PIPL, LGPD, POPIA. UniConsent RGPD, CCPA/CPRA, COPPA, LGPD, POPIA Solución de cumplimiento – Privacy Manager para simplificar el cumplimiento de las normativas de privacidad globales.
+[UniConsent](https://www.uniconsent.com/) es una plataforma líder de gestión de consentimiento (CMP) que ayuda a los sitios web a cumplir con las normativas de privacidad globales, incluyendo [RGPD](https://www.uniconsent.com/gdpr), [CCPA/CPRA](https://www.uniconsent.com/ccpa), COPPA, [LGPD](https://www.uniconsent.com/lgpd), PIPL, POPIA y [PDPA](https://www.uniconsent.com/pdpa).
 
-**UniConsent CMP es una plataforma de gestión de consentimiento certificada EU IAB TCF.**
+= Certificaciones =
 
-**UniConsent CMP es una plataforma de gestión de consentimiento certificada Canada IAB TCF.**
+* **CMP certificada EU IAB TCF 2.3**
+* **CMP certificada Canada IAB TCF**
+* **CMP certificada Google Consent Mode (Gold Tier)**
 
-**UniConsent CMP es una CMP certificada de Google Consent Mode**
+= Características =
 
-**Soporte de Microsoft UET Consent Mode**
+* 11 estilos de banner con vista previa visual — Bottom Sheet, Floating Card, Dark Compact, Popup y más
+* Google Consent Mode v2
+* Microsoft UET y Bing Ads Consent Mode
+* Señales de consentimiento IAB GPP 1.1
+* Señales de consentimiento EU IAB TCF 2.3, TCF Canada, CCPA USP y estados de EE. UU.
+* Opción para mostrar u ocultar el badge de privacidad
+* Segmentación GEO — mostrar banners de consentimiento solo a visitantes de regiones específicas
+* Soporte de 52+ idiomas
+* Compatible con WP Consent API
+* Funciona con Google Ad Manager, Google AdX, Google AdSense, Prebid.js, Amazon APS, Facebook Pixel, LinkedIn Pixel y más
 
-**Soporte de Bing Ads Consent Mode**
+= Cómo funciona =
 
-**Soporte de WP Consent API**
+Instale y active el plugin, elija su estilo de banner, habilite el cumplimiento de RGPD y/o CCPA, y guarde. El banner de consentimiento aparece en su sitio automáticamente — sin necesidad de código.
 
-[UniConsent](https://www.uniconsent.com/) implementa el marco de transparencia y consentimiento de IAB para el RGPD y las directrices de consentimiento de Google Ad Manager/AdSense. La mayoría de los editores han experimentado un aumento sustancial de ingresos después de implementar y cambiar a UniConsent.
-
-¿Busca UniConsent RGPD CMP para otras plataformas? Consulte [Universal Consent Manager para el cumplimiento de RGPD y CCPA](https://www.uniconsent.com/).
+Para funciones avanzadas como CSS personalizado, análisis de consentimiento, escaneo de cookies y registro de consentimiento, regístrese para obtener una clave de licencia gratuita en [uniconsent.com](https://www.uniconsent.com/).
 
 Manténgase actualizado en [Noticias de Regtech de privacidad de datos](https://www.uniconsent.com/blog).
-
-Señales de consentimiento soportadas: señales de consentimiento EU IAB TCF 2.2, señales de consentimiento TCF Canada, señales de consentimiento Global Privacy Platform (GPP), señales de consentimiento CCPA USP, señales de consentimiento de estados de EE. UU., etc.
-
-IAB Europe anunció un estándar técnico para apoyar al ecosistema de publicidad digital en el cumplimiento de los requisitos de consentimiento del [Reglamento General de Protección de Datos](https://www.uniconsent.com/gdpr) (RGPD), [Cumplimiento CCPA](https://www.uniconsent.com/ccpa), [Cumplimiento CPRA](https://www.uniconsent.com/cpra), [Cumplimiento LGPD](https://www.uniconsent.com/lgpd), [Cumplimiento PDPA](https://www.uniconsent.com/pdpa). Este plugin proporciona una implementación de ese marco.
-
-UniConsent soporta la gestión del consentimiento para proveedores de Google GAM.
-
-Soporte multilingüe: inglés, español, alemán, francés, italiano, portugués, polaco, neerlandés, sueco, búlgaro, catalán, checo, danés, griego, estonio, finés, húngaro, lituano, letón, maltés, noruego, rumano, ruso, eslovaco, esloveno, chino, serbio, japonés, bosnio, turco, galés, euskera, gallego, hebreo, indonesio, coreano, macedonio, malayo, tagalo, ucraniano. Más idiomas en camino.
-
-El plugin UniConsent implementa el marco de consentimiento IAB para RGPD, CCPA, Directiva ePrivacy y el gestor de consentimiento Google Ad Manager/AdSense.
-
-UniConsent puede cargar etiquetas de terceros basándose en el consentimiento del usuario y enviar datos de consentimiento a Google Tag Manager.
-
-Soporte para IAB TCF 2.2, Google Ad Manager, Google AdX, Google AdSense, Prebid.js Header Bidding, Amazon APS, proveedores personalizados, Facebook Pixel, Google Adwords, LinkedIn Pixel, Bing Ads.
 
 == Installation ==
 
@@ -82,34 +77,32 @@ UniConsent, o cualquier otro Consent Management Provider (CMP) aprobado por la I
 
 = ¿Cuál es la diferencia entre UniConsent y otras CMP?
 
-* Soporte de segmentación GEO, mostrar consentimiento solo para ciudadanos de la UE.
-* Soporte de múltiples modos, banner o popup
-* Soporte para proveedores IAB y proveedores Google DFP.
-* Alto rendimiento y fiabilidad
-* Alta tasa de opt-in.
-* Poco impacto en los ingresos publicitarios
+* 11 estilos de banner con tarjetas de vista previa visual
+* Segmentación GEO — mostrar banners de consentimiento solo en regiones específicas
+* CMP certificada IAB TCF 2.3 y Google Consent Mode
+* Soporte para proveedores IAB, proveedores Google GAM y proveedores personalizados
+* Google Consent Mode v2 y Microsoft UET Consent Mode
+* 52+ idiomas
+* Alta tasa de opt-in con mínimo impacto en los ingresos publicitarios
 * Soporte de consentimiento Cookie ePrivacy
-* Soporte para Google AdSense y Google DFP.
-* Descubrimiento de cookies
 
 = ¿Es gratuita esta solución CMP?
 
-Sí, el plugin de WordPress es una versión lite de UniConsent CMP, es gratuito. También ofrecemos una versión premium con funciones avanzadas y soporte técnico, por favor contacte a hello@uniconsent.com para más detalles.
+Sí, el plugin de WordPress funciona sin clave de licencia con todas las funciones principales, incluyendo IAB TCF 2.3, Google Consent Mode v2, 11 estilos de banner y 52+ idiomas. Regístrese para obtener una clave de licencia gratuita en [uniconsent.com](https://www.uniconsent.com/) para desbloquear funciones avanzadas como CSS personalizado, análisis de consentimiento, escaneo de cookies y registro de consentimiento.
 
-= Somos un gran editor. ¿Ofrecen un plan premium?
+= ¿Ofrecen un plan premium?
 
-Sí. El plan premium tiene las siguientes características:
+Sí. Los planes premium incluyen:
 
-* Pop-ups y barras de recopilación de consentimiento de múltiples etapas totalmente personalizables
-* Implementación de una sola etiqueta
-* Análisis de datos e información
-* Soporte multilingüe
-* Soporte IAB y Google
-* Soporte de consentimiento Cookie ePrivacy
-* Soporte técnico
-* Soporte de dominio personalizado [beta]
+* Textos de banner personalizados, traducciones y estilos CSS
+* Panel de análisis de tasas de consentimiento
+* Descubrimiento y divulgación de cookies del sitio web
+* Bloqueo de JavaScript y cookies
+* Registro de consentimiento ConsentDB
+* Dominio CMP de primera parte
+* Soporte prioritario
 
-Por favor consulte: [Sitio oficial de UniConsent Consent Manager](https://www.uniconsent.com)
+Por favor consulte: [UniConsent Consent Manager](https://www.uniconsent.com)
 
 == Screenshots ==
 
@@ -122,8 +115,10 @@ Por favor consulte: [Sitio oficial de UniConsent Consent Manager](https://www.un
 
 == Changelog ==
 
-= 1.6.5 =
-* Soporte de localización
+= 1.7.0 =
+* 11 estilos visuales de banner con tarjetas de vista previa
+* Opción para mostrar u ocultar el badge de privacidad
+* Soporte de 52+ idiomas
 
 = 1.6.4 =
 * Mejora de la interfaz

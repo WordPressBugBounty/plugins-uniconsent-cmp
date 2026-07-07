@@ -1,50 +1,45 @@
 === UniConsent Cookie Consent CMP - Consent Manager ===
-Version: 1.6.5
+Version: 1.7.0
 Contributors: uniconsent
 Tags: cmp, cookie banner, cookie consent, iab, cookie
 Requires at least: 4.0
 Tested up to: 6.8.3
 Requires PHP: 7.4
-Stable tag: 1.6.5
+Stable tag: 1.7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Leading Consent Management Platform for IAB TCF, GPP, GDPR, POPIA, CCPA, COPPA, and LGPD Compliance.
 
 == Description ==
 
-Leading Consent Management Platform for GDPR, CCPA, COPPA, PIPL, LGPD, POPIA Compliance. UniConsent GDPR, CCPA/CPRA, COPPA, LGPD, POPIA Compliance Solution Privacy Manager Simplify Global Privacy Regulations Compliance.
+[UniConsent](https://www.uniconsent.com/) is a leading Consent Management Platform (CMP) that helps websites comply with global privacy regulations including [GDPR](https://www.uniconsent.com/gdpr), [CCPA/CPRA](https://www.uniconsent.com/ccpa), COPPA, [LGPD](https://www.uniconsent.com/lgpd), PIPL, POPIA, and [PDPA](https://www.uniconsent.com/pdpa).
 
-**UniConsent CMP is a certified EU IAB TCF Consent Management Platform.**
+= Certifications =
 
-**UniConsent CMP is a certified Canada IAB TCF Consent Management Platform.**
+* **Certified EU IAB TCF 2.3 CMP**
+* **Certified Canada IAB TCF CMP**
+* **Certified Google Consent Mode CMP (Gold Tier)**
 
-**UniConsent CMP is a certified Google Consent Mode CMP**
+= Features =
 
-**Microsoft UET Consent Mode Support**
+* 11 banner styles with visual preview — Bottom Sheet, Floating Card, Dark Compact, Popup, and more
+* Google Consent Mode v2
+* Microsoft UET and Bing Ads Consent Mode
+* IAB GPP 1.1 consent signals
+* EU IAB TCF 2.3, TCF Canada, CCPA USP, and US state consent signals
+* Privacy badge toggle
+* GEO targeting — show consent banners only to visitors in specific regions
+* 52+ languages support
+* WP Consent API compatible
+* Works with Google Ad Manager, Google AdX, Google AdSense, Prebid.js, Amazon APS, Facebook Pixel, LinkedIn Pixel, and more
 
-**Bing Ads Consent Mode Support**
+= How It Works =
 
-**WP Consent API Support**
+Install and activate the plugin, choose your banner style, enable GDPR and/or CCPA compliance, and save. The consent banner appears on your site automatically — no coding required.
 
-[UniConsent](https://www.uniconsent.com/) implements the IAB Transparency and Consent Framework for GDPR and Google Ad Manager/Adsense Consent Guidance. Most publishers have seen revenue increased substantially right after implemented and switched to UniConsent.
-
-Looking for UniConsent GDPR CMP for other platform, please check [Universal Consent Manager for GDPR and CCPA Compliance](https://www.uniconsent.com/).
+For advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, register for a free license key at [uniconsent.com](https://www.uniconsent.com/).
 
 Keep updated on [Data Privacy Regtech News](https://www.uniconsent.com/blog).
-
-Supported consent signals: EU IAB TCF 2.2 consent signals, TCF Canada consent signals, global privacy platform (GPP) consent signals, CCPA USP consent signals, US state consent signals etc.
-
-IAB Europe announced a technical standard to support the digital advertising ecosystem in meeting the [General Data Protection Regulation](https://www.uniconsent.com/gdpr) (GDPR), [CCPA Compliance](https://www.uniconsent.com/ccpa), [CPRA Compliance](https://www.uniconsent.com/cpra), [LGPD Compliance](https://www.uniconsent.com/lgpd), [PDRA Compliance](https://www.uniconsent.com/pdpa) consumer consent requirements. This provides an implementation of that framework.
-
-UniConsent supports consent management for Google GAM vendors.
-
-Multiple languages support: English, Spanish, German, French, Italian, Portuguese, Polish, Dutch, Swedish, Bulgarian, Catalan, Czech, Danish, Greek, Estonian, Finnish, Hungarian, Lithuanian, Latvian, Maltese, Norwegian, Romanian, Russian, Slovak, Slovenian, Chinese, Serbian, Japanese, Bosnian, Turkish, Welsh, Basque, Galician, Hebrew, Indonesian, Korean, Macedonian, Malay, Tagalog, Ukrainian languages support. More languages on the way.
-
-The UniConsent plugin implements the IAB Consent Framework for GDPR, CCPA, ePrivacy Directive and Google Ad Manager/Adsense Consent Manager.
-
-UniConsent can load the third party tags based on user's consent and sending consent data to Google Tag Manager.
-
-Support IAB TCF 2.2, Google Ad Manager, Google AdX, Google Adsense, Prebid.js Header Bidding, Amazon APS, Custom Vendors, Facebook Pixel, Google Adwords, Linkedin Pixel, Bing Ads.
 
 == Installation ==
 
@@ -82,34 +77,32 @@ UniConsent, or any other IAB approved Consent Management Provider (CMP), provide
 
 = What is the difference between UniConsent and the other CMP?
 
-* GEO targeting support, only show consent for EU citizens.
-* Multiple mode support, bar or popup
-* Support both IAB vendors and Google DFP vendors.
-* High performance and reliability
-* High Opt-in rate.
-* Little impact with Ads revenue
+* 11 banner styles with visual preview cards
+* GEO targeting — show consent banners only in specific regions
+* Certified IAB TCF 2.3 and Google Consent Mode CMP
+* Support IAB vendors, Google GAM vendors, and custom vendors
+* Google Consent Mode v2 and Microsoft UET Consent Mode
+* 52+ languages
+* High opt-in rate with minimal impact on ad revenue
 * Cookie ePrivacy consent support
-* Support Google Adsense and Google DFP.
-* Cookies discovery
 
 = Is this CMP solution free?
 
-Yes, the wordpress plugin is a lite version of UniConsent CMP, it is free to use. We also provide a premium version with advanced features and technical support, please enquire hello@uniconsent.com for more details. 
+Yes, the WordPress plugin works without a license key with all core features including IAB TCF 2.3, Google Consent Mode v2, 11 banner styles, and 52+ languages. Register for a free license key at [uniconsent.com](https://www.uniconsent.com/) to unlock advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging.
 
-= We are a large publisher. Do you offer a premium plan?
+= Do you offer a premium plan?
 
-Yes. The premium plan has the following features:
+Yes. Premium plans include:
 
-* Fully customisable multiple stages consent collection pop-ups, bars
-* One-tag Implementation
-* Data analytics and Insight 
-* Multiple languages support
-* IAB and Google support 
-* Cookie ePrivacy consent support
-* Technical support
-* Custom domain support [beta]
+* Custom banner text, translations, and CSS styling
+* Consent rate analytics dashboard
+* Website cookie discovery and disclosure
+* JavaScript and cookie blocking
+* ConsentDB consent logging
+* First-party CMP domain
+* Priority support
 
-Please check: [UniConsent Consent Manager Offical site](https://www.uniconsent.com)
+Please check: [UniConsent Consent Manager](https://www.uniconsent.com)
 
 == Screenshots ==
 
@@ -122,8 +115,10 @@ Please check: [UniConsent Consent Manager Offical site](https://www.uniconsent.c
 
 == Changelog ==
 
-= 1.6.5 =
-* Localization support
+= 1.7.0 =
+* 11 visual banner styles with preview cards
+* Option to show or hide privacy badge
+* 52+ languages support
 
 = 1.6.4 =
 * Improve UI
