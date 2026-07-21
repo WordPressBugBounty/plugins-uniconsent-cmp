@@ -159,6 +159,15 @@ class UNIC_Admin_Settings {
 			)
 		);
 
+		register_setting(
+			'unic-general-config', // Option group
+			'unic_publisher_country', // Option name
+			array(
+				'type' => 'string',
+				'sanitize_callback' => array( $this, 'sanitize_country_code' )
+			)
+		);
+
 	}
 
 	public function sanitize_text( $input ) {
@@ -169,6 +178,11 @@ class UNIC_Admin_Settings {
 	public function sanitize_url( $input ) {
 		$input = esc_url( $input );
 		return $input;
+	}
+
+	public function sanitize_country_code( $input ) {
+		$input = strtoupper( sanitize_text_field( $input ) );
+		return preg_match( '/^[A-Z]{2}$/', $input ) ? $input : 'DE';
 	}
 
 	public function save_uniconsent_settings()
@@ -204,6 +218,7 @@ class UNIC_Admin_Settings {
 		$enable_gdpr = isset($_POST['unic_enable_gdpr']) ? sanitize_text_field($_POST['unic_enable_gdpr']) : 'no';
 		$enable_ccpa = isset($_POST['unic_enable_ccpa']) ? sanitize_text_field($_POST['unic_enable_ccpa']) : 'no';
 		$enable_iab = isset($_POST['unic_enable_iab']) ? sanitize_text_field($_POST['unic_enable_iab']) : 'no';
+		$publisher_country = isset($_POST['unic_publisher_country']) ? sanitize_text_field($_POST['unic_publisher_country']) : 'DE';
 
 		$settings = array(
 			'unic_license' => isset($_POST['unic_license']) ? sanitize_text_field($_POST['unic_license']) : '',
@@ -217,6 +232,7 @@ class UNIC_Admin_Settings {
 			'unic_enable_gdpr' => in_array($enable_gdpr, $allowed_yes_no, true) ? $enable_gdpr : 'no',
 			'unic_enable_ccpa' => in_array($enable_ccpa, $allowed_yes_no, true) ? $enable_ccpa : 'no',
 			'unic_enable_iab' => in_array($enable_iab, $allowed_iab, true) ? $enable_iab : 'no',
+			'unic_publisher_country' => $this->sanitize_country_code($publisher_country),
 		);
 
 		$errors = [];

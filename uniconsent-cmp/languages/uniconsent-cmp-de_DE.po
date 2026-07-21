@@ -642,3 +642,11 @@ msgstr "Über 52 Sprachen"
 #: admin/views.php
 msgid "Privacy badge"
 msgstr "Datenschutz-Badge"
+
+#: admin/views.php
+msgid "Publisher Country"
+msgstr "Land des Publishers"
+
+#: admin/views.php
+msgid "The country where your business is established. Used as the publisher country code in the IAB TCF consent string."
+msgstr "Das Land, in dem Ihr Unternehmen niedergelassen ist. Wird als Ländercode des Publishers im IAB TCF Consent String verwendet."

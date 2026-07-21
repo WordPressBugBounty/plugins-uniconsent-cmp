@@ -642,3 +642,11 @@ msgstr "52+ 种语言"
 #: admin/views.php
 msgid "Privacy badge"
 msgstr "隐私徽章"
+
+#: admin/views.php
+msgid "Publisher Country"
+msgstr "发布商所在国家/地区"
+
+#: admin/views.php
+msgid "The country where your business is established. Used as the publisher country code in the IAB TCF consent string."
+msgstr "您的企业注册所在的国家/地区。用作 IAB TCF 同意字符串中的发布商国家代码。"

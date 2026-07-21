@@ -152,7 +152,11 @@ UNIC;
 				$unic_enable_ccpa = 'yes';
 			}
 			$unic_init_vals['unic_enable_ccpa'] = $unic_enable_ccpa;
-			$unic_init_vals['publisherCountryCode'] = 'DE';
+			$unic_publisher_country = strtoupper(esc_attr(get_option( 'unic_publisher_country' )));
+			if(!preg_match('/^[A-Z]{2}$/', $unic_publisher_country)) {
+				$unic_publisher_country = 'DE';
+			}
+			$unic_init_vals['publisherCountryCode'] = $unic_publisher_country;
 		}
 		
 		return json_encode( $unic_init_vals );

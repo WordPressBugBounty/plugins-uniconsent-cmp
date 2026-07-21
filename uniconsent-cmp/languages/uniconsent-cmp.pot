@@ -639,3 +639,11 @@ msgstr ""
 #: admin/views.php
 msgid "Privacy badge"
 msgstr ""
+
+#: admin/views.php
+msgid "Publisher Country"
+msgstr ""
+
+#: admin/views.php
+msgid "The country where your business is established. Used as the publisher country code in the IAB TCF consent string."
+msgstr ""

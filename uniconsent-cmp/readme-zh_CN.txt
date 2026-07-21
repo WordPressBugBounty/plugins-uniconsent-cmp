@@ -1,11 +1,11 @@
 === UniConsent Cookie Consent CMP - 同意管理器 ===
-Version: 1.7.0
+Version: 1.7.1
 Contributors: uniconsent
 Tags: cmp, cookie横幅, cookie同意, iab, cookie
 Requires at least: 4.0
 Tested up to: 6.8.3
 Requires PHP: 7.4
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 领先的同意管理平台，支持 IAB TCF、GPP、GDPR、POPIA、CCPA、COPPA 和 LGPD 合规。
@@ -114,6 +114,9 @@ UniConsent 或任何其他经 IAB 批准的同意管理提供商（CMP）为发�
 6. UniConsent – 第六阶段：初始横幅页面。
 
 == Changelog ==
+
+= 1.7.1 =
+* 发布商国家/地区设置，用于 IAB TCF publisherCountryCode
 
 = 1.7.0 =
 * 11 种可视横幅样式，带预览卡片
