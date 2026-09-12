@@ -373,7 +373,7 @@ msgid "Where are my settings managed after entering a license key?"
 msgstr ""
 
 #: admin/views.php
-msgid "Once you enter a license key (format: license-xxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at"
+msgid "Once you enter a license key (format: license-xxxxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at"
 msgstr ""
 
 #: admin/views.php

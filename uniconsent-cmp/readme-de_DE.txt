@@ -1,11 +1,11 @@
 === UniConsent Cookie Consent CMP - Einwilligungsmanager ===
-Version: 1.7.1
+Version: 1.7.2
 Contributors: uniconsent
 Tags: cmp, cookie banner, cookie einwilligung, iab, cookie
 Requires at least: 4.0
-Tested up to: 6.8.3
+Tested up to: 7.1.0
 Requires PHP: 7.4
-Stable tag: 1.7.1
+Stable tag: 1.7.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Führende Consent-Management-Plattform für IAB TCF, GPP, DSGVO, POPIA, CCPA, COPPA und LGPD Konformität.
@@ -114,6 +114,9 @@ Bitte besuchen Sie: [UniConsent Consent Manager](https://www.uniconsent.com)
 6. UniConsent – Stufe sechs: Erster Banner-Bildschirm.
 
 == Changelog ==
+
+= 1.7.2 =
+* Lizenzschlüssel als license-xxxx, key-xxxx oder reine Projekt-ID akzeptieren, beim Speichern normalisieren und bei ungültigem Schlüssel einen Admin-Hinweis anzeigen
 
 = 1.7.1 =
 * Einstellung des Publisher-Landes für IAB TCF publisherCountryCode

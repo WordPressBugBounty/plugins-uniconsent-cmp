@@ -52,8 +52,7 @@ class UNIC_Admin_Views {
 							<form method="post" action="options.php" id="uniconsent-settings-form">
 								<?php settings_fields( 'unic-general-config' ); ?>
 								
-								<?php $unic_license = esc_attr(get_option( 'unic_license')); ?>
-								<?php if(!($unic_license && (strpos($unic_license, 'key-') > -1 || strpos($unic_license, 'license-') > -1))): ?>
+								<?php if(!\UNIC\UNIC_Values::parse_license(get_option( 'unic_license' ))): ?>
 
 								<?php
 								$unic_barmode = get_option( 'unic_barmode' );
@@ -301,7 +300,7 @@ class UNIC_Admin_Views {
 									<div class="unis-help-text">
 										<p><?php _e( '* Get your free license key at:', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a> <?php _e( 'to unlock more features.', 'uniconsent-cmp' ); ?></p>
 										<p><?php _e( '* The free version supports up to 50,000 users per month. For higher traffic, upgrade your plan at', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a>.</p>
-										<p><?php _e( '* The configurations are managed at', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a> <?php _e( 'once you have entered the license key:', 'uniconsent-cmp' ); ?> <b>license-xxxxxxxx</b>.</p>
+										<p><?php _e( '* The configurations are managed at', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a> <?php _e( 'once you have entered the license key:', 'uniconsent-cmp' ); ?> <b>license-xxxxxxxxxx</b>.</p>
 									</div>
 								</div>
 
@@ -363,7 +362,7 @@ class UNIC_Admin_Views {
 
 								<div class="unis-faq__item">
 									<button class="unis-faq__question"><?php _e( 'Where are my settings managed after entering a license key?', 'uniconsent-cmp' ); ?></button>
-									<div class="unis-faq__answer"><?php _e( 'Once you enter a license key (format: license-xxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at', 'uniconsent-cmp' ); ?> <a href="https://app.uniconsent.com/" target="_blank">app.uniconsent.com</a>. <?php _e( 'The WordPress plugin will load your configuration automatically.', 'uniconsent-cmp' ); ?></div>
+									<div class="unis-faq__answer"><?php _e( 'Once you enter a license key (format: license-xxxxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at', 'uniconsent-cmp' ); ?> <a href="https://app.uniconsent.com/" target="_blank">app.uniconsent.com</a>. <?php _e( 'The WordPress plugin will load your configuration automatically.', 'uniconsent-cmp' ); ?></div>
 								</div>
 
 							</div>

@@ -46,10 +46,8 @@ window.gtag||(window.dataLayer=window.dataLayer||[],window.gtag=function(){windo
 </script>
 UNIC;
 		
-		$unic_license = sanitize_text_field(get_option( 'unic_license' ));
-		if(strpos($unic_license, 'license-') > -1) {
-			$unic_license = preg_replace('/[^a-f0-9]/', '', str_replace('license-', '', $unic_license));
-			$unic_license = substr($unic_license,0,10);
+		$unic_license = UNIC_Values::parse_license(get_option( 'unic_license' ));
+		if($unic_license) {
 			echo $unic_stub_v2."\n";
 			echo "<script data-nowprocket async data-cfasync='false' src='".esc_url('https://cmp.uniconsent.com/v2/'.$unic_license.'/cmp.js')."'></script>\n";
 
@@ -69,10 +67,9 @@ UNIC;
 
 		$unic_init_vals = array();
 
-		$unic_license = sanitize_text_field(get_option( 'unic_license' ));
-		if(strpos($unic_license, 'license-') > -1) {
-			$unic_license = preg_replace('/[^a-f0-9]/', '', str_replace('license-', '', $unic_license));
-			$unic_init_vals['unic_license'] = substr($unic_license,0,10);
+		$unic_license = UNIC_Values::parse_license(get_option( 'unic_license' ));
+		if($unic_license) {
+			$unic_init_vals['unic_license'] = $unic_license;
 			$unic_init_vals['version'] = 2;
 		} else {
 

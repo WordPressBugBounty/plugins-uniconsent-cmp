@@ -27,4 +27,15 @@ class UNIC_Values {
 		);
 
 	}
+
+	/**
+	 * Returns the 10-char project ID from a license key, or '' if invalid.
+	 * Accepts "license-xxxxxxxxxx", "key-xxxxxxxxxx" and the bare "xxxxxxxxxx" form.
+	 */
+	public static function parse_license( $raw ) {
+		$value = strtolower( trim( (string) $raw ) );
+		$value = preg_replace( '/^(license|key)-/', '', $value );
+		$value = substr( preg_replace( '/[^a-z0-9]/', '', $value ), 0, 10 );
+		return strlen( $value ) === 10 ? $value : '';
+	}
 }

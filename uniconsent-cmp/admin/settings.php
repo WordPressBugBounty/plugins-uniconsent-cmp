@@ -39,6 +39,16 @@ class UNIC_Admin_Settings {
 	}
 
 	public function unic_admin_notice_license() {
+		$raw = get_option( 'unic_license' );
+		if ( ! $raw || UNIC_Values::parse_license( $raw ) ) {
+			return;
+		}
+		echo '<div class="notice notice-warning"><p>'
+			. sprintf(
+				__( 'UniConsent CMP: the license key "%s" is not valid, so the free-tier CMP is being loaded. Expected format: license-xxxxxxxxxx.', 'uniconsent-cmp' ),
+				esc_html( $raw )
+			)
+			. ' <a href="' . esc_url( admin_url( 'admin.php?page=unic-options' ) ) . '">' . __( 'Fix it in settings', 'uniconsent-cmp' ) . '</a></p></div>';
 	}
 
 	public function unic_options() {
@@ -220,8 +230,11 @@ class UNIC_Admin_Settings {
 		$enable_iab = isset($_POST['unic_enable_iab']) ? sanitize_text_field($_POST['unic_enable_iab']) : 'no';
 		$publisher_country = isset($_POST['unic_publisher_country']) ? sanitize_text_field($_POST['unic_publisher_country']) : 'DE';
 
+		$license = isset($_POST['unic_license']) ? sanitize_text_field($_POST['unic_license']) : '';
+		$license_id = UNIC_Values::parse_license($license);
+
 		$settings = array(
-			'unic_license' => isset($_POST['unic_license']) ? sanitize_text_field($_POST['unic_license']) : '',
+			'unic_license' => $license_id ? 'license-' . $license_id : $license,
 			'unic_language' => in_array($language, $allowed_languages, true) ? $language : 'EN',
 			'unic_company' => isset($_POST['unic_company']) ? sanitize_text_field($_POST['unic_company']) : '',
 			'unic_logo' => isset($_POST['unic_logo']) ? esc_url_raw($_POST['unic_logo']) : '',

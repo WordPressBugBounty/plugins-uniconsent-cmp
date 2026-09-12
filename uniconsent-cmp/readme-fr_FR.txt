@@ -1,11 +1,11 @@
 === UniConsent Cookie Consent CMP - Gestionnaire de consentement ===
-Version: 1.7.1
+Version: 1.7.2
 Contributors: uniconsent
 Tags: cmp, bannière cookie, consentement cookie, iab, cookie
 Requires at least: 4.0
-Tested up to: 6.8.3
+Tested up to: 7.1.0
 Requires PHP: 7.4
-Stable tag: 1.7.1
+Stable tag: 1.7.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Plateforme de gestion du consentement leader pour la conformité IAB TCF, GPP, RGPD, POPIA, CCPA, COPPA et LGPD.
@@ -114,6 +114,9 @@ Veuillez consulter : [UniConsent Consent Manager](https://www.uniconsent.com)
 6. UniConsent – étape six : écran de la bannière initiale.
 
 == Changelog ==
+
+= 1.7.2 =
+* Accepter la clé de licence sous la forme license-xxxx, key-xxxx ou l'ID de projet seul, la normaliser à l'enregistrement et afficher un avis d'administration si la clé est invalide
 
 = 1.7.1 =
 * Réglage du pays de l'éditeur pour IAB TCF publisherCountryCode

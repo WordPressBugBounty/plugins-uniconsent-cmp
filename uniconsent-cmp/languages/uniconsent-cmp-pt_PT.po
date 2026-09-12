@@ -376,8 +376,8 @@ msgid "Where are my settings managed after entering a license key?"
 msgstr "Onde são geridas as minhas definições após introduzir uma chave de licença?"
 
 #: admin/views.php
-msgid "Once you enter a license key (format: license-xxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at"
-msgstr "Depois de introduzir uma chave de licença (formato: license-xxxxxxxx), as suas configurações de CMP são geridas através do painel do UniConsent em"
+msgid "Once you enter a license key (format: license-xxxxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at"
+msgstr "Depois de introduzir uma chave de licença (formato: license-xxxxxxxxxx), as suas configurações de CMP são geridas através do painel do UniConsent em"
 
 #: admin/views.php
 msgid "The WordPress plugin will load your configuration automatically."
