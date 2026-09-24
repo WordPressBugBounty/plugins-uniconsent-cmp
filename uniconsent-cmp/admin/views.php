@@ -45,14 +45,99 @@ class UNIC_Admin_Views {
 					<div id="settings-content" class="unis-tab-content unis-tab-content--active">
 						<section class="unis-section">
 							<div class="unis-section__header">
-								<h2 class="unis-section__title"><?php _e( 'UniConsent Configuration', 'uniconsent-cmp' ); ?></h2>
-								<p class="unis-section__subtitle"><?php _e( 'Configure your UniConsent integration settings', 'uniconsent-cmp' ); ?></p>
+								<h2 class="unis-section__title"><?php _e( 'Consent Banner Settings', 'uniconsent-cmp' ); ?></h2>
+								<p class="unis-section__subtitle"><?php _e( 'Set up the consent banner shown on your website.', 'uniconsent-cmp' ); ?></p>
 							</div>
 
 							<form method="post" action="options.php" id="uniconsent-settings-form">
 								<?php settings_fields( 'unic-general-config' ); ?>
 								
-								<?php if(!\UNIC\UNIC_Values::parse_license(get_option( 'unic_license' ))): ?>
+								<?php $unic_licensed = (bool) \UNIC\UNIC_Values::parse_license(get_option( 'unic_license' )); ?>
+								<div class="unis-upgrade-banner" id="unic_licensed_notice"<?php echo $unic_licensed ? '' : ' style="display:none"'; ?>>
+									<div class="unis-upgrade-banner__text">
+										<span><?php _e( 'Your banner is configured in the UniConsent dashboard because a license key is set.', 'uniconsent-cmp' ); ?></span>
+									</div>
+									<a href="https://app.uniconsent.com/app/login?utm_source=wp_dashboard" target="_blank" class="unis-upgrade__cta unis-upgrade-banner__cta"><?php _e( 'Open Dashboard →', 'uniconsent-cmp' ); ?></a>
+								</div>
+
+								<?php // always rendered so saving with a license key keeps these values ?>
+								<div id="unic_free_settings"<?php echo $unic_licensed ? ' style="display:none"' : ''; ?>>
+
+								<?php $unic_enable_iab = get_option( 'unic_enable_iab'); ?>
+								<?php if(!$unic_enable_iab) {
+									$unic_enable_iab = 'no';
+								} ?>
+								<div class="unis-form-group">
+									<label class="unis-label" for="unic_enable_iab"><?php _e( 'Banner Type', 'uniconsent-cmp' ); ?></label>
+									<select class="unis-select" id="unic_enable_iab" name="unic_enable_iab">
+										<option value="ez" <?php selected( $unic_enable_iab, 'ez' ); ?>><?php _e( 'Cookie categories', 'uniconsent-cmp' ); ?></option>
+										<?php if ( $unic_enable_iab === 'no' ) : ?>
+										<option value="no" selected="selected"><?php _e( 'Without IAB vendors', 'uniconsent-cmp' ); ?></option>
+										<?php endif; ?>
+										<option value="v2" <?php selected( $unic_enable_iab, 'v2' ); ?>><?php _e( 'IAB TCF 2.4', 'uniconsent-cmp' ); ?></option>
+									</select>
+									<div class="unis-help-text">
+										<?php _e( 'Cookie categories shows all visitors a cookie banner where they can accept or reject each cookie category. Their choices are passed to Google Consent Mode v2 and Microsoft UET Consent Mode, so it suits sites that run ad campaigns with Google Ads or Microsoft Ads conversion and remarketing pixels. Choose IAB TCF 2.4 if you show ads on your site through Google AdSense, Google Ad Manager, or other programmatic ads, to serve ads to visitors in the EEA, UK, and Switzerland.', 'uniconsent-cmp' ); ?>
+									</div>
+								</div>
+
+								<?php
+								$unic_publisher_country = get_option( 'unic_publisher_country' );
+								if(!$unic_publisher_country) {
+									$unic_publisher_country = 'DE';
+								}
+								$unic_countries = array(
+									'AF' => 'Afghanistan', 'AX' => 'Åland Islands', 'AL' => 'Albania', 'DZ' => 'Algeria', 'AS' => 'American Samoa', 'AD' => 'Andorra', 'AO' => 'Angola', 'AI' => 'Anguilla', 'AG' => 'Antigua and Barbuda', 'AR' => 'Argentina', 'AM' => 'Armenia', 'AW' => 'Aruba', 'AU' => 'Australia', 'AT' => 'Austria', 'AZ' => 'Azerbaijan',
+									'BS' => 'Bahamas', 'BH' => 'Bahrain', 'BD' => 'Bangladesh', 'BB' => 'Barbados', 'BY' => 'Belarus', 'BE' => 'Belgium', 'BZ' => 'Belize', 'BJ' => 'Benin', 'BM' => 'Bermuda', 'BT' => 'Bhutan', 'BO' => 'Bolivia', 'BA' => 'Bosnia and Herzegovina', 'BW' => 'Botswana', 'BR' => 'Brazil', 'BN' => 'Brunei', 'BG' => 'Bulgaria', 'BF' => 'Burkina Faso', 'BI' => 'Burundi',
+									'KH' => 'Cambodia', 'CM' => 'Cameroon', 'CA' => 'Canada', 'CV' => 'Cape Verde', 'KY' => 'Cayman Islands', 'CF' => 'Central African Republic', 'TD' => 'Chad', 'CL' => 'Chile', 'CN' => 'China', 'CO' => 'Colombia', 'KM' => 'Comoros', 'CG' => 'Congo', 'CD' => 'Congo (DRC)', 'CK' => 'Cook Islands', 'CR' => 'Costa Rica', 'CI' => 'Côte d\'Ivoire', 'HR' => 'Croatia', 'CU' => 'Cuba', 'CW' => 'Curaçao', 'CY' => 'Cyprus', 'CZ' => 'Czechia',
+									'DK' => 'Denmark', 'DJ' => 'Djibouti', 'DM' => 'Dominica', 'DO' => 'Dominican Republic',
+									'EC' => 'Ecuador', 'EG' => 'Egypt', 'SV' => 'El Salvador', 'GQ' => 'Equatorial Guinea', 'ER' => 'Eritrea', 'EE' => 'Estonia', 'SZ' => 'Eswatini', 'ET' => 'Ethiopia',
+									'FO' => 'Faroe Islands', 'FJ' => 'Fiji', 'FI' => 'Finland', 'FR' => 'France', 'GF' => 'French Guiana', 'PF' => 'French Polynesia',
+									'GA' => 'Gabon', 'GM' => 'Gambia', 'GE' => 'Georgia', 'DE' => 'Germany', 'GH' => 'Ghana', 'GI' => 'Gibraltar', 'GR' => 'Greece', 'GL' => 'Greenland', 'GD' => 'Grenada', 'GP' => 'Guadeloupe', 'GU' => 'Guam', 'GT' => 'Guatemala', 'GG' => 'Guernsey', 'GN' => 'Guinea', 'GW' => 'Guinea-Bissau', 'GY' => 'Guyana',
+									'HT' => 'Haiti', 'HN' => 'Honduras', 'HK' => 'Hong Kong', 'HU' => 'Hungary',
+									'IS' => 'Iceland', 'IN' => 'India', 'ID' => 'Indonesia', 'IR' => 'Iran', 'IQ' => 'Iraq', 'IE' => 'Ireland', 'IM' => 'Isle of Man', 'IL' => 'Israel', 'IT' => 'Italy',
+									'JM' => 'Jamaica', 'JP' => 'Japan', 'JE' => 'Jersey', 'JO' => 'Jordan',
+									'KZ' => 'Kazakhstan', 'KE' => 'Kenya', 'KI' => 'Kiribati', 'KR' => 'Korea (South)', 'XK' => 'Kosovo', 'KW' => 'Kuwait', 'KG' => 'Kyrgyzstan',
+									'LA' => 'Laos', 'LV' => 'Latvia', 'LB' => 'Lebanon', 'LS' => 'Lesotho', 'LR' => 'Liberia', 'LY' => 'Libya', 'LI' => 'Liechtenstein', 'LT' => 'Lithuania', 'LU' => 'Luxembourg',
+									'MO' => 'Macao', 'MG' => 'Madagascar', 'MW' => 'Malawi', 'MY' => 'Malaysia', 'MV' => 'Maldives', 'ML' => 'Mali', 'MT' => 'Malta', 'MH' => 'Marshall Islands', 'MQ' => 'Martinique', 'MR' => 'Mauritania', 'MU' => 'Mauritius', 'YT' => 'Mayotte', 'MX' => 'Mexico', 'FM' => 'Micronesia', 'MD' => 'Moldova', 'MC' => 'Monaco', 'MN' => 'Mongolia', 'ME' => 'Montenegro', 'MS' => 'Montserrat', 'MA' => 'Morocco', 'MZ' => 'Mozambique', 'MM' => 'Myanmar',
+									'NA' => 'Namibia', 'NR' => 'Nauru', 'NP' => 'Nepal', 'NL' => 'Netherlands', 'NC' => 'New Caledonia', 'NZ' => 'New Zealand', 'NI' => 'Nicaragua', 'NE' => 'Niger', 'NG' => 'Nigeria', 'MK' => 'North Macedonia', 'NO' => 'Norway',
+									'OM' => 'Oman',
+									'PK' => 'Pakistan', 'PW' => 'Palau', 'PS' => 'Palestine', 'PA' => 'Panama', 'PG' => 'Papua New Guinea', 'PY' => 'Paraguay', 'PE' => 'Peru', 'PH' => 'Philippines', 'PL' => 'Poland', 'PT' => 'Portugal', 'PR' => 'Puerto Rico',
+									'QA' => 'Qatar',
+									'RE' => 'Réunion', 'RO' => 'Romania', 'RU' => 'Russia', 'RW' => 'Rwanda',
+									'KN' => 'Saint Kitts and Nevis', 'LC' => 'Saint Lucia', 'VC' => 'Saint Vincent and the Grenadines', 'WS' => 'Samoa', 'SM' => 'San Marino', 'ST' => 'São Tomé and Príncipe', 'SA' => 'Saudi Arabia', 'SN' => 'Senegal', 'RS' => 'Serbia', 'SC' => 'Seychelles', 'SL' => 'Sierra Leone', 'SG' => 'Singapore', 'SX' => 'Sint Maarten', 'SK' => 'Slovakia', 'SI' => 'Slovenia', 'SB' => 'Solomon Islands', 'SO' => 'Somalia', 'ZA' => 'South Africa', 'SS' => 'South Sudan', 'ES' => 'Spain', 'LK' => 'Sri Lanka', 'SD' => 'Sudan', 'SR' => 'Suriname', 'SE' => 'Sweden', 'CH' => 'Switzerland', 'SY' => 'Syria',
+									'TW' => 'Taiwan', 'TJ' => 'Tajikistan', 'TZ' => 'Tanzania', 'TH' => 'Thailand', 'TL' => 'Timor-Leste', 'TG' => 'Togo', 'TO' => 'Tonga', 'TT' => 'Trinidad and Tobago', 'TN' => 'Tunisia', 'TR' => 'Türkiye', 'TM' => 'Turkmenistan', 'TC' => 'Turks and Caicos Islands', 'TV' => 'Tuvalu',
+									'UG' => 'Uganda', 'UA' => 'Ukraine', 'AE' => 'United Arab Emirates', 'GB' => 'United Kingdom', 'US' => 'United States', 'UY' => 'Uruguay', 'UZ' => 'Uzbekistan',
+									'VU' => 'Vanuatu', 'VA' => 'Vatican City', 'VE' => 'Venezuela', 'VN' => 'Vietnam', 'VG' => 'Virgin Islands (British)', 'VI' => 'Virgin Islands (U.S.)',
+									'YE' => 'Yemen',
+									'ZM' => 'Zambia', 'ZW' => 'Zimbabwe',
+								);
+								?>
+								<div class="unis-form-group" id="unic_publisher_country_group"<?php echo $unic_enable_iab === 'v2' ? '' : ' style="display:none"'; ?>>
+									<label class="unis-label" for="unic_publisher_country"><?php _e( 'Publisher Country', 'uniconsent-cmp' ); ?></label>
+									<select class="unis-select" id="unic_publisher_country" name="unic_publisher_country">
+										<?php foreach ( $unic_countries as $code => $name ) : ?>
+											<option value="<?php echo esc_attr( $code ); ?>" <?php selected( $unic_publisher_country, $code ); ?>><?php echo esc_html( $name ); ?></option>
+										<?php endforeach; ?>
+									</select>
+									<div class="unis-help-text">
+										<?php _e( 'The country where your business is established. Used as the publisher country code in the IAB TCF consent string.', 'uniconsent-cmp' ); ?>
+									</div>
+								</div>
+
+								<?php $unic_region = get_option( 'unic_region' ); ?>
+								<?php if(!$unic_region) {
+									$unic_region = 'worldwide';
+								} elseif($unic_region === 'none') {
+									$unic_region = 'eu';
+								} ?>
+								<div class="unis-form-group unic-hide-ez"<?php echo $unic_enable_iab === 'ez' ? ' style="display:none"' : ''; ?>>
+									<label class="unis-label" for="unic_region"><?php _e( 'Show Banner To', 'uniconsent-cmp' ); ?></label>
+									<select class="unis-select" id="unic_region" name="unic_region">
+										<option value="worldwide" <?php selected( $unic_region, 'worldwide' ); ?>><?php _e( 'All visitors', 'uniconsent-cmp' ); ?></option>
+										<option value="eu" <?php selected( $unic_region, 'eu' ); ?>><?php _e( 'EU/EEA visitors only', 'uniconsent-cmp' ); ?></option>
+									</select>
+								</div>
 
 								<?php
 								$unic_barmode = get_option( 'unic_barmode' );
@@ -68,7 +153,7 @@ class UNIC_Admin_Views {
 								}
 								?>
 								<div class="unis-form-group">
-									<label class="unis-label"><?php _e( 'CMP Style', 'uniconsent-cmp' ); ?></label>
+									<label class="unis-label"><?php _e( 'Banner Style', 'uniconsent-cmp' ); ?></label>
 									<input type="hidden" id="unic_barmode" name="unic_barmode" value="<?php echo esc_attr($unic_barmode); ?>">
 									<div class="unis-tmpl-grid">
 										<?php
@@ -92,12 +177,19 @@ class UNIC_Admin_Views {
 											</div>
 										<?php endforeach; ?>
 									</div>
+									<div class="unis-help-text">
+										<?php _e( 'Need your own banner text, styling, or consent purposes?', 'uniconsent-cmp' ); ?> <a href="https://app.uniconsent.com/app/register?utm_source=wp_style" target="_blank"><?php _e( 'Customize them in the UniConsent dashboard →', 'uniconsent-cmp' ); ?></a>
+									</div>
 								</div>
 
 								<?php $unic_language = get_option( 'unic_language' ); ?>
+								<?php if(!$unic_language) {
+									$unic_language = 'EN';
+								} ?>
 								<div class="unis-form-group">
 									<label class="unis-label" for="unic_language"><?php _e( 'Language', 'uniconsent-cmp' ); ?></label>
 									<select class="unis-select" id="unic_language" name="unic_language">
+										<option value="AUTO" <?php selected( $unic_language, 'AUTO' ); ?>><?php _e( 'Automatic (visitor\'s browser language)', 'uniconsent-cmp' ); ?></option>
 										<option value="EN" <?php selected( $unic_language, 'EN' ); ?>><?php _e( 'English', 'uniconsent-cmp' ); ?></option>
 										<option value="FR" <?php selected( $unic_language, 'FR' ); ?>><?php _e( 'French', 'uniconsent-cmp' ); ?></option>
 										<option value="DE" <?php selected( $unic_language, 'DE' ); ?>><?php _e( 'German', 'uniconsent-cmp' ); ?></option>
@@ -155,152 +247,63 @@ class UNIC_Admin_Views {
 
 								<?php $unic_show_badge = get_option( 'unic_show_badge', 'yes' ); ?>
 								<div class="unis-form-group">
-									<label class="unis-label" for="unic_show_badge"><?php _e( 'Display Privacy Badge', 'uniconsent-cmp' ); ?></label>
+									<label class="unis-label" for="unic_show_badge"><?php _e( 'Show Privacy Settings Button', 'uniconsent-cmp' ); ?></label>
 									<select class="unis-select" id="unic_show_badge" name="unic_show_badge">
 										<option value="yes" <?php selected( $unic_show_badge, 'yes' ); ?>><?php _e( 'Yes', 'uniconsent-cmp' ); ?></option>
 										<option value="no" <?php selected( $unic_show_badge, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
 									</select>
 									<div class="unis-help-text">
-										<?php _e( 'Display a privacy badge on your website so users can re-open the consent manager.', 'uniconsent-cmp' ); ?>
+										<?php _e( 'Adds a small floating button so visitors can change their consent choices at any time.', 'uniconsent-cmp' ); ?>
 									</div>
 								</div>
 
-								<?php $unic_enable_gdpr = get_option( 'unic_enable_gdpr'); ?>
-								<?php if(!$unic_enable_gdpr) {
-									$unic_enable_gdpr = 'yes';
-								} ?>
 								<div class="unis-form-group">
-									<label class="unis-label" for="unic_enable_gdpr"><?php _e( 'Enable EU GDPR Compliance', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_enable_gdpr" name="unic_enable_gdpr">
-										<option value="no" <?php selected( $unic_enable_gdpr, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
-										<option value="yes" <?php selected( $unic_enable_gdpr, 'yes' ); ?>><?php _e( 'Yes', 'uniconsent-cmp' ); ?></option>
-									</select>
-								</div>
-
-								<?php $unic_region = get_option( 'unic_region' ); ?>
-								<div class="unis-form-group">
-									<label class="unis-label" for="unic_region"><?php _e( 'GDPR Policy Region', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_region" name="unic_region">
-										<option value="none" <?php selected( $unic_region, 'none' ); ?>><?php _e( 'None', 'uniconsent-cmp' ); ?></option>
-										<option value="worldwide" <?php selected( $unic_region, 'worldwide' ); ?>><?php _e( 'Worldwide', 'uniconsent-cmp' ); ?></option>
-										<option value="eu" <?php selected( $unic_region, 'eu' ); ?>><?php _e( 'EU (EEA) Countries', 'uniconsent-cmp' ); ?></option>
-									</select>
-									<div class="unis-help-text">
-										<?php _e( 'When select EU, only display CMP to the users in EU countries.', 'uniconsent-cmp' ); ?>
-									</div>
-								</div>
-
-								<?php $unic_enable_iab = get_option( 'unic_enable_iab'); ?>
-								<?php if(!$unic_enable_iab) {
-									$unic_enable_iab = 'no';
-								} ?>
-								<div class="unis-form-group">
-									<label class="unis-label" for="unic_enable_iab"><?php _e( 'IAB TCF Compliance', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_enable_iab" name="unic_enable_iab">
-										<option value="no" <?php selected( $unic_enable_iab, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
-										<option value="v2" <?php selected( $unic_enable_iab, 'v2' ); ?>><?php _e( 'IAB TCF 2.3', 'uniconsent-cmp' ); ?></option>
-									</select>
-									<div class="unis-help-text">
-										<?php _e( 'Required if you run Google AdSense, Google Ad Manager, or other Google ads: select IAB TCF 2.3 to serve ads to visitors in the EEA, UK, and Switzerland.', 'uniconsent-cmp' ); ?>
-									</div>
-								</div>
-
-								<?php
-								$unic_publisher_country = get_option( 'unic_publisher_country' );
-								if(!$unic_publisher_country) {
-									$unic_publisher_country = 'DE';
-								}
-								$unic_countries = array(
-									'AF' => 'Afghanistan', 'AX' => 'Åland Islands', 'AL' => 'Albania', 'DZ' => 'Algeria', 'AS' => 'American Samoa', 'AD' => 'Andorra', 'AO' => 'Angola', 'AI' => 'Anguilla', 'AG' => 'Antigua and Barbuda', 'AR' => 'Argentina', 'AM' => 'Armenia', 'AW' => 'Aruba', 'AU' => 'Australia', 'AT' => 'Austria', 'AZ' => 'Azerbaijan',
-									'BS' => 'Bahamas', 'BH' => 'Bahrain', 'BD' => 'Bangladesh', 'BB' => 'Barbados', 'BY' => 'Belarus', 'BE' => 'Belgium', 'BZ' => 'Belize', 'BJ' => 'Benin', 'BM' => 'Bermuda', 'BT' => 'Bhutan', 'BO' => 'Bolivia', 'BA' => 'Bosnia and Herzegovina', 'BW' => 'Botswana', 'BR' => 'Brazil', 'BN' => 'Brunei', 'BG' => 'Bulgaria', 'BF' => 'Burkina Faso', 'BI' => 'Burundi',
-									'KH' => 'Cambodia', 'CM' => 'Cameroon', 'CA' => 'Canada', 'CV' => 'Cape Verde', 'KY' => 'Cayman Islands', 'CF' => 'Central African Republic', 'TD' => 'Chad', 'CL' => 'Chile', 'CN' => 'China', 'CO' => 'Colombia', 'KM' => 'Comoros', 'CG' => 'Congo', 'CD' => 'Congo (DRC)', 'CK' => 'Cook Islands', 'CR' => 'Costa Rica', 'CI' => 'Côte d\'Ivoire', 'HR' => 'Croatia', 'CU' => 'Cuba', 'CW' => 'Curaçao', 'CY' => 'Cyprus', 'CZ' => 'Czechia',
-									'DK' => 'Denmark', 'DJ' => 'Djibouti', 'DM' => 'Dominica', 'DO' => 'Dominican Republic',
-									'EC' => 'Ecuador', 'EG' => 'Egypt', 'SV' => 'El Salvador', 'GQ' => 'Equatorial Guinea', 'ER' => 'Eritrea', 'EE' => 'Estonia', 'SZ' => 'Eswatini', 'ET' => 'Ethiopia',
-									'FO' => 'Faroe Islands', 'FJ' => 'Fiji', 'FI' => 'Finland', 'FR' => 'France', 'GF' => 'French Guiana', 'PF' => 'French Polynesia',
-									'GA' => 'Gabon', 'GM' => 'Gambia', 'GE' => 'Georgia', 'DE' => 'Germany', 'GH' => 'Ghana', 'GI' => 'Gibraltar', 'GR' => 'Greece', 'GL' => 'Greenland', 'GD' => 'Grenada', 'GP' => 'Guadeloupe', 'GU' => 'Guam', 'GT' => 'Guatemala', 'GG' => 'Guernsey', 'GN' => 'Guinea', 'GW' => 'Guinea-Bissau', 'GY' => 'Guyana',
-									'HT' => 'Haiti', 'HN' => 'Honduras', 'HK' => 'Hong Kong', 'HU' => 'Hungary',
-									'IS' => 'Iceland', 'IN' => 'India', 'ID' => 'Indonesia', 'IR' => 'Iran', 'IQ' => 'Iraq', 'IE' => 'Ireland', 'IM' => 'Isle of Man', 'IL' => 'Israel', 'IT' => 'Italy',
-									'JM' => 'Jamaica', 'JP' => 'Japan', 'JE' => 'Jersey', 'JO' => 'Jordan',
-									'KZ' => 'Kazakhstan', 'KE' => 'Kenya', 'KI' => 'Kiribati', 'KR' => 'Korea (South)', 'XK' => 'Kosovo', 'KW' => 'Kuwait', 'KG' => 'Kyrgyzstan',
-									'LA' => 'Laos', 'LV' => 'Latvia', 'LB' => 'Lebanon', 'LS' => 'Lesotho', 'LR' => 'Liberia', 'LY' => 'Libya', 'LI' => 'Liechtenstein', 'LT' => 'Lithuania', 'LU' => 'Luxembourg',
-									'MO' => 'Macao', 'MG' => 'Madagascar', 'MW' => 'Malawi', 'MY' => 'Malaysia', 'MV' => 'Maldives', 'ML' => 'Mali', 'MT' => 'Malta', 'MH' => 'Marshall Islands', 'MQ' => 'Martinique', 'MR' => 'Mauritania', 'MU' => 'Mauritius', 'YT' => 'Mayotte', 'MX' => 'Mexico', 'FM' => 'Micronesia', 'MD' => 'Moldova', 'MC' => 'Monaco', 'MN' => 'Mongolia', 'ME' => 'Montenegro', 'MS' => 'Montserrat', 'MA' => 'Morocco', 'MZ' => 'Mozambique', 'MM' => 'Myanmar',
-									'NA' => 'Namibia', 'NR' => 'Nauru', 'NP' => 'Nepal', 'NL' => 'Netherlands', 'NC' => 'New Caledonia', 'NZ' => 'New Zealand', 'NI' => 'Nicaragua', 'NE' => 'Niger', 'NG' => 'Nigeria', 'MK' => 'North Macedonia', 'NO' => 'Norway',
-									'OM' => 'Oman',
-									'PK' => 'Pakistan', 'PW' => 'Palau', 'PS' => 'Palestine', 'PA' => 'Panama', 'PG' => 'Papua New Guinea', 'PY' => 'Paraguay', 'PE' => 'Peru', 'PH' => 'Philippines', 'PL' => 'Poland', 'PT' => 'Portugal', 'PR' => 'Puerto Rico',
-									'QA' => 'Qatar',
-									'RE' => 'Réunion', 'RO' => 'Romania', 'RU' => 'Russia', 'RW' => 'Rwanda',
-									'KN' => 'Saint Kitts and Nevis', 'LC' => 'Saint Lucia', 'VC' => 'Saint Vincent and the Grenadines', 'WS' => 'Samoa', 'SM' => 'San Marino', 'ST' => 'São Tomé and Príncipe', 'SA' => 'Saudi Arabia', 'SN' => 'Senegal', 'RS' => 'Serbia', 'SC' => 'Seychelles', 'SL' => 'Sierra Leone', 'SG' => 'Singapore', 'SX' => 'Sint Maarten', 'SK' => 'Slovakia', 'SI' => 'Slovenia', 'SB' => 'Solomon Islands', 'SO' => 'Somalia', 'ZA' => 'South Africa', 'SS' => 'South Sudan', 'ES' => 'Spain', 'LK' => 'Sri Lanka', 'SD' => 'Sudan', 'SR' => 'Suriname', 'SE' => 'Sweden', 'CH' => 'Switzerland', 'SY' => 'Syria',
-									'TW' => 'Taiwan', 'TJ' => 'Tajikistan', 'TZ' => 'Tanzania', 'TH' => 'Thailand', 'TL' => 'Timor-Leste', 'TG' => 'Togo', 'TO' => 'Tonga', 'TT' => 'Trinidad and Tobago', 'TN' => 'Tunisia', 'TR' => 'Türkiye', 'TM' => 'Turkmenistan', 'TC' => 'Turks and Caicos Islands', 'TV' => 'Tuvalu',
-									'UG' => 'Uganda', 'UA' => 'Ukraine', 'AE' => 'United Arab Emirates', 'GB' => 'United Kingdom', 'US' => 'United States', 'UY' => 'Uruguay', 'UZ' => 'Uzbekistan',
-									'VU' => 'Vanuatu', 'VA' => 'Vatican City', 'VE' => 'Venezuela', 'VN' => 'Vietnam', 'VG' => 'Virgin Islands (British)', 'VI' => 'Virgin Islands (U.S.)',
-									'YE' => 'Yemen',
-									'ZM' => 'Zambia', 'ZW' => 'Zimbabwe',
-								);
-								?>
-								<div class="unis-form-group">
-									<label class="unis-label" for="unic_publisher_country"><?php _e( 'Publisher Country', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_publisher_country" name="unic_publisher_country">
-										<?php foreach ( $unic_countries as $code => $name ) : ?>
-											<option value="<?php echo esc_attr( $code ); ?>" <?php selected( $unic_publisher_country, $code ); ?>><?php echo esc_html( $name ); ?></option>
-										<?php endforeach; ?>
-									</select>
-									<div class="unis-help-text">
-										<?php _e( 'The country where your business is established. Used as the publisher country code in the IAB TCF consent string.', 'uniconsent-cmp' ); ?>
-									</div>
-								</div>
-
-								<?php $unic_enable_ccpa = get_option( 'unic_enable_ccpa'); ?>
-								<div class="unis-form-group">
-									<label class="unis-label" for="unic_enable_ccpa"><?php _e( 'Enable U.S. CCPA Compliance', 'uniconsent-cmp' ); ?></label>
-									<select class="unis-select" id="unic_enable_ccpa" name="unic_enable_ccpa">
-										<option value="no" <?php selected( $unic_enable_ccpa, 'no' ); ?>><?php _e( 'No', 'uniconsent-cmp' ); ?></option>
-										<option value="yes" <?php selected( $unic_enable_ccpa, 'yes' ); ?>><?php _e( 'Yes', 'uniconsent-cmp' ); ?></option>
-									</select>
-								</div>
-
-								<div class="unis-form-group">
-									<label class="unis-label" for="unic_company"><?php _e( 'Website Name (Optional)', 'uniconsent-cmp' ); ?></label>
+									<label class="unis-label" for="unic_company"><?php _e( 'Website Name', 'uniconsent-cmp' ); ?></label>
 									<input type="text" class="unis-input" id="unic_company" name="unic_company" 
 										   value="<?php echo esc_attr(get_option( 'unic_company' )); ?>" 
-										   placeholder="<?php esc_attr_e( 'Enter your website name...', 'uniconsent-cmp' ); ?>">
+										   placeholder="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+									<div class="unis-help-text">
+										<?php _e( 'Leave empty to use your site title.', 'uniconsent-cmp' ); ?>
+									</div>
 								</div>
 
 								<div class="unis-form-group">
-									<label class="unis-label" for="unic_logo"><?php _e( 'Website LOGO URL (Optional)', 'uniconsent-cmp' ); ?></label>
+									<label class="unis-label" for="unic_logo"><?php _e( 'Logo URL', 'uniconsent-cmp' ); ?></label>
 									<input type="text" class="unis-input" id="unic_logo" name="unic_logo" 
 										   value="<?php echo esc_url(get_option( 'unic_logo' )); ?>" 
-										   placeholder="<?php esc_attr_e( 'Enter your logo URL...', 'uniconsent-cmp' ); ?>">
+										   placeholder="https://www.example.com/logo.png">
+									<div class="unis-help-text">
+										<?php _e( 'Optional. Shown in the consent banner.', 'uniconsent-cmp' ); ?>
+									</div>
 								</div>
 
 								<div class="unis-form-group">
-									<label class="unis-label" for="unic_policy_url"><?php _e( 'Policy URL (Optional)', 'uniconsent-cmp' ); ?></label>
+									<label class="unis-label" for="unic_policy_url"><?php _e( 'Privacy Policy URL', 'uniconsent-cmp' ); ?></label>
 									<input type="text" class="unis-input" id="unic_policy_url" name="unic_policy_url" 
 										   value="<?php echo esc_url(get_option( 'unic_policy_url' )); ?>" 
-										   placeholder="https://www.example.com/policy">
+										   placeholder="<?php echo esc_attr( get_privacy_policy_url() ? get_privacy_policy_url() : 'https://www.example.com/privacy-policy' ); ?>">
 									<div class="unis-help-text">
-										<strong><?php _e( 'Example:', 'uniconsent-cmp' ); ?></strong> <?php _e( 'https://www.example.com/policy', 'uniconsent-cmp' ); ?>
+										<?php _e( 'Leave empty to use the privacy policy page set in WordPress (Settings → Privacy).', 'uniconsent-cmp' ); ?>
 									</div>
 								</div>
 
 								<div class="unis-upgrade-banner">
 									<div class="unis-upgrade-banner__text">
-										<strong><?php _e( 'You are on the free plan: up to 50,000 users per month.', 'uniconsent-cmp' ); ?></strong>
-										<span><?php _e( 'Upgrade for higher traffic, custom banner text, consent analytics, cookie scanning, and consent logging.', 'uniconsent-cmp' ); ?></span>
+										<strong><?php _e( 'Free for up to 50,000 users per month.', 'uniconsent-cmp' ); ?></strong>
+										<span><?php _e( 'For more traffic and features, create a UniConsent account, configure your banner in the dashboard, and paste your license key below.', 'uniconsent-cmp' ); ?></span>
 									</div>
-									<a href="https://app.uniconsent.com/app/register?utm_source=wp_upgrade" target="_blank" class="unis-upgrade__cta unis-upgrade-banner__cta"><?php _e( 'Upgrade Now →', 'uniconsent-cmp' ); ?></a>
+									<a href="https://app.uniconsent.com/app/register?utm_source=wp_upgrade" target="_blank" class="unis-upgrade__cta unis-upgrade-banner__cta"><?php _e( 'Create Account →', 'uniconsent-cmp' ); ?></a>
 								</div>
 
-								<?php endif;?>
+								</div>
 
 								<div class="unis-form-group">
-									<label class="unis-label" for="unic_license"><?php _e( 'License key (Optional)', 'uniconsent-cmp' ); ?></label>
+									<label class="unis-label" for="unic_license"><?php _e( 'License Key', 'uniconsent-cmp' ); ?></label>
 									<input type="text" class="unis-input" id="unic_license" name="unic_license" 
 										   value="<?php echo esc_attr(get_option( 'unic_license' )); ?>" 
-										   placeholder="<?php esc_attr_e( 'Enter your license key...', 'uniconsent-cmp' ); ?>">
+										   placeholder="license-xxxxxxxxxx">
 									<div class="unis-help-text">
-										<p><?php _e( '* Get your free license key at:', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a> <?php _e( 'to unlock more features.', 'uniconsent-cmp' ); ?></p>
-										<p><?php _e( '* The free version supports up to 50,000 users per month. For higher traffic, upgrade your plan at', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a>.</p>
-										<p><?php _e( '* The configurations are managed at', 'uniconsent-cmp' ); ?> <a target="_blank" href="https://www.uniconsent.com/?utm_source=wp_license">https://www.uniconsent.com/</a> <?php _e( 'once you have entered the license key:', 'uniconsent-cmp' ); ?> <b>license-xxxxxxxxxx</b>.</p>
+										<?php _e( 'Paste the license key from your UniConsent dashboard. Your banner is then configured in the dashboard instead of on this page.', 'uniconsent-cmp' ); ?>
 									</div>
 								</div>
 
@@ -325,8 +328,8 @@ class UNIC_Admin_Views {
 								<div class="unis-support-card">
 									<div class="unis-support-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
 									<h3 class="unis-support-card__title"><?php _e( 'Documentation', 'uniconsent-cmp' ); ?></h3>
-									<p class="unis-support-card__description"><?php _e( 'Comprehensive guides and tutorials to help you get started and make the most of our plugin.', 'uniconsent-cmp' ); ?></p>
-									<a href="https://www.uniconsent.com/docs" class="unis-support-card__link"><?php _e( 'View Documentation', 'uniconsent-cmp' ); ?> →</a>
+									<p class="unis-support-card__description"><?php _e( 'Setup guides for the plugin and the UniConsent dashboard.', 'uniconsent-cmp' ); ?></p>
+									<a href="https://www.uniconsent.com/docs?utm_source=wp_docs" class="unis-support-card__link"><?php _e( 'View Documentation', 'uniconsent-cmp' ); ?> →</a>
 								</div>
 
 								<div class="unis-support-card">
@@ -347,22 +350,77 @@ class UNIC_Admin_Views {
 							<div class="unis-faq">
 								<div class="unis-faq__item">
 									<button class="unis-faq__question"><?php _e( 'How do I get started with UniConsent?', 'uniconsent-cmp' ); ?></button>
-									<div class="unis-faq__answer"><?php _e( 'Install and activate the plugin, then configure your consent settings on the Settings tab. Enable GDPR and/or CCPA compliance, choose your language and CMP style, and save. The consent banner will appear on your site automatically.', 'uniconsent-cmp' ); ?></div>
+									<div class="unis-faq__answer"><?php _e( 'Activate the plugin, choose a banner type, style, and language on the Settings tab, and save. The consent banner appears on your site right away.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'Which banner type should I choose?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'Choose Cookie categories if you don\'t show ads on your site. It suits most sites, including sites that use Google Analytics or run Google Ads or Microsoft Ads campaigns with conversion and remarketing pixels. Choose IAB TCF 2.4 if you show ads on your site through Google AdSense, Google Ad Manager, or other programmatic ad networks. Google requires a certified IAB TCF CMP to serve ads to visitors in the EEA, UK, and Switzerland.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'What is IAB TCF 2.4 and do I need it?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'IAB TCF (Transparency and Consent Framework) 2.4 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.4 is recommended to stay compliant.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'What does "Without IAB vendors" mean?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'It is an older setting that shows the IAB TCF banner without any ad partners. It is kept only for sites that already use it. Switch to Cookie categories if you don\'t show ads on your site, or to IAB TCF 2.4 if you do.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'Does it work with Google Consent Mode and Microsoft UET?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'Yes. The plugin loads at the top of the page and sets Google Consent Mode v2 to "denied" until the visitor makes a choice. It then passes the choice to both Google Consent Mode and Microsoft UET Consent Mode. In Cookie categories mode, the advertising category controls ad storage, ad user data, and ad personalization; the performance category controls analytics storage; and the functionality category controls functionality and personalization storage. You don\'t need to add any code: keep your Google tag, Google Tag Manager, or UET tag as it is.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'Who sees the banner?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'With Cookie categories, all visitors see the banner. With IAB TCF 2.4, use Show Banner To: All visitors shows it everywhere, and EU/EEA visitors only shows it only to visitors in the EU and EEA. With EU/EEA visitors only, visitors in California see a CCPA notice instead.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'Which banner style should I use?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'All styles collect consent in the same way; they differ only in layout and position. To see a style, save it and open your site in a private browser window.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'How does the Automatic language option work?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'The banner uses the language set in the visitor\'s browser. If that language isn\'t supported, it uses English. Choose a specific language to show the banner in the same language to everyone.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'What is the privacy settings button, and can I use my own link?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'It is a small floating button that lets visitors reopen the banner and change their choices. Privacy laws such as the GDPR require an easy way to do this. If you turn the button off, add your own link, for example in a Custom HTML block in your footer:', 'uniconsent-cmp' ); ?> <code><?php echo esc_html( '<a href="#" onclick="window.__unicapi(\'openunic\');return false;">Privacy settings</a>' ); ?></code></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'What are Website Name, Logo URL, and Privacy Policy URL used for?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'They are shown in the banner. The website name and logo identify your site, and the privacy policy link lets visitors read your policy. If you leave the name or the privacy policy URL empty, the plugin uses your site title and the privacy policy page set in WordPress.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'What is Publisher Country?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'It is only used with IAB TCF 2.4. Choose the country where your business is established. It is stored in the consent string that is shared with your ad partners.', 'uniconsent-cmp' ); ?></div>
+								</div>
+
+								<div class="unis-faq__item">
+									<button class="unis-faq__question"><?php _e( 'I saved my settings but the banner didn\'t change. Why?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'Your browser remembers the choice you already made, so the banner doesn\'t show again. Open your site in a private browser window to see it as a new visitor. If you use a caching plugin or a CDN, clear its cache after saving, because cached pages still contain the old settings. With IAB TCF 2.4 and EU/EEA visitors only, the banner is only shown to visitors in the EU and EEA.', 'uniconsent-cmp' ); ?></div>
 								</div>
 
 								<div class="unis-faq__item">
 									<button class="unis-faq__question"><?php _e( 'Do I need a license key?', 'uniconsent-cmp' ); ?></button>
-									<div class="unis-faq__answer"><?php _e( 'No, the plugin works without a license key with all core features including IAB TCF 2.3, Google Consent Mode v2, and 11 banner styles, for up to 50,000 users per month. To unlock advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, or to support higher traffic, register for a free license key at', 'uniconsent-cmp' ); ?> <a href="https://www.uniconsent.com/" target="_blank">uniconsent.com</a>.</div>
+									<div class="unis-faq__answer"><?php _e( 'No. Without a license key the plugin includes cookie categories and IAB TCF 2.4 banners, Google Consent Mode v2, 11 banner styles, and 52+ languages for up to 50,000 users per month. For more traffic or advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, create an account at', 'uniconsent-cmp' ); ?> <a href="https://www.uniconsent.com/?utm_source=wp_faq" target="_blank">uniconsent.com</a>.</div>
 								</div>
 
 								<div class="unis-faq__item">
-									<button class="unis-faq__question"><?php _e( 'What is IAB TCF 2.3 and do I need it?', 'uniconsent-cmp' ); ?></button>
-									<div class="unis-faq__answer"><?php _e( 'IAB TCF (Transparency and Consent Framework) 2.3 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.3 is recommended to stay compliant.', 'uniconsent-cmp' ); ?></div>
+									<button class="unis-faq__question"><?php _e( 'Can I customize the banner further?', 'uniconsent-cmp' ); ?></button>
+									<div class="unis-faq__answer"><?php _e( 'Yes. Create a UniConsent account, configure your banner in the dashboard, and paste your license key on the Settings tab. The dashboard has more options than this plugin, including custom banner text and translations, custom CSS, your own purposes and vendor lists, cookie scanning and script blocking, consent analytics and logging, and more privacy laws such as US state laws, LGPD, and POPIA.', 'uniconsent-cmp' ); ?> <a href="https://app.uniconsent.com/app/register?utm_source=wp_faq" target="_blank"><?php _e( 'Create Account →', 'uniconsent-cmp' ); ?></a></div>
 								</div>
 
 								<div class="unis-faq__item">
 									<button class="unis-faq__question"><?php _e( 'Where are my settings managed after entering a license key?', 'uniconsent-cmp' ); ?></button>
-									<div class="unis-faq__answer"><?php _e( 'Once you enter a license key (format: license-xxxxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at', 'uniconsent-cmp' ); ?> <a href="https://app.uniconsent.com/" target="_blank">app.uniconsent.com</a>. <?php _e( 'The WordPress plugin will load your configuration automatically.', 'uniconsent-cmp' ); ?></div>
+									<div class="unis-faq__answer"><?php _e( 'Once you enter a license key (format: license-xxxxxxxxxx), your CMP configurations are managed through the UniConsent dashboard at', 'uniconsent-cmp' ); ?> <a href="https://app.uniconsent.com/app/login?utm_source=wp_faq" target="_blank">app.uniconsent.com</a>. <?php _e( 'The WordPress plugin will load your configuration automatically.', 'uniconsent-cmp' ); ?></div>
 								</div>
 
 							</div>
@@ -374,9 +432,10 @@ class UNIC_Admin_Views {
 				<aside class="unis-sidebar">
 					<!-- Upgrade Card -->
 					<div class="unis-upgrade">
-						<h3 class="unis-upgrade__title"><?php _e( 'Unlock More with a Free Account', 'uniconsent-cmp' ); ?></h3>
-						<p class="unis-upgrade__subtitle"><?php _e( 'Register for a free license key to access advanced features:', 'uniconsent-cmp' ); ?></p>
+						<h3 class="unis-upgrade__title"><?php _e( 'More with a UniConsent Account', 'uniconsent-cmp' ); ?></h3>
+						<p class="unis-upgrade__subtitle"><?php _e( 'Configure these in the UniConsent dashboard, then paste your license key here:', 'uniconsent-cmp' ); ?></p>
 						<ul class="unis-upgrade__features">
+							<li class="unis-upgrade__feature"><?php _e( 'More than 50,000 users per month', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Custom banner text and translations', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Custom CSS styling', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Custom vendor and purpose lists', 'uniconsent-cmp' ); ?></li>
@@ -386,11 +445,10 @@ class UNIC_Admin_Views {
 							<li class="unis-upgrade__feature"><?php _e( 'ConsentDB consent logging', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'LGPD, POPIA, PIPL, PDPD compliance', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'US state privacy laws (VA, CO, CT, UT)', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Google GAM / AdSense / AdX support', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Prebid.js and header bidding support', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'First-party CMP domain (Pro)', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'First-party CMP domain', 'uniconsent-cmp' ); ?></li>
 						</ul>
-						<a href="https://app.uniconsent.com/app/register?utm_source=wp" class="unis-upgrade__cta"><?php _e( 'Get Free License Key →', 'uniconsent-cmp' ); ?></a>
+						<a href="https://app.uniconsent.com/app/register?utm_source=wp" target="_blank" class="unis-upgrade__cta"><?php _e( 'Create Account →', 'uniconsent-cmp' ); ?></a>
 					</div>
 
 					<!-- Included Features -->
@@ -399,13 +457,14 @@ class UNIC_Admin_Views {
 						<ul class="unis-upgrade__features">
 							<li class="unis-upgrade__feature"><?php _e( 'Up to 50,000 users per month', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Certified Google CMP (Gold Tier)', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Cookie categories or IAB TCF 2.4 banner', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Google Consent Mode v2', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'IAB TCF 2.3 & IAB GPP 1.1', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'IAB TCF 2.4 & IAB GPP 1.1', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Microsoft UET Consent Mode', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'GDPR & CCPA compliance', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( '11 banner styles + popup', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'GDPR and CCPA (California) compliance', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( '11 banner styles', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( '52+ languages', 'uniconsent-cmp' ); ?></li>
-							<li class="unis-upgrade__feature"><?php _e( 'Privacy badge', 'uniconsent-cmp' ); ?></li>
+							<li class="unis-upgrade__feature"><?php _e( 'Privacy settings button', 'uniconsent-cmp' ); ?></li>
 							<li class="unis-upgrade__feature"><?php _e( 'Support:', 'uniconsent-cmp' ); ?> support@uniconsent.com</li>
 						</ul>
 					</div>

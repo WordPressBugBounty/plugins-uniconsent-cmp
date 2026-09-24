@@ -19,7 +19,7 @@ class UNIC_CMP {
 		if ( defined( 'UNIC_VERSION' ) ) {
 			$this->version = UNIC_VERSION;
 		} else {
-			$this->version = '1.7.2';
+			$this->version = '1.8.0';
 		}
 		$this->plugin_name = 'uniconsent-cmp';
 
@@ -58,7 +58,7 @@ class UNIC_CMP {
 
 		$plugin_public = new UNIC_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action( 'wp_head', $plugin_public, 'enqueue_scripts', -9999 );
 	}
 
 	public function run() {

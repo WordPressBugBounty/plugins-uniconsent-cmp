@@ -15,10 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: admin/views.php:63
-msgid "Enable EU GDPR Compliance"
-msgstr "启用欧盟 GDPR 合规"
-
 #: admin/views.php:65 admin/views.php:74 admin/views.php:176
 msgid "No"
 msgstr "否"
@@ -26,10 +22,6 @@ msgstr "否"
 #: admin/views.php:66 admin/views.php:75
 msgid "Yes"
 msgstr "是"
-
-#: admin/views.php:72
-msgid "Enable U.S. CCPA Compliance"
-msgstr "启用美国 CCPA 合规"
 
 #: admin/views.php:81
 msgid "Language"
@@ -195,69 +187,9 @@ msgstr "他加禄语"
 msgid "Ukrainian"
 msgstr "乌克兰语"
 
-#: admin/views.php:127
-msgid "Website Name (Optional)"
-msgstr "网站名称（可选）"
-
-#: admin/views.php:134
-msgid "Website LOGO URL (Optional)"
-msgstr "网站 Logo 网址（可选）"
-
-#: admin/views.php:141
-msgid "Policy URL (Optional)"
-msgstr "隐私政策网址（可选）"
-
-#: admin/views.php:146
-msgid "Example:"
-msgstr "示例："
-
-#: admin/views.php:146
-msgid "https://www.example.com/policy"
-msgstr "https://www.example.com/policy"
-
-#: admin/views.php:152
-msgid "GDPR Policy Region"
-msgstr "GDPR 政策区域"
-
-#: admin/views.php:154
-msgid "None"
-msgstr "无"
-
-#: admin/views.php:155
-msgid "Worldwide"
-msgstr "全球"
-
-#: admin/views.php:156
-msgid "EU (EEA) Countries"
-msgstr "欧盟（EEA）国家"
-
-#: admin/views.php:165
-msgid "CMP Style"
-msgstr "CMP 样式"
-
 #: admin/views.php:167
 msgid "Banner"
 msgstr "横幅"
-
-#: admin/views.php:168
-msgid "Popup Box"
-msgstr "弹窗"
-
-#: admin/views.php:174
-msgid "IAB TCF Compliance"
-msgstr "IAB TCF 合规"
-
-#: admin/views.php:177
-msgid "IAB TCF 2.2"
-msgstr "IAB TCF 2.2"
-
-#: admin/views.php:184
-msgid "License key (Optional)"
-msgstr "许可证密钥（可选）"
-
-#: admin/views.php:189
-msgid "* Get your free license key at:"
-msgstr "* 在此获取您的免费许可证密钥："
 
 #: admin/views.php
 msgid "Settings"
@@ -266,42 +198,6 @@ msgstr "设置"
 #: admin/views.php
 msgid "Support"
 msgstr "支持"
-
-#: admin/views.php
-msgid "UniConsent Configuration"
-msgstr "UniConsent 配置"
-
-#: admin/views.php
-msgid "Configure your UniConsent integration settings"
-msgstr "配置您的 UniConsent 集成设置"
-
-#: admin/views.php
-msgid "Enter your website name..."
-msgstr "输入您的网站名称..."
-
-#: admin/views.php
-msgid "Enter your logo URL..."
-msgstr "输入您的 Logo 网址..."
-
-#: admin/views.php
-msgid "Enter your license key..."
-msgstr "输入您的许可证密钥..."
-
-#: admin/views.php
-msgid "When select EU, only display CMP to the users in EU countries."
-msgstr "选择欧盟时，仅向欧盟国家的用户显示 CMP。"
-
-#: admin/views.php
-msgid "to unlock more features."
-msgstr "以解锁更多功能。"
-
-#: admin/views.php
-msgid "* The configurations are managed at"
-msgstr "* 配置在以下网址管理"
-
-#: admin/views.php
-msgid "once you have entered the license key:"
-msgstr "在您输入许可证密钥后："
 
 #: admin/views.php
 msgid "Save Changes"
@@ -318,10 +214,6 @@ msgstr "获取帮助并找到您问题的答案"
 #: admin/views.php
 msgid "Documentation"
 msgstr "文档"
-
-#: admin/views.php
-msgid "Comprehensive guides and tutorials to help you get started and make the most of our plugin."
-msgstr "全面的指南和教程，帮助您入门并充分利用我们的插件。"
 
 #: admin/views.php
 msgid "View Documentation"
@@ -352,24 +244,8 @@ msgid "How do I get started with UniConsent?"
 msgstr "如何开始使用 UniConsent？"
 
 #: admin/views.php
-msgid "Install and activate the plugin, then configure your consent settings on the Settings tab. Enable GDPR and/or CCPA compliance, choose your language and CMP style, and save. The consent banner will appear on your site automatically."
-msgstr "安装并激活插件，然后在设置选项卡中配置您的同意设置。启用 GDPR 和/或 CCPA 合规，选择您的语言和 CMP 样式，然后保存。同意横幅将自动显示在您的网站上。"
-
-#: admin/views.php
 msgid "Do I need a license key?"
 msgstr "我需要许可证密钥吗？"
-
-#: admin/views.php
-msgid "No, the plugin works without a license key with basic features. To unlock advanced features such as IAB TCF 2.2, Google Consent Mode v2, analytics dashboard, and full customisation, register for a free license key at"
-msgstr "不需要，插件无需许可证密钥即可使用基本功能。要解锁高级功能（如 IAB TCF 2.2、Google Consent Mode v2、分析仪表板和完全自定义），请在以下网址注册免费许可证密钥"
-
-#: admin/views.php
-msgid "What is IAB TCF 2.2 and do I need it?"
-msgstr "什么是 IAB TCF 2.2，我需要它吗？"
-
-#: admin/views.php
-msgid "IAB TCF (Transparency and Consent Framework) 2.2 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.2 is recommended to stay compliant."
-msgstr "IAB TCF（透明度和同意框架）2.2 是管理在线广告用户同意的行业标准。如果您使用 Google AdSense、Google Ad Manager 或程序化广告，建议启用 IAB TCF 2.2 以保持合规。"
 
 #: admin/views.php
 msgid "Where are my settings managed after entering a license key?"
@@ -384,14 +260,6 @@ msgid "The WordPress plugin will load your configuration automatically."
 msgstr "WordPress 插件将自动加载您的配置。"
 
 #: admin/views.php
-msgid "Certified EU IAB TCF 2.2/2.3 CMP"
-msgstr "经认证的 EU IAB TCF 2.2/2.3 CMP"
-
-#: admin/views.php
-msgid "Certified Canada IAB TCF CMP"
-msgstr "经认证的 Canada IAB TCF CMP"
-
-#: admin/views.php
 msgid "Certified Google CMP (Gold Tier)"
 msgstr "经认证的 Google CMP（金牌级）"
 
@@ -404,54 +272,6 @@ msgid "Microsoft UET Consent Mode"
 msgstr "Microsoft UET Consent Mode"
 
 #: admin/views.php
-msgid "IAB GPP 1.1 compliance"
-msgstr "IAB GPP 1.1 合规"
-
-#: admin/views.php
-msgid "40+ Languages support"
-msgstr "支持 40+ 种语言"
-
-#: admin/views.php
-msgid "GPP, TCF, USP Consent signals"
-msgstr "GPP、TCF、USP 同意信号"
-
-#: admin/views.php
-msgid "For GDPR, CCPA, LGPD, PDPA, CPRA, PIPL"
-msgstr "适用于 GDPR、CCPA、LGPD、PDPA、CPRA、PIPL"
-
-#: admin/views.php
-msgid "More popup UI choices and easy mode"
-msgstr "更多弹窗界面选择和简易模式"
-
-#: admin/views.php
-msgid "Fully customisable consent collection pop-ups and bars"
-msgstr "完全可定制的同意收集弹窗和横幅"
-
-#: admin/views.php
-msgid "Multiple languages support"
-msgstr "多语言支持"
-
-#: admin/views.php
-msgid "Data analytics and insight dashboard"
-msgstr "数据分析和洞察仪表板"
-
-#: admin/views.php
-msgid "One-tag Implementation"
-msgstr "一标签实现"
-
-#: admin/views.php
-msgid "Google GAM/Google AdSense/Google AdX/Amazon APS Support"
-msgstr "支持 Google GAM/Google AdSense/Google AdX/Amazon APS"
-
-#: admin/views.php
-msgid "Prebid.js and Header bidding support"
-msgstr "支持 Prebid.js 和 Header bidding"
-
-#: admin/views.php
-msgid "Cookie ePrivacy consent support"
-msgstr "Cookie ePrivacy 同意支持"
-
-#: admin/views.php
 msgid "Website cookie discovery and disclosure"
 msgstr "网站 Cookie 发现和披露"
 
@@ -460,16 +280,8 @@ msgid "JavaScript and cookie blocking"
 msgstr "JavaScript 和 Cookie 阻止"
 
 #: admin/views.php
-msgid "Consent rate analytics and insight"
-msgstr "同意率分析和洞察"
-
-#: admin/views.php
 msgid "Support:"
 msgstr "支持："
-
-#: admin/views.php
-msgid "Get Started"
-msgstr "立即开始"
 
 #: admin/views.php
 msgid "Arabic"
@@ -520,56 +332,20 @@ msgid "Serbian (Cyrillic)"
 msgstr "塞尔维亚语（西里尔文）"
 
 #: admin/views.php
-msgid "Display Privacy Badge"
-msgstr "显示隐私徽章"
+msgid "IAB TCF 2.4"
+msgstr "IAB TCF 2.4"
 
 #: admin/views.php
-msgid "Display a privacy badge on your website so users can re-open the consent manager."
-msgstr "在您的网站上显示隐私徽章，方便用户重新打开同意管理器。"
+msgid "Cookie categories shows all visitors a cookie banner where they can accept or reject each cookie category. Their choices are passed to Google Consent Mode v2 and Microsoft UET Consent Mode, so it suits sites that run ad campaigns with Google Ads or Microsoft Ads conversion and remarketing pixels. Choose IAB TCF 2.4 if you show ads on your site through Google AdSense, Google Ad Manager, or other programmatic ads, to serve ads to visitors in the EEA, UK, and Switzerland."
+msgstr "“Cookie 类别”向所有访问者显示 Cookie 横幅，访问者可以接受或拒绝每个 Cookie 类别。访问者的选择会同步到 Google 同意模式 v2 和 Microsoft UET 同意模式，适合投放广告活动并安装了 Google Ads 或 Microsoft Ads 转化和再营销像素的网站。如果您通过 Google AdSense、Google Ad Manager 或其他程序化广告在网站上展示广告，请选择 IAB TCF 2.4，以便向欧洲经济区、英国和瑞士的访问者投放广告。"
 
 #: admin/views.php
-msgid "IAB TCF 2.3"
-msgstr "IAB TCF 2.3"
+msgid "What is IAB TCF 2.4 and do I need it?"
+msgstr "什么是 IAB TCF 2.4？我需要它吗？"
 
 #: admin/views.php
-msgid "Required if you run Google AdSense, Google Ad Manager, or other Google ads: select IAB TCF 2.3 to serve ads to visitors in the EEA, UK, and Switzerland."
-msgstr "如果您使用 Google AdSense、Google Ad Manager 或其他 Google 广告，则必须选择 IAB TCF 2.3，才能向欧洲经济区、英国和瑞士的访问者投放广告。"
-
-#: admin/views.php
-msgid "You are on the free plan: up to 50,000 users per month."
-msgstr "您正在使用免费方案：每月最多 50,000 名用户。"
-
-#: admin/views.php
-msgid "Upgrade for higher traffic, custom banner text, consent analytics, cookie scanning, and consent logging."
-msgstr "升级以支持更高流量、自定义横幅文本、同意分析、Cookie 扫描和同意日志。"
-
-#: admin/views.php
-msgid "Upgrade Now →"
-msgstr "立即升级 →"
-
-#: admin/views.php
-msgid "* The free version supports up to 50,000 users per month. For higher traffic, upgrade your plan at"
-msgstr "* 免费版每月最多支持 50,000 名用户。如需更高流量，请升级您的方案："
-
-#: admin/views.php
-msgid "No, the plugin works without a license key with all core features including IAB TCF 2.3, Google Consent Mode v2, and 11 banner styles, for up to 50,000 users per month. To unlock advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, or to support higher traffic, register for a free license key at"
-msgstr "不需要。无需许可证密钥，插件即可使用所有核心功能，包括 IAB TCF 2.3、Google 同意模式 v2 和 11 种横幅样式，每月最多支持 50,000 名用户。如需解锁自定义 CSS、同意分析、Cookie 扫描和同意日志等高级功能，或支持更高流量，请注册免费许可证密钥："
-
-#: admin/views.php
-msgid "What is IAB TCF 2.3 and do I need it?"
-msgstr "什么是 IAB TCF 2.3？我需要它吗？"
-
-#: admin/views.php
-msgid "IAB TCF (Transparency and Consent Framework) 2.3 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.3 is recommended to stay compliant."
-msgstr "IAB TCF（透明度和同意框架）2.3 是管理在线广告用户同意的行业标准。如果您使用 Google AdSense、Google Ad Manager 或程序化广告，建议启用 IAB TCF 2.3 以保持合规。"
-
-#: admin/views.php
-msgid "Unlock More with a Free Account"
-msgstr "使用免费账户解锁更多功能"
-
-#: admin/views.php
-msgid "Register for a free license key to access advanced features:"
-msgstr "注册免费许可证密钥即可使用高级功能："
+msgid "IAB TCF (Transparency and Consent Framework) 2.4 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.4 is recommended to stay compliant."
+msgstr "IAB TCF（透明度和同意框架）2.4 是管理在线广告用户同意的行业标准。如果您使用 Google AdSense、Google Ad Manager 或程序化广告，建议启用 IAB TCF 2.4 以保持合规。"
 
 #: admin/views.php
 msgid "Custom banner text and translations"
@@ -600,20 +376,8 @@ msgid "US state privacy laws (VA, CO, CT, UT)"
 msgstr "美国州隐私法（VA、CO、CT、UT）"
 
 #: admin/views.php
-msgid "Google GAM / AdSense / AdX support"
-msgstr "支持 Google GAM / AdSense / AdX"
-
-#: admin/views.php
 msgid "Prebid.js and header bidding support"
 msgstr "支持 Prebid.js 和头部竞价"
-
-#: admin/views.php
-msgid "First-party CMP domain (Pro)"
-msgstr "第一方 CMP 域名（专业版）"
-
-#: admin/views.php
-msgid "Get Free License Key →"
-msgstr "获取免费许可证密钥 →"
 
 #: admin/views.php
 msgid "Included in This Plugin"
@@ -624,24 +388,16 @@ msgid "Up to 50,000 users per month"
 msgstr "每月最多 50,000 名用户"
 
 #: admin/views.php
-msgid "IAB TCF 2.3 & IAB GPP 1.1"
-msgstr "IAB TCF 2.3 和 IAB GPP 1.1"
-
-#: admin/views.php
-msgid "GDPR & CCPA compliance"
-msgstr "GDPR 和 CCPA 合规"
-
-#: admin/views.php
-msgid "11 banner styles + popup"
-msgstr "11 种横幅样式 + 弹窗"
+msgid "IAB TCF 2.4 & IAB GPP 1.1"
+msgstr "IAB TCF 2.4 和 IAB GPP 1.1"
 
 #: admin/views.php
 msgid "52+ languages"
 msgstr "52+ 种语言"
 
 #: admin/views.php
-msgid "Privacy badge"
-msgstr "隐私徽章"
+msgid "Privacy settings button"
+msgstr "隐私设置按钮"
 
 #: admin/views.php
 msgid "Publisher Country"
@@ -650,3 +406,316 @@ msgstr "发布商所在国家/地区"
 #: admin/views.php
 msgid "The country where your business is established. Used as the publisher country code in the IAB TCF consent string."
 msgstr "您的企业注册所在的国家/地区。用作 IAB TCF 同意字符串中的发布商国家代码。"
+
+#: admin/views.php
+msgid "Without IAB vendors"
+msgstr "不含 IAB 供应商"
+
+#: admin/views.php
+msgid "Cookie categories"
+msgstr "Cookie 类别"
+
+#: admin/views.php
+msgid "Consent Banner Settings"
+msgstr "同意横幅设置"
+
+#: admin/views.php
+msgid "Set up the consent banner shown on your website."
+msgstr "设置在您的网站上显示的同意横幅。"
+
+#: admin/views.php
+msgid "Your banner is configured in the UniConsent dashboard because a license key is set."
+msgstr "由于已设置许可证密钥，您的横幅在 UniConsent 控制台中配置。"
+
+#: admin/views.php
+msgid "Open Dashboard →"
+msgstr "打开控制台 →"
+
+#: admin/views.php
+msgid "Banner Type"
+msgstr "横幅类型"
+
+#: admin/views.php
+msgid "Show Banner To"
+msgstr "横幅显示对象"
+
+#: admin/views.php
+msgid "All visitors"
+msgstr "所有访问者"
+
+#: admin/views.php
+msgid "EU/EEA visitors only"
+msgstr "仅限欧盟/欧洲经济区访问者"
+
+#: admin/views.php
+msgid "Banner Style"
+msgstr "横幅样式"
+
+#: admin/views.php
+msgid "Automatic (visitor's browser language)"
+msgstr "自动（访问者的浏览器语言）"
+
+#: admin/views.php
+msgid "Show Privacy Settings Button"
+msgstr "显示隐私设置按钮"
+
+#: admin/views.php
+msgid "Adds a small floating button so visitors can change their consent choices at any time."
+msgstr "添加一个小型悬浮按钮，访问者可随时更改其同意选择。"
+
+#: admin/views.php
+msgid "Website Name"
+msgstr "网站名称"
+
+#: admin/views.php
+msgid "Leave empty to use your site title."
+msgstr "留空则使用您的网站标题。"
+
+#: admin/views.php
+msgid "Logo URL"
+msgstr "Logo 网址"
+
+#: admin/views.php
+msgid "Optional. Shown in the consent banner."
+msgstr "可选。显示在同意横幅中。"
+
+#: admin/views.php
+msgid "Privacy Policy URL"
+msgstr "隐私政策网址"
+
+#: admin/views.php
+msgid "Leave empty to use the privacy policy page set in WordPress (Settings → Privacy)."
+msgstr "留空则使用 WordPress 中设置的隐私政策页面（设置 → 隐私）。"
+
+#: admin/views.php
+msgid "Free for up to 50,000 users per month."
+msgstr "每月最多 50,000 名用户免费。"
+
+#: admin/views.php
+msgid "For more traffic and features, create a UniConsent account, configure your banner in the dashboard, and paste your license key below."
+msgstr "如需支持更多流量和功能，请创建 UniConsent 账户，在控制台中配置横幅，然后在下方粘贴许可证密钥。"
+
+#: admin/views.php
+msgid "Create Account →"
+msgstr "创建账户 →"
+
+#: admin/views.php
+msgid "License Key"
+msgstr "许可证密钥"
+
+#: admin/views.php
+msgid "Paste the license key from your UniConsent dashboard. Your banner is then configured in the dashboard instead of on this page."
+msgstr "粘贴 UniConsent 控制台中的许可证密钥。之后您的横幅将在控制台中配置，而不是在此页面。"
+
+#: admin/views.php
+msgid "Setup guides for the plugin and the UniConsent dashboard."
+msgstr "插件和 UniConsent 控制台的设置指南。"
+
+#: admin/views.php
+msgid "Activate the plugin, choose a banner type, style, and language on the Settings tab, and save. The consent banner appears on your site right away."
+msgstr "启用插件，在“设置”选项卡中选择横幅类型、样式和语言，然后保存。同意横幅会立即显示在您的网站上。"
+
+#: admin/views.php
+msgid "No. Without a license key the plugin includes cookie categories and IAB TCF 2.4 banners, Google Consent Mode v2, 11 banner styles, and 52+ languages for up to 50,000 users per month. For more traffic or advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, create an account at"
+msgstr "不需要。无需许可证密钥，插件即包含 Cookie 类别和 IAB TCF 2.4 横幅、Google 同意模式 v2、11 种横幅样式和 52+ 种语言，每月最多支持 50,000 名用户。如需更多流量或自定义 CSS、同意分析、Cookie 扫描和同意日志等高级功能，请在以下网址创建账户："
+
+#: admin/views.php
+msgid "More with a UniConsent Account"
+msgstr "使用 UniConsent 账户获取更多功能"
+
+#: admin/views.php
+msgid "Configure these in the UniConsent dashboard, then paste your license key here:"
+msgstr "在 UniConsent 控制台中配置以下功能，然后在此处粘贴许可证密钥："
+
+#: admin/views.php
+msgid "More than 50,000 users per month"
+msgstr "每月超过 50,000 名用户"
+
+#: admin/views.php
+msgid "First-party CMP domain"
+msgstr "第一方 CMP 域名"
+
+#: admin/views.php
+msgid "Cookie categories or IAB TCF 2.4 banner"
+msgstr "Cookie 类别或 IAB TCF 2.4 横幅"
+
+#: admin/views.php
+msgid "GDPR and CCPA (California) compliance"
+msgstr "GDPR 和 CCPA（加州）合规"
+
+#: admin/views.php
+msgid "11 banner styles"
+msgstr "11 种横幅样式"
+
+#: admin/views.php
+msgid "Saving..."
+msgstr "正在保存..."
+
+#: admin/views.php
+msgid "Settings saved"
+msgstr "设置已保存"
+
+#: admin/views.php
+msgid "Your consent banner settings have been updated."
+msgstr "您的同意横幅设置已更新。"
+
+#: admin/views.php
+msgid "Save failed"
+msgstr "保存失败"
+
+#: admin/views.php
+msgid "Could not save settings. Please try again."
+msgstr "无法保存设置，请重试。"
+
+#: admin/views.php
+msgid "Network error. Check your connection and try again."
+msgstr "网络错误，请检查网络连接后重试。"
+
+#: admin/views.php
+msgid "Normal"
+msgstr "普通"
+
+#: admin/views.php
+msgid "Push Down"
+msgstr "下推"
+
+#: admin/views.php
+msgid "Simple"
+msgstr "简洁"
+
+#: admin/views.php
+msgid "Corner"
+msgstr "角落"
+
+#: admin/views.php
+msgid "Mini"
+msgstr "迷你"
+
+#: admin/views.php
+msgid "Floating Card"
+msgstr "浮动卡片"
+
+#: admin/views.php
+msgid "Compact Inline"
+msgstr "紧凑单行"
+
+#: admin/views.php
+msgid "Clean Stacked"
+msgstr "简洁堆叠"
+
+#: admin/views.php
+msgid "Bottom Sheet"
+msgstr "底部面板"
+
+#: admin/views.php
+msgid "Dark Compact"
+msgstr "深色紧凑"
+
+#: admin/views.php
+msgid "Popup"
+msgstr "弹窗"
+
+#: admin/settings.php
+msgid "Fix it in settings"
+msgstr "前往设置修复"
+
+#: admin/settings.php
+#, php-format
+msgid "UniConsent CMP: the license key \"%s\" is not valid, so the free-tier CMP is being loaded. Expected format: license-xxxxxxxxxx."
+msgstr "UniConsent CMP：许可证密钥“%s”无效，因此正在加载免费版 CMP。预期格式：license-xxxxxxxxxx。"
+
+#: admin/views.php
+msgid "Which banner type should I choose?"
+msgstr "应该选择哪种横幅类型？"
+
+#: admin/views.php
+msgid "Choose Cookie categories if you don't show ads on your site. It suits most sites, including sites that use Google Analytics or run Google Ads or Microsoft Ads campaigns with conversion and remarketing pixels. Choose IAB TCF 2.4 if you show ads on your site through Google AdSense, Google Ad Manager, or other programmatic ad networks. Google requires a certified IAB TCF CMP to serve ads to visitors in the EEA, UK, and Switzerland."
+msgstr "如果您的网站不展示广告，请选择“Cookie 类别”。它适合大多数网站，包括使用 Google Analytics 或投放 Google Ads、Microsoft Ads 广告活动并安装了转化和再营销像素的网站。如果您通过 Google AdSense、Google Ad Manager 或其他程序化广告网络在网站上展示广告，请选择 IAB TCF 2.4。Google 要求使用经认证的 IAB TCF CMP 才能向欧洲经济区、英国和瑞士的访问者投放广告。"
+
+#: admin/views.php
+msgid "What does \"Without IAB vendors\" mean?"
+msgstr "“不含 IAB 供应商”是什么意思？"
+
+#: admin/views.php
+msgid "It is an older setting that shows the IAB TCF banner without any ad partners. It is kept only for sites that already use it. Switch to Cookie categories if you don't show ads on your site, or to IAB TCF 2.4 if you do."
+msgstr "这是一个旧设置，显示不含任何广告合作伙伴的 IAB TCF 横幅，仅为已在使用的网站保留。如果您的网站不展示广告，请改为“Cookie 类别”；如果展示广告，请改为 IAB TCF 2.4。"
+
+#: admin/views.php
+msgid "Does it work with Google Consent Mode and Microsoft UET?"
+msgstr "是否支持 Google 同意模式和 Microsoft UET？"
+
+#: admin/views.php
+msgid "Yes. The plugin loads at the top of the page and sets Google Consent Mode v2 to \"denied\" until the visitor makes a choice. It then passes the choice to both Google Consent Mode and Microsoft UET Consent Mode. In Cookie categories mode, the advertising category controls ad storage, ad user data, and ad personalization; the performance category controls analytics storage; and the functionality category controls functionality and personalization storage. You don't need to add any code: keep your Google tag, Google Tag Manager, or UET tag as it is."
+msgstr "支持。插件在页面顶部加载，并在访问者做出选择前将 Google 同意模式 v2 设为“denied”（拒绝），随后将访问者的选择同步到 Google 同意模式和 Microsoft UET 同意模式。在“Cookie 类别”模式下，广告类别控制 ad storage、ad user data 和 ad personalization；性能类别控制 analytics storage；功能类别控制 functionality 和 personalization storage。无需添加任何代码，保留现有的 Google 代码、Google Tag Manager 或 UET 代码即可。"
+
+#: admin/views.php
+msgid "Who sees the banner?"
+msgstr "哪些访问者会看到横幅？"
+
+#: admin/views.php
+msgid "With Cookie categories, all visitors see the banner. With IAB TCF 2.4, use Show Banner To: All visitors shows it everywhere, and EU/EEA visitors only shows it only to visitors in the EU and EEA. With EU/EEA visitors only, visitors in California see a CCPA notice instead."
+msgstr "选择“Cookie 类别”时，所有访问者都会看到横幅。选择 IAB TCF 2.4 时，可通过“横幅显示对象”设置：“所有访问者”在所有地区显示，“仅限欧盟/欧洲经济区访问者”仅向欧盟和欧洲经济区的访问者显示。选择后者时，加州的访问者会看到 CCPA 声明。"
+
+#: admin/views.php
+msgid "Which banner style should I use?"
+msgstr "应该使用哪种横幅样式？"
+
+#: admin/views.php
+msgid "All styles collect consent in the same way; they differ only in layout and position. To see a style, save it and open your site in a private browser window."
+msgstr "所有样式收集同意的方式相同，只是布局和位置不同。要查看某个样式，请保存后在浏览器的无痕窗口中打开您的网站。"
+
+#: admin/views.php
+msgid "How does the Automatic language option work?"
+msgstr "“自动”语言选项如何工作？"
+
+#: admin/views.php
+msgid "The banner uses the language set in the visitor's browser. If that language isn't supported, it uses English. Choose a specific language to show the banner in the same language to everyone."
+msgstr "横幅使用访问者浏览器中设置的语言；如果不支持该语言，则使用英语。选择特定语言可让所有访问者看到相同语言的横幅。"
+
+#: admin/views.php
+msgid "What is the privacy settings button, and can I use my own link?"
+msgstr "什么是隐私设置按钮？可以使用自己的链接吗？"
+
+#: admin/views.php
+msgid "It is a small floating button that lets visitors reopen the banner and change their choices. Privacy laws such as the GDPR require an easy way to do this. If you turn the button off, add your own link, for example in a Custom HTML block in your footer:"
+msgstr "这是一个小型悬浮按钮，访问者可以用它重新打开横幅并更改选择。GDPR 等隐私法律要求提供便捷的方式来做到这一点。如果关闭该按钮，请添加您自己的链接，例如在页脚的“自定义 HTML”区块中添加："
+
+#: admin/views.php
+msgid "What are Website Name, Logo URL, and Privacy Policy URL used for?"
+msgstr "网站名称、Logo 网址和隐私政策网址有什么用？"
+
+#: admin/views.php
+msgid "They are shown in the banner. The website name and logo identify your site, and the privacy policy link lets visitors read your policy. If you leave the name or the privacy policy URL empty, the plugin uses your site title and the privacy policy page set in WordPress."
+msgstr "这些信息会显示在横幅中。网站名称和 Logo 用于标识您的网站，隐私政策链接方便访问者阅读您的政策。如果名称或隐私政策网址留空，插件会使用您的网站标题和 WordPress 中设置的隐私政策页面。"
+
+#: admin/views.php
+msgid "What is Publisher Country?"
+msgstr "什么是“发布商所在国家/地区”？"
+
+#: admin/views.php
+msgid "It is only used with IAB TCF 2.4. Choose the country where your business is established. It is stored in the consent string that is shared with your ad partners."
+msgstr "仅在 IAB TCF 2.4 模式下使用。请选择您的企业所在的国家/地区。该信息会保存在与广告合作伙伴共享的同意字符串中。"
+
+#: admin/views.php
+msgid "I saved my settings but the banner didn't change. Why?"
+msgstr "保存设置后横幅没有变化，为什么？"
+
+#: admin/views.php
+msgid "Your browser remembers the choice you already made, so the banner doesn't show again. Open your site in a private browser window to see it as a new visitor. If you use a caching plugin or a CDN, clear its cache after saving, because cached pages still contain the old settings. With IAB TCF 2.4 and EU/EEA visitors only, the banner is only shown to visitors in the EU and EEA."
+msgstr "您的浏览器会记住您之前的选择，因此横幅不会再次显示。请在浏览器的无痕窗口中打开网站，以新访问者的身份查看。如果您使用缓存插件或 CDN，请在保存后清除缓存，因为缓存的页面仍包含旧设置。选择 IAB TCF 2.4 并设置为“仅限欧盟/欧洲经济区访问者”时，横幅只会向欧盟和欧洲经济区的访问者显示。"
+
+#: admin/views.php
+msgid "Need your own banner text, styling, or consent purposes?"
+msgstr "需要自定义横幅文本、样式或同意用途？"
+
+#: admin/views.php
+msgid "Customize them in the UniConsent dashboard →"
+msgstr "在 UniConsent 控制台中自定义 →"
+
+#: admin/views.php
+msgid "Can I customize the banner further?"
+msgstr "可以进一步自定义横幅吗？"
+
+#: admin/views.php
+msgid "Yes. Create a UniConsent account, configure your banner in the dashboard, and paste your license key on the Settings tab. The dashboard has more options than this plugin, including custom banner text and translations, custom CSS, your own purposes and vendor lists, cookie scanning and script blocking, consent analytics and logging, and more privacy laws such as US state laws, LGPD, and POPIA."
+msgstr "可以。创建 UniConsent 账户，在控制台中配置横幅，然后在“设置”选项卡中粘贴许可证密钥。控制台提供比本插件更多的选项，包括自定义横幅文本和翻译、自定义 CSS、自定义用途和供应商列表、Cookie 扫描和脚本拦截、同意分析和日志，以及美国各州隐私法、LGPD 和 POPIA 等更多隐私法规。"

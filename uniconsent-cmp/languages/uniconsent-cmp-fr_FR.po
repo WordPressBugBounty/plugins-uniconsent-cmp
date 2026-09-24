@@ -15,10 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: admin/views.php:63
-msgid "Enable EU GDPR Compliance"
-msgstr "Activer la conformité RGPD UE"
-
 #: admin/views.php:65 admin/views.php:74 admin/views.php:176
 msgid "No"
 msgstr "Non"
@@ -26,10 +22,6 @@ msgstr "Non"
 #: admin/views.php:66 admin/views.php:75
 msgid "Yes"
 msgstr "Oui"
-
-#: admin/views.php:72
-msgid "Enable U.S. CCPA Compliance"
-msgstr "Activer la conformité CCPA États-Unis"
 
 #: admin/views.php:81
 msgid "Language"
@@ -195,69 +187,9 @@ msgstr "Tagalog"
 msgid "Ukrainian"
 msgstr "Ukrainien"
 
-#: admin/views.php:127
-msgid "Website Name (Optional)"
-msgstr "Nom du site web (Facultatif)"
-
-#: admin/views.php:134
-msgid "Website LOGO URL (Optional)"
-msgstr "URL du logo du site web (Facultatif)"
-
-#: admin/views.php:141
-msgid "Policy URL (Optional)"
-msgstr "URL de la politique de confidentialité (Facultatif)"
-
-#: admin/views.php:146
-msgid "Example:"
-msgstr "Exemple :"
-
-#: admin/views.php:146
-msgid "https://www.example.com/policy"
-msgstr "https://www.example.com/politique"
-
-#: admin/views.php:152
-msgid "GDPR Policy Region"
-msgstr "Région de la politique RGPD"
-
-#: admin/views.php:154
-msgid "None"
-msgstr "Aucune"
-
-#: admin/views.php:155
-msgid "Worldwide"
-msgstr "Monde entier"
-
-#: admin/views.php:156
-msgid "EU (EEA) Countries"
-msgstr "Pays de l'UE (EEE)"
-
-#: admin/views.php:165
-msgid "CMP Style"
-msgstr "Style de la CMP"
-
 #: admin/views.php:167
 msgid "Banner"
 msgstr "Bannière"
-
-#: admin/views.php:168
-msgid "Popup Box"
-msgstr "Fenêtre contextuelle"
-
-#: admin/views.php:174
-msgid "IAB TCF Compliance"
-msgstr "Conformité IAB TCF"
-
-#: admin/views.php:177
-msgid "IAB TCF 2.2"
-msgstr "IAB TCF 2.2"
-
-#: admin/views.php:184
-msgid "License key (Optional)"
-msgstr "Clé de licence (Facultatif)"
-
-#: admin/views.php:189
-msgid "* Get your free license key at:"
-msgstr "* Obtenez votre clé de licence gratuite sur :"
 
 #: admin/views.php
 msgid "Settings"
@@ -266,42 +198,6 @@ msgstr "Paramètres"
 #: admin/views.php
 msgid "Support"
 msgstr "Support"
-
-#: admin/views.php
-msgid "UniConsent Configuration"
-msgstr "Configuration UniConsent"
-
-#: admin/views.php
-msgid "Configure your UniConsent integration settings"
-msgstr "Configurez vos paramètres d'intégration UniConsent"
-
-#: admin/views.php
-msgid "Enter your website name..."
-msgstr "Entrez le nom de votre site web..."
-
-#: admin/views.php
-msgid "Enter your logo URL..."
-msgstr "Entrez l'URL de votre logo..."
-
-#: admin/views.php
-msgid "Enter your license key..."
-msgstr "Entrez votre clé de licence..."
-
-#: admin/views.php
-msgid "When select EU, only display CMP to the users in EU countries."
-msgstr "Lorsque l'option UE est sélectionnée, la CMP ne s'affiche que pour les utilisateurs des pays de l'UE."
-
-#: admin/views.php
-msgid "to unlock more features."
-msgstr "pour débloquer plus de fonctionnalités."
-
-#: admin/views.php
-msgid "* The configurations are managed at"
-msgstr "* Les configurations sont gérées sur"
-
-#: admin/views.php
-msgid "once you have entered the license key:"
-msgstr "une fois que vous avez entré la clé de licence :"
 
 #: admin/views.php
 msgid "Save Changes"
@@ -318,10 +214,6 @@ msgstr "Obtenez de l'aide et trouvez des réponses à vos questions"
 #: admin/views.php
 msgid "Documentation"
 msgstr "Documentation"
-
-#: admin/views.php
-msgid "Comprehensive guides and tutorials to help you get started and make the most of our plugin."
-msgstr "Guides complets et tutoriels pour vous aider à démarrer et tirer le meilleur parti de notre plugin."
 
 #: admin/views.php
 msgid "View Documentation"
@@ -352,24 +244,8 @@ msgid "How do I get started with UniConsent?"
 msgstr "Comment démarrer avec UniConsent ?"
 
 #: admin/views.php
-msgid "Install and activate the plugin, then configure your consent settings on the Settings tab. Enable GDPR and/or CCPA compliance, choose your language and CMP style, and save. The consent banner will appear on your site automatically."
-msgstr "Installez et activez le plugin, puis configurez vos paramètres de consentement dans l'onglet Paramètres. Activez la conformité RGPD et/ou CCPA, choisissez votre langue et le style CMP, puis enregistrez. La bannière de consentement apparaîtra automatiquement sur votre site."
-
-#: admin/views.php
 msgid "Do I need a license key?"
 msgstr "Ai-je besoin d'une clé de licence ?"
-
-#: admin/views.php
-msgid "No, the plugin works without a license key with basic features. To unlock advanced features such as IAB TCF 2.2, Google Consent Mode v2, analytics dashboard, and full customisation, register for a free license key at"
-msgstr "Non, le plugin fonctionne sans clé de licence avec les fonctionnalités de base. Pour débloquer les fonctionnalités avancées telles que IAB TCF 2.2, Google Consent Mode v2, tableau de bord analytique et personnalisation complète, inscrivez-vous pour une clé de licence gratuite sur"
-
-#: admin/views.php
-msgid "What is IAB TCF 2.2 and do I need it?"
-msgstr "Qu'est-ce que l'IAB TCF 2.2 et en ai-je besoin ?"
-
-#: admin/views.php
-msgid "IAB TCF (Transparency and Consent Framework) 2.2 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.2 is recommended to stay compliant."
-msgstr "IAB TCF (Transparency and Consent Framework) 2.2 est un standard industriel pour la gestion du consentement des utilisateurs pour la publicité en ligne. Si vous utilisez Google AdSense, Google Ad Manager ou la publicité programmatique, l'activation de l'IAB TCF 2.2 est recommandée pour rester conforme."
 
 #: admin/views.php
 msgid "Where are my settings managed after entering a license key?"
@@ -384,14 +260,6 @@ msgid "The WordPress plugin will load your configuration automatically."
 msgstr "Le plugin WordPress chargera automatiquement votre configuration."
 
 #: admin/views.php
-msgid "Certified EU IAB TCF 2.2/2.3 CMP"
-msgstr "CMP certifiée EU IAB TCF 2.2/2.3"
-
-#: admin/views.php
-msgid "Certified Canada IAB TCF CMP"
-msgstr "CMP certifiée Canada IAB TCF"
-
-#: admin/views.php
 msgid "Certified Google CMP (Gold Tier)"
 msgstr "CMP certifiée Google (niveau Gold)"
 
@@ -404,54 +272,6 @@ msgid "Microsoft UET Consent Mode"
 msgstr "Microsoft UET Consent Mode"
 
 #: admin/views.php
-msgid "IAB GPP 1.1 compliance"
-msgstr "Conformité IAB GPP 1.1"
-
-#: admin/views.php
-msgid "40+ Languages support"
-msgstr "Support de 40+ langues"
-
-#: admin/views.php
-msgid "GPP, TCF, USP Consent signals"
-msgstr "Signaux de consentement GPP, TCF, USP"
-
-#: admin/views.php
-msgid "For GDPR, CCPA, LGPD, PDPA, CPRA, PIPL"
-msgstr "Pour RGPD, CCPA, LGPD, PDPA, CPRA, PIPL"
-
-#: admin/views.php
-msgid "More popup UI choices and easy mode"
-msgstr "Plus de choix d'interface popup et mode simplifié"
-
-#: admin/views.php
-msgid "Fully customisable consent collection pop-ups and bars"
-msgstr "Pop-ups et bannières de collecte de consentement entièrement personnalisables"
-
-#: admin/views.php
-msgid "Multiple languages support"
-msgstr "Support multilingue"
-
-#: admin/views.php
-msgid "Data analytics and insight dashboard"
-msgstr "Tableau de bord d'analyse de données et d'insights"
-
-#: admin/views.php
-msgid "One-tag Implementation"
-msgstr "Implémentation en un seul tag"
-
-#: admin/views.php
-msgid "Google GAM/Google AdSense/Google AdX/Amazon APS Support"
-msgstr "Support Google GAM/Google AdSense/Google AdX/Amazon APS"
-
-#: admin/views.php
-msgid "Prebid.js and Header bidding support"
-msgstr "Support Prebid.js et Header bidding"
-
-#: admin/views.php
-msgid "Cookie ePrivacy consent support"
-msgstr "Support du consentement Cookie ePrivacy"
-
-#: admin/views.php
 msgid "Website cookie discovery and disclosure"
 msgstr "Découverte et divulgation des cookies du site"
 
@@ -460,16 +280,8 @@ msgid "JavaScript and cookie blocking"
 msgstr "Blocage JavaScript et cookies"
 
 #: admin/views.php
-msgid "Consent rate analytics and insight"
-msgstr "Analyse et insights du taux de consentement"
-
-#: admin/views.php
 msgid "Support:"
 msgstr "Support :"
-
-#: admin/views.php
-msgid "Get Started"
-msgstr "Commencer"
 
 #: admin/views.php
 msgid "Arabic"
@@ -520,56 +332,20 @@ msgid "Serbian (Cyrillic)"
 msgstr "Serbe (cyrillique)"
 
 #: admin/views.php
-msgid "Display Privacy Badge"
-msgstr "Afficher le badge de confidentialité"
+msgid "IAB TCF 2.4"
+msgstr "IAB TCF 2.4"
 
 #: admin/views.php
-msgid "Display a privacy badge on your website so users can re-open the consent manager."
-msgstr "Affichez un badge de confidentialité sur votre site web afin que les utilisateurs puissent rouvrir le gestionnaire de consentement."
+msgid "Cookie categories shows all visitors a cookie banner where they can accept or reject each cookie category. Their choices are passed to Google Consent Mode v2 and Microsoft UET Consent Mode, so it suits sites that run ad campaigns with Google Ads or Microsoft Ads conversion and remarketing pixels. Choose IAB TCF 2.4 if you show ads on your site through Google AdSense, Google Ad Manager, or other programmatic ads, to serve ads to visitors in the EEA, UK, and Switzerland."
+msgstr "« Catégories de cookies » affiche à tous les visiteurs une bannière de cookies où ils peuvent accepter ou refuser chaque catégorie de cookies. Leurs choix sont transmis à Google Consent Mode v2 et à Microsoft UET Consent Mode, ce qui convient aux sites qui mènent des campagnes publicitaires avec des pixels de conversion et de remarketing Google Ads ou Microsoft Ads. Choisissez IAB TCF 2.4 si vous affichez des annonces sur votre site via Google AdSense, Google Ad Manager ou d'autres publicités programmatiques, afin de diffuser des annonces aux visiteurs de l'EEE, du Royaume-Uni et de la Suisse."
 
 #: admin/views.php
-msgid "IAB TCF 2.3"
-msgstr "IAB TCF 2.3"
+msgid "What is IAB TCF 2.4 and do I need it?"
+msgstr "Qu'est-ce que l'IAB TCF 2.4 et en ai-je besoin ?"
 
 #: admin/views.php
-msgid "Required if you run Google AdSense, Google Ad Manager, or other Google ads: select IAB TCF 2.3 to serve ads to visitors in the EEA, UK, and Switzerland."
-msgstr "Obligatoire si vous utilisez Google AdSense, Google Ad Manager ou d'autres annonces Google : sélectionnez IAB TCF 2.3 pour diffuser des annonces aux visiteurs de l'EEE, du Royaume-Uni et de la Suisse."
-
-#: admin/views.php
-msgid "You are on the free plan: up to 50,000 users per month."
-msgstr "Vous utilisez l'offre gratuite : jusqu'à 50 000 utilisateurs par mois."
-
-#: admin/views.php
-msgid "Upgrade for higher traffic, custom banner text, consent analytics, cookie scanning, and consent logging."
-msgstr "Passez à une offre supérieure pour plus de trafic, un texte de bannière personnalisé, des statistiques de consentement, l'analyse des cookies et la journalisation du consentement."
-
-#: admin/views.php
-msgid "Upgrade Now →"
-msgstr "Mettre à niveau →"
-
-#: admin/views.php
-msgid "* The free version supports up to 50,000 users per month. For higher traffic, upgrade your plan at"
-msgstr "* La version gratuite prend en charge jusqu'à 50 000 utilisateurs par mois. Pour un trafic plus élevé, mettez à niveau votre offre sur"
-
-#: admin/views.php
-msgid "No, the plugin works without a license key with all core features including IAB TCF 2.3, Google Consent Mode v2, and 11 banner styles, for up to 50,000 users per month. To unlock advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, or to support higher traffic, register for a free license key at"
-msgstr "Non, le plugin fonctionne sans clé de licence avec toutes les fonctionnalités de base, y compris IAB TCF 2.3, Google Consent Mode v2 et 11 styles de bannière, pour un maximum de 50 000 utilisateurs par mois. Pour débloquer des fonctionnalités avancées telles que le CSS personnalisé, les statistiques de consentement, l'analyse des cookies et la journalisation du consentement, ou pour prendre en charge un trafic plus élevé, inscrivez-vous pour obtenir une clé de licence gratuite sur"
-
-#: admin/views.php
-msgid "What is IAB TCF 2.3 and do I need it?"
-msgstr "Qu'est-ce que l'IAB TCF 2.3 et en ai-je besoin ?"
-
-#: admin/views.php
-msgid "IAB TCF (Transparency and Consent Framework) 2.3 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.3 is recommended to stay compliant."
-msgstr "L'IAB TCF (Transparency and Consent Framework) 2.3 est une norme du secteur pour la gestion du consentement des utilisateurs pour la publicité en ligne. Si vous utilisez Google AdSense, Google Ad Manager ou la publicité programmatique, il est recommandé d'activer l'IAB TCF 2.3 pour rester conforme."
-
-#: admin/views.php
-msgid "Unlock More with a Free Account"
-msgstr "Débloquez plus avec un compte gratuit"
-
-#: admin/views.php
-msgid "Register for a free license key to access advanced features:"
-msgstr "Inscrivez-vous pour obtenir une clé de licence gratuite et accéder aux fonctionnalités avancées :"
+msgid "IAB TCF (Transparency and Consent Framework) 2.4 is an industry standard for managing user consent for online advertising. If you use Google AdSense, Google Ad Manager, or programmatic advertising, enabling IAB TCF 2.4 is recommended to stay compliant."
+msgstr "L'IAB TCF (Transparency and Consent Framework) 2.4 est une norme du secteur pour la gestion du consentement des utilisateurs pour la publicité en ligne. Si vous utilisez Google AdSense, Google Ad Manager ou la publicité programmatique, il est recommandé d'activer l'IAB TCF 2.4 pour rester conforme."
 
 #: admin/views.php
 msgid "Custom banner text and translations"
@@ -600,20 +376,8 @@ msgid "US state privacy laws (VA, CO, CT, UT)"
 msgstr "Lois de confidentialité des États américains (VA, CO, CT, UT)"
 
 #: admin/views.php
-msgid "Google GAM / AdSense / AdX support"
-msgstr "Prise en charge de Google GAM / AdSense / AdX"
-
-#: admin/views.php
 msgid "Prebid.js and header bidding support"
 msgstr "Prise en charge de Prebid.js et du header bidding"
-
-#: admin/views.php
-msgid "First-party CMP domain (Pro)"
-msgstr "Domaine CMP first-party (Pro)"
-
-#: admin/views.php
-msgid "Get Free License Key →"
-msgstr "Obtenir une clé de licence gratuite →"
 
 #: admin/views.php
 msgid "Included in This Plugin"
@@ -624,24 +388,16 @@ msgid "Up to 50,000 users per month"
 msgstr "Jusqu'à 50 000 utilisateurs par mois"
 
 #: admin/views.php
-msgid "IAB TCF 2.3 & IAB GPP 1.1"
-msgstr "IAB TCF 2.3 & IAB GPP 1.1"
-
-#: admin/views.php
-msgid "GDPR & CCPA compliance"
-msgstr "Conformité RGPD et CCPA"
-
-#: admin/views.php
-msgid "11 banner styles + popup"
-msgstr "11 styles de bannière + popup"
+msgid "IAB TCF 2.4 & IAB GPP 1.1"
+msgstr "IAB TCF 2.4 & IAB GPP 1.1"
 
 #: admin/views.php
 msgid "52+ languages"
 msgstr "Plus de 52 langues"
 
 #: admin/views.php
-msgid "Privacy badge"
-msgstr "Badge de confidentialité"
+msgid "Privacy settings button"
+msgstr "Bouton des paramètres de confidentialité"
 
 #: admin/views.php
 msgid "Publisher Country"
@@ -650,3 +406,316 @@ msgstr "Pays de l'éditeur"
 #: admin/views.php
 msgid "The country where your business is established. Used as the publisher country code in the IAB TCF consent string."
 msgstr "Le pays où votre entreprise est établie. Utilisé comme code pays de l'éditeur dans la chaîne de consentement IAB TCF."
+
+#: admin/views.php
+msgid "Without IAB vendors"
+msgstr "Sans fournisseurs IAB"
+
+#: admin/views.php
+msgid "Cookie categories"
+msgstr "Catégories de cookies"
+
+#: admin/views.php
+msgid "Consent Banner Settings"
+msgstr "Réglages de la bannière de consentement"
+
+#: admin/views.php
+msgid "Set up the consent banner shown on your website."
+msgstr "Configurez la bannière de consentement affichée sur votre site."
+
+#: admin/views.php
+msgid "Your banner is configured in the UniConsent dashboard because a license key is set."
+msgstr "Une clé de licence étant définie, votre bannière se configure dans le tableau de bord UniConsent."
+
+#: admin/views.php
+msgid "Open Dashboard →"
+msgstr "Ouvrir le tableau de bord →"
+
+#: admin/views.php
+msgid "Banner Type"
+msgstr "Type de bannière"
+
+#: admin/views.php
+msgid "Show Banner To"
+msgstr "Afficher la bannière pour"
+
+#: admin/views.php
+msgid "All visitors"
+msgstr "Tous les visiteurs"
+
+#: admin/views.php
+msgid "EU/EEA visitors only"
+msgstr "Visiteurs de l'UE/EEE uniquement"
+
+#: admin/views.php
+msgid "Banner Style"
+msgstr "Style de bannière"
+
+#: admin/views.php
+msgid "Automatic (visitor's browser language)"
+msgstr "Automatique (langue du navigateur du visiteur)"
+
+#: admin/views.php
+msgid "Show Privacy Settings Button"
+msgstr "Afficher le bouton des paramètres de confidentialité"
+
+#: admin/views.php
+msgid "Adds a small floating button so visitors can change their consent choices at any time."
+msgstr "Ajoute un petit bouton flottant permettant aux visiteurs de modifier leurs choix de consentement à tout moment."
+
+#: admin/views.php
+msgid "Website Name"
+msgstr "Nom du site"
+
+#: admin/views.php
+msgid "Leave empty to use your site title."
+msgstr "Laissez vide pour utiliser le titre de votre site."
+
+#: admin/views.php
+msgid "Logo URL"
+msgstr "URL du logo"
+
+#: admin/views.php
+msgid "Optional. Shown in the consent banner."
+msgstr "Facultatif. Affiché dans la bannière de consentement."
+
+#: admin/views.php
+msgid "Privacy Policy URL"
+msgstr "URL de la politique de confidentialité"
+
+#: admin/views.php
+msgid "Leave empty to use the privacy policy page set in WordPress (Settings → Privacy)."
+msgstr "Laissez vide pour utiliser la page de politique de confidentialité définie dans WordPress (Réglages → Confidentialité)."
+
+#: admin/views.php
+msgid "Free for up to 50,000 users per month."
+msgstr "Gratuit jusqu'à 50 000 utilisateurs par mois."
+
+#: admin/views.php
+msgid "For more traffic and features, create a UniConsent account, configure your banner in the dashboard, and paste your license key below."
+msgstr "Pour plus de trafic et de fonctionnalités, créez un compte UniConsent, configurez votre bannière dans le tableau de bord et collez votre clé de licence ci-dessous."
+
+#: admin/views.php
+msgid "Create Account →"
+msgstr "Créer un compte →"
+
+#: admin/views.php
+msgid "License Key"
+msgstr "Clé de licence"
+
+#: admin/views.php
+msgid "Paste the license key from your UniConsent dashboard. Your banner is then configured in the dashboard instead of on this page."
+msgstr "Collez la clé de licence de votre tableau de bord UniConsent. Votre bannière se configure alors dans le tableau de bord et non sur cette page."
+
+#: admin/views.php
+msgid "Setup guides for the plugin and the UniConsent dashboard."
+msgstr "Guides de configuration du plugin et du tableau de bord UniConsent."
+
+#: admin/views.php
+msgid "Activate the plugin, choose a banner type, style, and language on the Settings tab, and save. The consent banner appears on your site right away."
+msgstr "Activez le plugin, choisissez le type, le style et la langue de la bannière dans l'onglet Réglages, puis enregistrez. La bannière de consentement apparaît immédiatement sur votre site."
+
+#: admin/views.php
+msgid "No. Without a license key the plugin includes cookie categories and IAB TCF 2.4 banners, Google Consent Mode v2, 11 banner styles, and 52+ languages for up to 50,000 users per month. For more traffic or advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, create an account at"
+msgstr "Non. Sans clé de licence, le plugin inclut les bannières par catégories de cookies et IAB TCF 2.4, Google Consent Mode v2, 11 styles de bannière et plus de 52 langues, jusqu'à 50 000 utilisateurs par mois. Pour plus de trafic ou des fonctionnalités avancées comme le CSS personnalisé, les statistiques de consentement, l'analyse des cookies et la journalisation du consentement, créez un compte sur"
+
+#: admin/views.php
+msgid "More with a UniConsent Account"
+msgstr "Plus de possibilités avec un compte UniConsent"
+
+#: admin/views.php
+msgid "Configure these in the UniConsent dashboard, then paste your license key here:"
+msgstr "Configurez-les dans le tableau de bord UniConsent, puis collez votre clé de licence ici :"
+
+#: admin/views.php
+msgid "More than 50,000 users per month"
+msgstr "Plus de 50 000 utilisateurs par mois"
+
+#: admin/views.php
+msgid "First-party CMP domain"
+msgstr "Domaine CMP propriétaire"
+
+#: admin/views.php
+msgid "Cookie categories or IAB TCF 2.4 banner"
+msgstr "Bannière par catégories de cookies ou IAB TCF 2.4"
+
+#: admin/views.php
+msgid "GDPR and CCPA (California) compliance"
+msgstr "Conformité RGPD et CCPA (Californie)"
+
+#: admin/views.php
+msgid "11 banner styles"
+msgstr "11 styles de bannière"
+
+#: admin/views.php
+msgid "Saving..."
+msgstr "Enregistrement..."
+
+#: admin/views.php
+msgid "Settings saved"
+msgstr "Réglages enregistrés"
+
+#: admin/views.php
+msgid "Your consent banner settings have been updated."
+msgstr "Les réglages de votre bannière de consentement ont été mis à jour."
+
+#: admin/views.php
+msgid "Save failed"
+msgstr "Échec de l'enregistrement"
+
+#: admin/views.php
+msgid "Could not save settings. Please try again."
+msgstr "Impossible d'enregistrer les réglages. Veuillez réessayer."
+
+#: admin/views.php
+msgid "Network error. Check your connection and try again."
+msgstr "Erreur réseau. Vérifiez votre connexion et réessayez."
+
+#: admin/views.php
+msgid "Normal"
+msgstr "Normal"
+
+#: admin/views.php
+msgid "Push Down"
+msgstr "Poussée vers le bas"
+
+#: admin/views.php
+msgid "Simple"
+msgstr "Simple"
+
+#: admin/views.php
+msgid "Corner"
+msgstr "Coin"
+
+#: admin/views.php
+msgid "Mini"
+msgstr "Mini"
+
+#: admin/views.php
+msgid "Floating Card"
+msgstr "Carte flottante"
+
+#: admin/views.php
+msgid "Compact Inline"
+msgstr "Compact en ligne"
+
+#: admin/views.php
+msgid "Clean Stacked"
+msgstr "Empilé épuré"
+
+#: admin/views.php
+msgid "Bottom Sheet"
+msgstr "Panneau inférieur"
+
+#: admin/views.php
+msgid "Dark Compact"
+msgstr "Compact sombre"
+
+#: admin/views.php
+msgid "Popup"
+msgstr "Pop-up"
+
+#: admin/settings.php
+msgid "Fix it in settings"
+msgstr "Corriger dans les réglages"
+
+#: admin/settings.php
+#, php-format
+msgid "UniConsent CMP: the license key \"%s\" is not valid, so the free-tier CMP is being loaded. Expected format: license-xxxxxxxxxx."
+msgstr "UniConsent CMP : la clé de licence « %s » n'est pas valide, la CMP gratuite est donc chargée. Format attendu : license-xxxxxxxxxx."
+
+#: admin/views.php
+msgid "Which banner type should I choose?"
+msgstr "Quel type de bannière dois-je choisir ?"
+
+#: admin/views.php
+msgid "Choose Cookie categories if you don't show ads on your site. It suits most sites, including sites that use Google Analytics or run Google Ads or Microsoft Ads campaigns with conversion and remarketing pixels. Choose IAB TCF 2.4 if you show ads on your site through Google AdSense, Google Ad Manager, or other programmatic ad networks. Google requires a certified IAB TCF CMP to serve ads to visitors in the EEA, UK, and Switzerland."
+msgstr "Choisissez « Catégories de cookies » si vous n'affichez pas d'annonces sur votre site. Ce mode convient à la plupart des sites, y compris ceux qui utilisent Google Analytics ou qui mènent des campagnes Google Ads ou Microsoft Ads avec des pixels de conversion et de remarketing. Choisissez IAB TCF 2.4 si vous affichez des annonces sur votre site via Google AdSense, Google Ad Manager ou d'autres réseaux publicitaires programmatiques. Google exige une CMP IAB TCF certifiée pour diffuser des annonces aux visiteurs de l'EEE, du Royaume-Uni et de la Suisse."
+
+#: admin/views.php
+msgid "What does \"Without IAB vendors\" mean?"
+msgstr "Que signifie « Sans fournisseurs IAB » ?"
+
+#: admin/views.php
+msgid "It is an older setting that shows the IAB TCF banner without any ad partners. It is kept only for sites that already use it. Switch to Cookie categories if you don't show ads on your site, or to IAB TCF 2.4 if you do."
+msgstr "Il s'agit d'un ancien réglage qui affiche la bannière IAB TCF sans aucun partenaire publicitaire. Il n'est conservé que pour les sites qui l'utilisent déjà. Passez à « Catégories de cookies » si vous n'affichez pas d'annonces sur votre site, ou à IAB TCF 2.4 si vous en affichez."
+
+#: admin/views.php
+msgid "Does it work with Google Consent Mode and Microsoft UET?"
+msgstr "Est-ce compatible avec Google Consent Mode et Microsoft UET ?"
+
+#: admin/views.php
+msgid "Yes. The plugin loads at the top of the page and sets Google Consent Mode v2 to \"denied\" until the visitor makes a choice. It then passes the choice to both Google Consent Mode and Microsoft UET Consent Mode. In Cookie categories mode, the advertising category controls ad storage, ad user data, and ad personalization; the performance category controls analytics storage; and the functionality category controls functionality and personalization storage. You don't need to add any code: keep your Google tag, Google Tag Manager, or UET tag as it is."
+msgstr "Oui. Le plugin se charge en haut de la page et règle Google Consent Mode v2 sur « denied » jusqu'à ce que le visiteur fasse un choix. Ce choix est ensuite transmis à Google Consent Mode et à Microsoft UET Consent Mode. En mode « Catégories de cookies », la catégorie publicité contrôle ad storage, ad user data et ad personalization ; la catégorie performance contrôle analytics storage ; et la catégorie fonctionnalité contrôle functionality et personalization storage. Aucun code à ajouter : conservez votre balise Google, Google Tag Manager ou votre balise UET telle quelle."
+
+#: admin/views.php
+msgid "Who sees the banner?"
+msgstr "Qui voit la bannière ?"
+
+#: admin/views.php
+msgid "With Cookie categories, all visitors see the banner. With IAB TCF 2.4, use Show Banner To: All visitors shows it everywhere, and EU/EEA visitors only shows it only to visitors in the EU and EEA. With EU/EEA visitors only, visitors in California see a CCPA notice instead."
+msgstr "Avec « Catégories de cookies », tous les visiteurs voient la bannière. Avec IAB TCF 2.4, utilisez « Afficher la bannière pour » : « Tous les visiteurs » l'affiche partout, et « Visiteurs de l'UE/EEE uniquement » ne l'affiche qu'aux visiteurs de l'UE et de l'EEE. Dans ce dernier cas, les visiteurs en Californie voient à la place un avis CCPA."
+
+#: admin/views.php
+msgid "Which banner style should I use?"
+msgstr "Quel style de bannière utiliser ?"
+
+#: admin/views.php
+msgid "All styles collect consent in the same way; they differ only in layout and position. To see a style, save it and open your site in a private browser window."
+msgstr "Tous les styles recueillent le consentement de la même manière ; seuls la mise en page et l'emplacement changent. Pour voir un style, enregistrez-le et ouvrez votre site dans une fenêtre de navigation privée."
+
+#: admin/views.php
+msgid "How does the Automatic language option work?"
+msgstr "Comment fonctionne l'option de langue automatique ?"
+
+#: admin/views.php
+msgid "The banner uses the language set in the visitor's browser. If that language isn't supported, it uses English. Choose a specific language to show the banner in the same language to everyone."
+msgstr "La bannière utilise la langue définie dans le navigateur du visiteur. Si cette langue n'est pas prise en charge, l'anglais est utilisé. Choisissez une langue précise pour afficher la bannière dans la même langue pour tout le monde."
+
+#: admin/views.php
+msgid "What is the privacy settings button, and can I use my own link?"
+msgstr "Qu'est-ce que le bouton des paramètres de confidentialité, et puis-je utiliser mon propre lien ?"
+
+#: admin/views.php
+msgid "It is a small floating button that lets visitors reopen the banner and change their choices. Privacy laws such as the GDPR require an easy way to do this. If you turn the button off, add your own link, for example in a Custom HTML block in your footer:"
+msgstr "Il s'agit d'un petit bouton flottant qui permet aux visiteurs de rouvrir la bannière et de modifier leurs choix. Les lois sur la vie privée comme le RGPD exigent un moyen simple de le faire. Si vous désactivez le bouton, ajoutez votre propre lien, par exemple dans un bloc HTML personnalisé de votre pied de page :"
+
+#: admin/views.php
+msgid "What are Website Name, Logo URL, and Privacy Policy URL used for?"
+msgstr "À quoi servent le nom du site, l'URL du logo et l'URL de la politique de confidentialité ?"
+
+#: admin/views.php
+msgid "They are shown in the banner. The website name and logo identify your site, and the privacy policy link lets visitors read your policy. If you leave the name or the privacy policy URL empty, the plugin uses your site title and the privacy policy page set in WordPress."
+msgstr "Ils sont affichés dans la bannière. Le nom du site et le logo identifient votre site, et le lien vers la politique de confidentialité permet aux visiteurs de la lire. Si vous laissez vide le nom ou l'URL de la politique, le plugin utilise le titre de votre site et la page de politique de confidentialité définie dans WordPress."
+
+#: admin/views.php
+msgid "What is Publisher Country?"
+msgstr "Qu'est-ce que « Pays de l'éditeur » ?"
+
+#: admin/views.php
+msgid "It is only used with IAB TCF 2.4. Choose the country where your business is established. It is stored in the consent string that is shared with your ad partners."
+msgstr "Il n'est utilisé qu'avec IAB TCF 2.4. Choisissez le pays où votre entreprise est établie. Il est enregistré dans la chaîne de consentement partagée avec vos partenaires publicitaires."
+
+#: admin/views.php
+msgid "I saved my settings but the banner didn't change. Why?"
+msgstr "J'ai enregistré mes réglages, mais la bannière n'a pas changé. Pourquoi ?"
+
+#: admin/views.php
+msgid "Your browser remembers the choice you already made, so the banner doesn't show again. Open your site in a private browser window to see it as a new visitor. If you use a caching plugin or a CDN, clear its cache after saving, because cached pages still contain the old settings. With IAB TCF 2.4 and EU/EEA visitors only, the banner is only shown to visitors in the EU and EEA."
+msgstr "Votre navigateur mémorise le choix que vous avez déjà fait, la bannière ne s'affiche donc plus. Ouvrez votre site dans une fenêtre de navigation privée pour le voir comme un nouveau visiteur. Si vous utilisez un plugin de cache ou un CDN, videz son cache après l'enregistrement, car les pages en cache contiennent encore les anciens réglages. Avec IAB TCF 2.4 et « Visiteurs de l'UE/EEE uniquement », la bannière n'est affichée qu'aux visiteurs de l'UE et de l'EEE."
+
+#: admin/views.php
+msgid "Need your own banner text, styling, or consent purposes?"
+msgstr "Besoin de vos propres textes, styles ou finalités de consentement ?"
+
+#: admin/views.php
+msgid "Customize them in the UniConsent dashboard →"
+msgstr "Personnalisez-les dans le tableau de bord UniConsent →"
+
+#: admin/views.php
+msgid "Can I customize the banner further?"
+msgstr "Puis-je personnaliser davantage la bannière ?"
+
+#: admin/views.php
+msgid "Yes. Create a UniConsent account, configure your banner in the dashboard, and paste your license key on the Settings tab. The dashboard has more options than this plugin, including custom banner text and translations, custom CSS, your own purposes and vendor lists, cookie scanning and script blocking, consent analytics and logging, and more privacy laws such as US state laws, LGPD, and POPIA."
+msgstr "Oui. Créez un compte UniConsent, configurez votre bannière dans le tableau de bord et collez votre clé de licence dans l'onglet Réglages. Le tableau de bord offre plus d'options que ce plugin, notamment des textes de bannière et des traductions personnalisés, du CSS personnalisé, vos propres finalités et listes de fournisseurs, l'analyse des cookies et le blocage de scripts, les statistiques et la journalisation du consentement, ainsi que d'autres lois sur la vie privée comme les lois des États américains, la LGPD et la POPIA."

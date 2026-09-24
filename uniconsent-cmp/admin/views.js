@@ -15,6 +15,12 @@ jQuery(document).ready(function($) {
         $('#' + tabId).addClass('unis-tab-content--active');
     });
 
+    // Publisher country only applies to IAB TCF mode; region does not apply to cookie categories mode
+    $('#unic_enable_iab').on('change', function() {
+        $('#unic_publisher_country_group').toggle($(this).val() === 'v2');
+        $('.unic-hide-ez').toggle($(this).val() !== 'ez');
+    });
+
     // FAQ functionality
     $('.unis-faq__question').on('click', function() {
         const $answer = $(this).next('.unis-faq__answer');
@@ -41,7 +47,7 @@ jQuery(document).ready(function($) {
         
         // Set loading state
         $saveButton.prop('disabled', true).addClass('unis-save-button--loading');
-        $buttonText.text('Saving...');
+        $buttonText.text(unicAdmin.saving);
         
         // Remove any existing spinners first
         $saveButton.find('.unis-save-button__spinner').remove();
@@ -64,30 +70,25 @@ jQuery(document).ready(function($) {
             contentType: false,
             success: function(response) {
                 if (response.success) {
-                    showToast(
-                        'Settings Saved!', 
-                        'Your UniConsent settings have been successfully updated.',
-                        'success'
-                    );
+                    $('#unic_license').val(response.data.license);
+                    $('#unic_licensed_notice').toggle(response.data.licensed);
+                    $('#unic_free_settings').toggle(!response.data.licensed);
+                    $('#unic-license-notice').remove();
+                    if (response.data.notice) {
+                        $('.unis-wrap').before(response.data.notice);
+                    }
+                    showToast(unicAdmin.savedTitle, unicAdmin.savedMessage, 'success');
                 } else {
-                    showToast(
-                        'Save Failed!', 
-                        response.data || 'Failed to save settings. Please try again.',
-                        'error'
-                    );
+                    showToast(unicAdmin.failedTitle, response.data || unicAdmin.failedMessage, 'error');
                 }
             },
             error: function(xhr, status, error) {
-                showToast(
-                    'Save Failed!', 
-                    'Network error occurred. Please check your connection and try again.',
-                    'error'
-                );
+                showToast(unicAdmin.failedTitle, unicAdmin.networkError, 'error');
             },
             complete: function() {
                 // Reset button state
                 $saveButton.prop('disabled', false).removeClass('unis-save-button--loading');
-                $buttonText.text('Save Changes');
+                $buttonText.text(unicAdmin.save);
                 
                 // Remove spinner
                 $saveButton.find('.unis-save-button__spinner').remove();

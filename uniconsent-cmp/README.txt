@@ -1,11 +1,11 @@
 === UniConsent Cookie Consent CMP - Consent Manager ===
-Version: 1.7.2
+Version: 1.8.0
 Contributors: uniconsent
 Tags: cmp, cookie banner, cookie consent, iab, cookie
-Requires at least: 4.0
+Requires at least: 5.0
 Tested up to: 7.1.0
 Requires PHP: 7.4
-Stable tag: 1.7.2
+Stable tag: 1.8.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Leading Consent Management Platform for IAB TCF, GPP, GDPR, POPIA, CCPA, COPPA, and LGPD Compliance.
@@ -14,58 +14,109 @@ Leading Consent Management Platform for IAB TCF, GPP, GDPR, POPIA, CCPA, COPPA, 
 
 [UniConsent](https://www.uniconsent.com/) is a leading Consent Management Platform (CMP) that helps websites comply with global privacy regulations including [GDPR](https://www.uniconsent.com/gdpr), [CCPA/CPRA](https://www.uniconsent.com/ccpa), COPPA, [LGPD](https://www.uniconsent.com/lgpd), PIPL, POPIA, and [PDPA](https://www.uniconsent.com/pdpa).
 
+Add a GDPR and CCPA cookie consent banner to your site in minutes, with no coding. The plugin is free for up to 50,000 users per month and works without an account.
+
+= Choose your banner type =
+
+* **Cookie categories**: a cookie banner where visitors accept or reject each cookie category. Choices are passed to Google Consent Mode v2 and Microsoft UET Consent Mode, so it suits most sites, including sites that use Google Analytics or run Google Ads or Microsoft Ads (Bing Ads) campaigns with conversion and remarketing pixels.
+* **IAB TCF 2.4**: for sites that show ads through Google AdSense, Google Ad Manager, Google AdX, or other programmatic ad networks. Google requires a certified IAB TCF CMP to serve ads to visitors in the EEA, UK, and Switzerland.
+
 = Certifications =
 
-* **Certified EU IAB TCF 2.3 CMP**
+* **Certified EU IAB TCF 2.4 CMP**
 * **Certified Canada IAB TCF CMP**
 * **Certified Google Consent Mode CMP (Gold Tier)**
 
 = Features =
 
-* 11 banner styles with visual preview — Bottom Sheet, Floating Card, Dark Compact, Popup, and more
+* Cookie categories or IAB TCF 2.4 cookie consent banner
+* 11 banner styles with visual preview: Bottom Sheet, Floating Card, Dark Compact, Popup, and more
 * Google Consent Mode v2
 * Microsoft UET and Bing Ads Consent Mode
 * IAB GPP 1.1 consent signals
-* EU IAB TCF 2.3, TCF Canada, CCPA USP, and US state consent signals
-* Privacy badge toggle
-* GEO targeting — show consent banners only to visitors in specific regions
-* 52+ languages support
+* EU IAB TCF 2.4, TCF Canada, CCPA USP, and US state consent signals
+* Works with Google Ad Manager, Google AdX, Google AdSense, Prebid.js, and Amazon APS through IAB TCF 2.4
+* GEO targeting: show the consent banner to all visitors or only to visitors in the EU/EEA
+* 52+ languages, with automatic detection of the visitor's browser language
+* Privacy settings button so visitors can change their consent at any time
+* Uses your site title and WordPress privacy policy page automatically
+* Loads with a single tag at the top of the page
 * WP Consent API compatible
-* Works with Google Ad Manager, Google AdX, Google AdSense, Prebid.js, Amazon APS, Facebook Pixel, LinkedIn Pixel, and more
+* Up to 50,000 users per month
+
+= More with a UniConsent account =
+
+Create a UniConsent account, configure your banner in the dashboard, and paste your license key into the plugin to unlock advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging:
+
+* More than 50,000 users per month
+* Custom banner text, translations, and custom CSS styling
+* Custom purposes, IAB vendors, Google vendors, and custom vendors
+* Website cookie discovery and disclosure
+* JavaScript and cookie blocking for tags such as Facebook Pixel and LinkedIn Pixel
+* Consent rate analytics dashboard and ConsentDB consent logging
+* Header bidding support for Prebid.js and Amazon APS
+* First-party CMP domain
 
 = How It Works =
 
-Install and activate the plugin, choose your banner style, enable GDPR and/or CCPA compliance, and save. The consent banner appears on your site automatically — no coding required.
-
-For advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging, register for a free license key at [uniconsent.com](https://www.uniconsent.com/).
+1. Install and activate the plugin.
+2. Choose a banner type, banner style, and language.
+3. Save. The cookie consent banner appears on your site automatically.
 
 Keep updated on [Data Privacy Regtech News](https://www.uniconsent.com/blog).
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-1. Upload `uniconsent-cmp` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Navigate to the UniConsent admin page and configure your settings: enter your license key or change the configurations.
+1. In WordPress, go to Plugins > Add New, search for "UniConsent", then install and activate the plugin. You can also upload the `uniconsent-cmp` folder to the `/wp-content/plugins/` directory and activate it on the Plugins page.
+2. Open **UniConsent CMP** in the admin menu.
+3. Choose a banner type, banner style, and language, and save.
+4. Optional: paste the license key from your UniConsent dashboard to manage your banner there.
 
 == Frequently Asked Questions ==
 
+= Which banner type should I choose? =
+
+Choose Cookie categories if you don't show ads on your site. It suits most sites, including sites that use Google Analytics or run Google Ads or Microsoft Ads campaigns with conversion and remarketing pixels. Choose IAB TCF 2.4 if you show ads on your site through Google AdSense, Google Ad Manager, or other programmatic ad networks.
+
+= Does it work with Google Consent Mode and Microsoft UET? =
+
+Yes. The plugin loads at the top of the page and sets Google Consent Mode v2 to "denied" until the visitor makes a choice. It then passes the choice to both Google Consent Mode and Microsoft UET Consent Mode. You don't need to add any code: keep your Google tag, Google Tag Manager, or UET tag as it is.
+
+= Who sees the banner? =
+
+With Cookie categories, all visitors see the banner. With IAB TCF 2.4, you can show it to all visitors or only to visitors in the EU/EEA.
+
+= I saved my settings but the banner didn't change. Why? =
+
+Your browser remembers the choice you already made. Open your site in a private browser window to see it as a new visitor. If you use a caching plugin or a CDN, clear its cache after saving.
+
+= Can I add my own link to reopen the consent banner? =
+
+Yes. Add this link anywhere on your site, for example in a Custom HTML block in your footer:
+
+`<a href="#" onclick="window.__unicapi('openunic');return false;">Privacy settings</a>`
+
+= Is this CMP solution free? =
+
+Yes. The WordPress plugin works without an account for up to 50,000 users per month, with both banner types, Google Consent Mode v2, Microsoft UET Consent Mode, 11 banner styles, and 52+ languages.
+
+= What more can I do with a UniConsent account? =
+
+Create an account at [uniconsent.com](https://www.uniconsent.com/), configure your banner in the dashboard, and paste your license key into the plugin. The dashboard adds custom banner text and CSS, consent analytics, cookie scanning, script blocking, consent logging, and support for more than 50,000 users per month.
+
 = What is GDPR? =
 
-Most companies who do any business in the EU are aware of the General Data Protection Regulation (GDPR), which went into effect on May 25, 2018. 
+The General Data Protection Regulation (GDPR) went into effect on May 25, 2018. It applies to any business, whether or not it is based in the EU, that processes the personal data of people in the EU.
 
-Organizations found in non-compliance will face heavy fines: €20 million or 4 percent of global revenue/turnover per infraction. This could mean millions, or even billions of dollars in fines for large companies.
+Organizations found in non-compliance can face fines of up to €20 million or 4 percent of global annual turnover, whichever is higher.
 
-The GDPR applies to any business, whether or not it is based in the EU, that processes the personal data of EU citizens.
+= What is GDPR Consent and CMP? =
 
-= What is GDPR Consent and CMP?
+Consent should be given by a clear affirmative act establishing a freely given, specific, informed and unambiguous indication of the data subject's agreement to the processing of personal data relating to him or her, such as by a written statement, including by electronic means, or an oral statement. This could include ticking a box when visiting an internet website, choosing technical settings for information society services or another statement or conduct which clearly indicates in this context the data subject's acceptance of the proposed processing of his or her personal data.
 
-Consent should be given by a clear affirmative act establishing a freely given, specific, informed and unambiguous indication of the data subject's agreement to the processing of personal data relating to him or her, such as by a written statement, including by electronic means, or an oral statement. This could include ticking a box when visiting an internet website, choosing technical settings for information society services or another statement or conduct which clearly indicates in this context the data subject's acceptance of the proposed processing of his or her personal data. 
+CMP is the technical infrastructure a business uses to collect and store what data customers have consented to be used and for what.
 
-CMP is the technical infrastructure a business uses to collect and store what data customers have consented to be used and for what. 
-
-= Is UniConsent an IAB EU approved CMP?
+= Is UniConsent an IAB EU approved CMP? =
 
 Yes, UniConsent is an IAB approved Consent Management Provider.
 
@@ -75,34 +126,17 @@ NOTICE: ACTIVATING THIS PLUGIN DOES NOT GUARANTEE YOU FULLY COMPLY WITH GDPR. PL
 
 UniConsent, or any other IAB approved Consent Management Provider (CMP), provides publishers and advertisers with a mechanism to obtain consent, and then control which third-party vendors can request consent to track users of their websites and apps.
 
-= What is the difference between UniConsent and the other CMP?
+= What is the difference between UniConsent and the other CMP? =
 
+* Cookie categories and IAB TCF 2.4 banner types
 * 11 banner styles with visual preview cards
-* GEO targeting — show consent banners only in specific regions
-* Certified IAB TCF 2.3 and Google Consent Mode CMP
+* GEO targeting: show consent banners only in specific regions
+* Certified IAB TCF 2.4 and Google Consent Mode CMP
 * Support IAB vendors, Google GAM vendors, and custom vendors
 * Google Consent Mode v2 and Microsoft UET Consent Mode
 * 52+ languages
 * High opt-in rate with minimal impact on ad revenue
 * Cookie ePrivacy consent support
-
-= Is this CMP solution free?
-
-Yes, the WordPress plugin works without a license key with all core features including IAB TCF 2.3, Google Consent Mode v2, 11 banner styles, and 52+ languages. Register for a free license key at [uniconsent.com](https://www.uniconsent.com/) to unlock advanced features such as custom CSS, consent analytics, cookie scanning, and consent logging.
-
-= Do you offer a premium plan?
-
-Yes. Premium plans include:
-
-* Custom banner text, translations, and CSS styling
-* Consent rate analytics dashboard
-* Website cookie discovery and disclosure
-* JavaScript and cookie blocking
-* ConsentDB consent logging
-* First-party CMP domain
-* Priority support
-
-Please check: [UniConsent Consent Manager](https://www.uniconsent.com)
 
 == Screenshots ==
 
@@ -114,6 +148,18 @@ Please check: [UniConsent Consent Manager](https://www.uniconsent.com)
 6. UniConsent - stage six: Initial bar screen.
 
 == Changelog ==
+
+= 1.8.0 =
+* New Banner Type setting: Cookie categories (default for new installs) or IAB TCF 2.4
+* Cookie categories passes consent to Google Consent Mode v2 and Microsoft UET Consent Mode
+* Automatic language option that follows the visitor's browser language (default for new installs)
+* Use the site title and WordPress privacy policy page when the name or policy URL is left empty
+* Load the CMP with a single synchronous tag at the top of the page head
+* Settings page updates after saving, without a page reload
+* Fix: saving with a license key no longer resets the other settings
+* Show only the settings that apply to the selected banner type; removed GDPR and CCPA toggles that had no effect
+* Clearer settings wording, more FAQs, and a dashboard link when a license key is set
+* Update IAB TCF references to 2.4
 
 = 1.7.2 =
 * Accept license key as license-xxxx, key-xxxx or the bare project ID, normalize it on save, and show an admin notice when the key is invalid
@@ -181,8 +227,6 @@ Please check: [UniConsent Consent Manager](https://www.uniconsent.com)
 
 = 1.3.11 =
 * Optimise consent rate performance.
-
-= 1.3.11 =
 * Optimise performance, updated for IAB TCF changes.
 
 = 1.3.8 =
@@ -222,7 +266,7 @@ Please check: [UniConsent Consent Manager](https://www.uniconsent.com)
 * Dutch language support added.
 
 = 1.1.26 =
-* Load thrid party tags and GTM.
+* Load third party tags and GTM.
 
 = 1.1.25 =
 * Optimise the performance

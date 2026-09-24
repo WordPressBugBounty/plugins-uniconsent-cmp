@@ -39,11 +39,15 @@ class UNIC_Admin_Settings {
 	}
 
 	public function unic_admin_notice_license() {
+		echo $this->get_license_notice();
+	}
+
+	private function get_license_notice() {
 		$raw = get_option( 'unic_license' );
 		if ( ! $raw || UNIC_Values::parse_license( $raw ) ) {
-			return;
+			return '';
 		}
-		echo '<div class="notice notice-warning"><p>'
+		return '<div class="notice notice-warning" id="unic-license-notice"><p>'
 			. sprintf(
 				__( 'UniConsent CMP: the license key "%s" is not valid, so the free-tier CMP is being loaded. Expected format: license-xxxxxxxxxx.', 'uniconsent-cmp' ),
 				esc_html( $raw )
@@ -153,24 +157,6 @@ class UNIC_Admin_Settings {
 
 		register_setting(
 			'unic-general-config', // Option group
-			'unic_enable_gdpr', // Option name
-			array(
-				'type' => 'string',
-				'sanitize_callback' => array( $this, 'sanitize_text' )
-			)
-		);
-
-		register_setting(
-			'unic-general-config', // Option group
-			'unic_enable_ccpa', // Option name
-			array(
-				'type' => 'string',
-				'sanitize_callback' => array( $this, 'sanitize_text' )
-			)
-		);
-
-		register_setting(
-			'unic-general-config', // Option group
 			'unic_publisher_country', // Option name
 			array(
 				'type' => 'string',
@@ -213,20 +199,18 @@ class UNIC_Admin_Settings {
 			'DA', 'EL', 'ET', 'FI', 'HU', 'LT', 'LV', 'MT', 'NO', 'RO', 'RU', 'SK',
 			'SL', 'ZH', 'SR', 'JA', 'BS', 'TR', 'CY', 'EU', 'GL', 'HE', 'ID', 'KO',
 			'MK', 'MS', 'TL', 'UK', 'AR', 'SQ', 'HR', 'KA', 'HI', 'IS', 'TH', 'VI',
-			'SW', 'ZH-HANT', 'PT-BR', 'SR-CYRL',
+			'SW', 'ZH-HANT', 'PT-BR', 'SR-CYRL', 'AUTO',
 		);
-		$allowed_regions = array( 'none', 'worldwide', 'eu' );
+		$allowed_regions = array( 'worldwide', 'eu' );
 		$allowed_barmodes = array( '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'popup' );
 		$allowed_yes_no = array( 'yes', 'no' );
-		$allowed_iab = array( 'no', 'v2' );
+		$allowed_iab = array( 'ez', 'no', 'v2' );
 
 		// Validate and sanitize settings
 		$language = isset($_POST['unic_language']) ? sanitize_text_field($_POST['unic_language']) : 'EN';
-		$region = isset($_POST['unic_region']) ? sanitize_text_field($_POST['unic_region']) : 'none';
+		$region = isset($_POST['unic_region']) ? sanitize_text_field($_POST['unic_region']) : 'worldwide';
 		$barmode = isset($_POST['unic_barmode']) ? sanitize_text_field($_POST['unic_barmode']) : '8';
 		$show_badge = isset($_POST['unic_show_badge']) ? sanitize_text_field($_POST['unic_show_badge']) : 'yes';
-		$enable_gdpr = isset($_POST['unic_enable_gdpr']) ? sanitize_text_field($_POST['unic_enable_gdpr']) : 'no';
-		$enable_ccpa = isset($_POST['unic_enable_ccpa']) ? sanitize_text_field($_POST['unic_enable_ccpa']) : 'no';
 		$enable_iab = isset($_POST['unic_enable_iab']) ? sanitize_text_field($_POST['unic_enable_iab']) : 'no';
 		$publisher_country = isset($_POST['unic_publisher_country']) ? sanitize_text_field($_POST['unic_publisher_country']) : 'DE';
 
@@ -239,11 +223,9 @@ class UNIC_Admin_Settings {
 			'unic_company' => isset($_POST['unic_company']) ? sanitize_text_field($_POST['unic_company']) : '',
 			'unic_logo' => isset($_POST['unic_logo']) ? esc_url_raw($_POST['unic_logo']) : '',
 			'unic_policy_url' => isset($_POST['unic_policy_url']) ? esc_url_raw($_POST['unic_policy_url']) : '',
-			'unic_region' => in_array($region, $allowed_regions, true) ? $region : 'none',
+			'unic_region' => in_array($region, $allowed_regions, true) ? $region : 'worldwide',
 			'unic_barmode' => in_array($barmode, $allowed_barmodes, true) ? $barmode : '8',
 			'unic_show_badge' => in_array($show_badge, $allowed_yes_no, true) ? $show_badge : 'yes',
-			'unic_enable_gdpr' => in_array($enable_gdpr, $allowed_yes_no, true) ? $enable_gdpr : 'no',
-			'unic_enable_ccpa' => in_array($enable_ccpa, $allowed_yes_no, true) ? $enable_ccpa : 'no',
 			'unic_enable_iab' => in_array($enable_iab, $allowed_iab, true) ? $enable_iab : 'no',
 			'unic_publisher_country' => $this->sanitize_country_code($publisher_country),
 		);
@@ -257,7 +239,12 @@ class UNIC_Admin_Settings {
             }
         }
         if (empty($errors)) {
-            wp_send_json_success('Settings saved successfully');
+            // lets the settings page update without a reload
+            wp_send_json_success(array(
+                'license'  => $settings['unic_license'],
+                'licensed' => (bool) $license_id,
+                'notice'   => $this->get_license_notice(),
+            ));
         } else {
             wp_send_json_error('Failed to save: ' . implode(', ', $errors));
         }
